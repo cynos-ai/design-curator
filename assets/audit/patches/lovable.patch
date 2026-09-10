@@ -1,0 +1,141 @@
+--- a/design-md/lovable/DESIGN.md
++++ b/design-md/lovable/DESIGN.md
+@@ -1,3 +1,138 @@
++---
++# Curator supplement, not official brand tokens.
++# Source notes: design-package attachments/sources/lovable.json; Skill assets/source-notes/lovable.json.
++# Partial tokens only: read the complete original prose and source notes.
++version: alpha
++name: Lovable-Inspired-design-analysis
++description: Lovable's website radiates warmth through restraint. The entire page sits on a creamy, parchment-toned
++  background (`#f7f4ed`) that immediately separates it from the cold-white conventions of most developer tool sites.
++  This isn't minimalism for minimalism's sake — it's a deliberate choice to feel approachable, almost analog, like
++  a well-crafted notebook. The near-black text (`#1c1c1c`) against this warm cream creates a contrast ratio that's
++  easy on the eyes while maintaining sharp readability.
++colors:
++  primary: '#1c1c1c'
++  on-primary: '#fcfbf8'
++  canvas: '#f7f4ed'
++  ink: '#1c1c1c'
++  text-strong: rgba(28,28,28,0.83)
++  body: rgba(28,28,28,0.82)
++  muted: '#5f5f5d'
++  hairline: '#eceae4'
++  hairline-interactive: rgba(28,28,28,0.4)
++  surface-hover: rgba(28,28,28,0.04)
++  surface-overlay: rgba(28,28,28,0.03)
++  focus: rgba(59,130,246,0.5)
++typography:
++  display-hero:
++    fontFamily: Camera Plain Variable
++    fontSize: 60px
++    fontWeight: 600
++    letterSpacing: -1.5px
++  display-alt:
++    fontFamily: Camera Plain Variable
++    fontSize: 60px
++    fontWeight: 480
++    lineHeight: 1
++  section-heading:
++    fontFamily: Camera Plain Variable
++    fontSize: 48px
++    fontWeight: 600
++    lineHeight: 1
++    letterSpacing: -1.2px
++  sub-heading:
++    fontFamily: Camera Plain Variable
++    fontSize: 36px
++    fontWeight: 600
++    lineHeight: 1.1
++    letterSpacing: -0.9px
++  card-title:
++    fontFamily: Camera Plain Variable
++    fontSize: 20px
++    fontWeight: 400
++    lineHeight: 1.25
++  body-large:
++    fontFamily: Camera Plain Variable
++    fontSize: 18px
++    fontWeight: 400
++    lineHeight: 1.38
++  body:
++    fontFamily: Camera Plain Variable
++    fontSize: 16px
++    fontWeight: 400
++    lineHeight: 1.5
++  button:
++    fontFamily: Camera Plain Variable
++    fontSize: 16px
++    fontWeight: 400
++    lineHeight: 1.5
++  button-small:
++    fontFamily: Camera Plain Variable
++    fontSize: 14px
++    fontWeight: 400
++    lineHeight: 1.5
++  link:
++    fontFamily: Camera Plain Variable
++    fontSize: 16px
++    fontWeight: 400
++    lineHeight: 1.5
++  link-small:
++    fontFamily: Camera Plain Variable
++    fontSize: 14px
++    fontWeight: 400
++    lineHeight: 1.5
++  caption:
++    fontFamily: Camera Plain Variable
++    fontSize: 14px
++    fontWeight: 400
++    lineHeight: 1.5
++rounded:
++  px-4: 4px
++  px-6: 6px
++  px-8: 8px
++  px-12: 12px
++  px-16: 16px
++  px-9999: 9999px
++spacing:
++  px-8: 8px
++  px-10: 10px
++  px-12: 12px
++  px-16: 16px
++  px-24: 24px
++  px-32: 32px
++  px-40: 40px
++  px-56: 56px
++  px-80: 80px
++  px-96: 96px
++  px-128: 128px
++  px-176: 176px
++  px-192: 192px
++  px-208: 208px
++components:
++  button-primary:
++    backgroundColor: '{colors.primary}'
++    textColor: '{colors.on-primary}'
++    padding: 8px 16px
++    rounded: '{rounded.px-6}'
++  button-outline:
++    backgroundColor: transparent
++    textColor: '{colors.ink}'
++    padding: 8px 16px
++    rounded: '{rounded.px-6}'
++  button-surface:
++    backgroundColor: '{colors.canvas}'
++    textColor: '{colors.ink}'
++    padding: 8px 16px
++    rounded: '{rounded.px-6}'
++  button-pill:
++    backgroundColor: '{colors.canvas}'
++    textColor: '{colors.ink}'
++    rounded: '{rounded.px-9999}'
++  text-input:
++    backgroundColor: '{colors.canvas}'
++    textColor: '{colors.ink}'
++    rounded: '{rounded.px-6}'
++---
++
+ # Design System Inspired by Lovable
+ 
+ ## 1. Visual Theme & Atmosphere

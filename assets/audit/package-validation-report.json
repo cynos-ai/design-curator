@@ -1,0 +1,1094 @@
+{
+  "scope": "strict YAML, duplicate keys, frontmatter references and source preservation only; not rendered UI, full prose consistency or WCAG certification",
+  "upstream_commit": "8147538b4226ae41e2487a9179e3bcc1f68e8554",
+  "raw_counts": {
+    "total": 74,
+    "readme_entries": 73,
+    "valid_yaml": 61,
+    "invalid_yaml": 3,
+    "no_frontmatter": 10
+  },
+  "normalized_counts": {
+    "parseable": 74,
+    "descriptions_present": 74,
+    "broken_frontmatter_references": 0
+  },
+  "checks": [
+    {
+      "slug": "airbnb",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "airtable",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "apple",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "binance",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "bmw",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "bmw-m",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "bugatti",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "cal",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "claude",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "clay",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "clickhouse",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "cohere",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "coinbase",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "composio",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "cursor",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "dell-1996",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "elevenlabs",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "expo",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "ferrari",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "figma",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "framer",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "hashicorp",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "hp",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "ibm",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "intercom",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "kraken",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "lamborghini",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "linear.app",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "lovable",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "mastercard",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "meta",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "minimax",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "mintlify",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "miro",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "mistral.ai",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "mongodb",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "nike",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "nintendo-2001",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "notion",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "nvidia",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "ollama",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "opencode.ai",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "pinterest",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "playstation",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "posthog",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "raycast",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "renault",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "replicate",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "resend",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "revolut",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "runwayml",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "sanity",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "sentry",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "shopify",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "slack",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "spacex",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "spotify",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "starbucks",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "stripe",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "supabase",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "superhuman",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "tesla",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "theverge",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "together.ai",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "uber",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "vercel",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "vodafone",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "voltagent",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "warp",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "webflow",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "wired",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "wise",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "x.ai",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    },
+    {
+      "slug": "zapier",
+      "strict_yaml": "pass",
+      "duplicate_keys": "none",
+      "frontmatter_refs": [],
+      "groups_present": [
+        "colors",
+        "typography",
+        "rounded",
+        "spacing",
+        "components"
+      ],
+      "has_description": true
+    }
+  ],
+  "not_checked": [
+    "official Google lint",
+    "full CSS color syntax/alpha composition",
+    "all prose token references",
+    "all typography required at render time",
+    "semantic consistency of all original prose",
+    "browser rendering",
+    "font availability",
+    "WCAG accessibility"
+  ],
+  "patch_round_trip": {
+    "pass": [
+      "elevenlabs",
+      "kraken",
+      "lamborghini",
+      "lovable",
+      "mastercard",
+      "raycast",
+      "runwayml",
+      "sanity",
+      "spotify",
+      "starbucks",
+      "supabase",
+      "tesla",
+      "theverge"
+    ],
+    "count": 13,
+    "method": "apply unified patches to separate raw snapshot with patch -p1; compare resulting bytes to normalized files"
+  },
+  "supplement_type_checks": "10 supplements: declared fontSize/letterSpacing dimensions, fontWeight numeric, lineHeight numeric/dimension; ranges/normal/missing properties stay omitted",
+  "source_body_preservation": "10 prepend operations end with original source bytes; 3 scalar fixes preserve colors onward byte-for-byte",
+  "hash_checks": "all 74 raw files, README, LICENSE, 13 normalized files, 13 YAML files, 13 patches and 13 source maps match source-lock",
+  "source_excerpt_checks": "10 added descriptions match verbatim source-line ranges; all mapped line ranges in bounds",
+  "regression_checks": [
+    "Runway tracking ranges containing to are not collapsed to their first endpoint",
+    "Starbucks three contradictory rem/px display sizes stay unresolved",
+    "Starbucks explicit 33.25px line height remains 33.25px despite approximate parenthesized ratio",
+    "Raycast existing description preserved; unknown 属于 scalar repaired without renaming"
+  ],
+  "omitted_typography_properties": 125
+}

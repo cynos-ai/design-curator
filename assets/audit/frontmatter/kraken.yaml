@@ -1,0 +1,123 @@
+# Curator supplement, not official brand tokens.
+# Source notes: design-package attachments/sources/kraken.json; Skill assets/source-notes/kraken.json.
+# Partial tokens only: read the complete original prose and source notes.
+version: alpha
+name: Kraken-Inspired-design-analysis
+description: Kraken's website is a clean, trustworthy crypto exchange that uses purple as its commanding brand color.
+  The design operates on white backgrounds with Kraken Purple (`#7132f5`, `#5741d8`, `#5b1ecf`) creating a distinctive,
+  professional crypto identity. The proprietary Kraken-Brand font handles display headings with bold (700) weight
+  and negative tracking, while Kraken-Product (with IBM Plex Sans fallback) serves as the UI workhorse.
+colors:
+  primary: '#7132f5'
+  primary-dark: '#5741d8'
+  primary-deep: '#5b1ecf'
+  primary-subtle: rgba(133,91,251,0.16)
+  canvas: '#ffffff'
+  ink: '#101114'
+  on-primary: '#ffffff'
+  neutral: '#686b82'
+  muted: '#9497a9'
+  hairline: '#dedee5'
+  success: '#149e61'
+  on-success: '#026b3f'
+  success-soft: rgba(20,158,97,0.16)
+  neutral-soft: rgba(104,107,130,0.12)
+  on-neutral: '#484b5e'
+  surface-subtle: rgba(148,151,169,0.08)
+typography:
+  display-hero:
+    fontFamily: Kraken-Brand
+    fontSize: 48px
+    fontWeight: 700
+    lineHeight: 1.17
+    letterSpacing: -1px
+  section-heading:
+    fontFamily: Kraken-Brand
+    fontSize: 36px
+    fontWeight: 700
+    lineHeight: 1.22
+    letterSpacing: -0.5px
+  sub-heading:
+    fontFamily: Kraken-Brand
+    fontSize: 28px
+    fontWeight: 700
+    lineHeight: 1.29
+    letterSpacing: -0.5px
+  feature-title:
+    fontFamily: Kraken-Product
+    fontSize: 22px
+    fontWeight: 600
+    lineHeight: 1.2
+  body:
+    fontFamily: Kraken-Product
+    fontSize: 16px
+    fontWeight: 400
+    lineHeight: 1.38
+  body-medium:
+    fontFamily: Kraken-Product
+    fontSize: 16px
+    fontWeight: 500
+    lineHeight: 1.38
+  button:
+    fontFamily: Kraken-Product
+    fontSize: 16px
+    lineHeight: 1.38
+  caption:
+    fontFamily: Kraken-Product
+    fontSize: 14px
+  small:
+    fontFamily: Kraken-Product
+    fontSize: 12px
+    lineHeight: 1.33
+  micro:
+    fontFamily: Kraken-Product
+    fontSize: 7px
+    fontWeight: 500
+    lineHeight: 1
+rounded:
+  px-3: 3px
+  px-6: 6px
+  px-8: 8px
+  px-10: 10px
+  px-12: 12px
+  px-16: 16px
+  px-9999: 9999px
+spacing:
+  px-1: 1px
+  px-2: 2px
+  px-3: 3px
+  px-4: 4px
+  px-5: 5px
+  px-6: 6px
+  px-8: 8px
+  px-10: 10px
+  px-12: 12px
+  px-13: 13px
+  px-15: 15px
+  px-16: 16px
+  px-20: 20px
+  px-24: 24px
+  px-25: 25px
+components:
+  button-primary:
+    backgroundColor: '{colors.primary}'
+    textColor: '{colors.on-primary}'
+    padding: 13px 16px
+    rounded: '{rounded.px-12}'
+  button-outline:
+    backgroundColor: '{colors.canvas}'
+    textColor: '{colors.primary-dark}'
+    rounded: '{rounded.px-12}'
+  button-subtle:
+    backgroundColor: '{colors.primary-subtle}'
+    textColor: '{colors.primary}'
+    padding: 8px
+    rounded: '{rounded.px-12}'
+  button-white:
+    backgroundColor: '{colors.canvas}'
+    textColor: '{colors.ink}'
+    rounded: '{rounded.px-10}'
+  badge-success:
+    backgroundColor: '{colors.success-soft}'
+    textColor: '{colors.on-success}'
+    rounded: '{rounded.px-6}'

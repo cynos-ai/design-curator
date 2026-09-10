@@ -1,0 +1,620 @@
+{
+  "slug": "lovable",
+  "operation": "prepend-frontmatter",
+  "source_repo": "https://github.com/VoltAgent/awesome-design-md",
+  "source_commit": "8147538b4226ae41e2487a9179e3bcc1f68e8554",
+  "source_path": "design-md/lovable/DESIGN.md",
+  "source_sha256": "92790895c833104072643929ba56ebbf42c8f88ffb7bff1926462545d0ace6c7",
+  "mappings": [
+    {
+      "path": "version",
+      "kind": "metadata-added",
+      "notes": "alpha schema marker; not an upstream claim"
+    },
+    {
+      "path": "name",
+      "kind": "metadata-added",
+      "source_lines": [
+        1,
+        1
+      ],
+      "notes": "display label from original document title"
+    },
+    {
+      "path": "description",
+      "kind": "verbatim-excerpt",
+      "source_lines": [
+        5,
+        5
+      ]
+    },
+    {
+      "path": "colors.primary",
+      "source_lines": [
+        5,
+        5
+      ],
+      "kind": "semantic-alias-of-literal",
+      "notes": "token name is curator-added; role restrictions remain in original prose"
+    },
+    {
+      "path": "colors.on-primary",
+      "source_lines": [
+        26,
+        26
+      ],
+      "kind": "semantic-alias-of-literal",
+      "notes": "token name is curator-added; role restrictions remain in original prose"
+    },
+    {
+      "path": "colors.canvas",
+      "source_lines": [
+        5,
+        5
+      ],
+      "kind": "semantic-alias-of-literal",
+      "notes": "token name is curator-added; role restrictions remain in original prose"
+    },
+    {
+      "path": "colors.ink",
+      "source_lines": [
+        5,
+        5
+      ],
+      "kind": "semantic-alias-of-literal",
+      "notes": "token name is curator-added; role restrictions remain in original prose"
+    },
+    {
+      "path": "colors.text-strong",
+      "source_lines": [
+        30,
+        30
+      ],
+      "kind": "semantic-alias-of-literal",
+      "notes": "token name is curator-added; role restrictions remain in original prose"
+    },
+    {
+      "path": "colors.body",
+      "source_lines": [
+        31,
+        31
+      ],
+      "kind": "semantic-alias-of-literal",
+      "notes": "token name is curator-added; role restrictions remain in original prose"
+    },
+    {
+      "path": "colors.muted",
+      "source_lines": [
+        32,
+        32
+      ],
+      "kind": "semantic-alias-of-literal",
+      "notes": "token name is curator-added; role restrictions remain in original prose"
+    },
+    {
+      "path": "colors.hairline",
+      "source_lines": [
+        9,
+        9
+      ],
+      "kind": "semantic-alias-of-literal",
+      "notes": "token name is curator-added; role restrictions remain in original prose"
+    },
+    {
+      "path": "colors.hairline-interactive",
+      "source_lines": [
+        9,
+        9
+      ],
+      "kind": "semantic-alias-of-literal",
+      "notes": "token name is curator-added; role restrictions remain in original prose"
+    },
+    {
+      "path": "colors.surface-hover",
+      "source_lines": [
+        34,
+        34
+      ],
+      "kind": "semantic-alias-of-literal",
+      "notes": "token name is curator-added; role restrictions remain in original prose"
+    },
+    {
+      "path": "colors.surface-overlay",
+      "source_lines": [
+        35,
+        35
+      ],
+      "kind": "semantic-alias-of-literal",
+      "notes": "token name is curator-added; role restrictions remain in original prose"
+    },
+    {
+      "path": "colors.focus",
+      "source_lines": [
+        131,
+        131
+      ],
+      "kind": "semantic-alias-of-literal",
+      "notes": "token name is curator-added; role restrictions remain in original prose"
+    },
+    {
+      "path": "typography.display-hero",
+      "source_lines": [
+        59,
+        59
+      ],
+      "kind": "table-transcription",
+      "notes": "",
+      "font_family_evidence_lines": [
+        59,
+        59
+      ]
+    },
+    {
+      "path": "typography.display-alt",
+      "source_lines": [
+        60,
+        60
+      ],
+      "kind": "table-transcription",
+      "notes": "",
+      "font_family_evidence_lines": [
+        60,
+        60
+      ]
+    },
+    {
+      "path": "typography.section-heading",
+      "source_lines": [
+        61,
+        61
+      ],
+      "kind": "table-transcription",
+      "notes": "",
+      "font_family_evidence_lines": [
+        61,
+        61
+      ]
+    },
+    {
+      "path": "typography.sub-heading",
+      "source_lines": [
+        62,
+        62
+      ],
+      "kind": "table-transcription",
+      "notes": "",
+      "font_family_evidence_lines": [
+        62,
+        62
+      ]
+    },
+    {
+      "path": "typography.card-title",
+      "source_lines": [
+        63,
+        63
+      ],
+      "kind": "table-transcription",
+      "notes": "",
+      "font_family_evidence_lines": [
+        63,
+        63
+      ]
+    },
+    {
+      "path": "typography.body-large",
+      "source_lines": [
+        64,
+        64
+      ],
+      "kind": "table-transcription",
+      "notes": "",
+      "font_family_evidence_lines": [
+        64,
+        64
+      ]
+    },
+    {
+      "path": "typography.body",
+      "source_lines": [
+        65,
+        65
+      ],
+      "kind": "table-transcription",
+      "notes": "",
+      "font_family_evidence_lines": [
+        65,
+        65
+      ]
+    },
+    {
+      "path": "typography.button",
+      "source_lines": [
+        66,
+        66
+      ],
+      "kind": "table-transcription",
+      "notes": "",
+      "font_family_evidence_lines": [
+        66,
+        66
+      ]
+    },
+    {
+      "path": "typography.button-small",
+      "source_lines": [
+        67,
+        67
+      ],
+      "kind": "table-transcription",
+      "notes": "",
+      "font_family_evidence_lines": [
+        67,
+        67
+      ]
+    },
+    {
+      "path": "typography.link",
+      "source_lines": [
+        68,
+        68
+      ],
+      "kind": "table-transcription",
+      "notes": "",
+      "font_family_evidence_lines": [
+        68,
+        68
+      ]
+    },
+    {
+      "path": "typography.link-small",
+      "source_lines": [
+        69,
+        69
+      ],
+      "kind": "table-transcription",
+      "notes": "",
+      "font_family_evidence_lines": [
+        69,
+        69
+      ]
+    },
+    {
+      "path": "typography.caption",
+      "source_lines": [
+        70,
+        70
+      ],
+      "kind": "table-transcription",
+      "notes": "",
+      "font_family_evidence_lines": [
+        70,
+        70
+      ]
+    },
+    {
+      "path": "rounded.px-4",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "rounded.px-6",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "rounded.px-8",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "rounded.px-12",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "rounded.px-16",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "rounded.px-9999",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "spacing.px-8",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "spacing.px-10",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "spacing.px-12",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "spacing.px-16",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "spacing.px-24",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "spacing.px-32",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "spacing.px-40",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "spacing.px-56",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "spacing.px-80",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "spacing.px-96",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "spacing.px-128",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "spacing.px-176",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "spacing.px-192",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "spacing.px-208",
+      "source_lines": [
+        173,
+        199
+      ],
+      "kind": "scale-transcription",
+      "notes": "value-based ID is not a role or a permission to apply it everywhere"
+    },
+    {
+      "path": "components.button-primary",
+      "source_lines": [
+        82,
+        91
+      ],
+      "kind": "component-transcription",
+      "notes": "only explicitly recorded properties; no inferred default state or inheritance values"
+    },
+    {
+      "path": "components.button-outline",
+      "source_lines": [
+        92,
+        101
+      ],
+      "kind": "component-transcription",
+      "notes": "only explicitly recorded properties; no inferred default state or inheritance values"
+    },
+    {
+      "path": "components.button-surface",
+      "source_lines": [
+        39,
+        40
+      ],
+      "kind": "component-transcription",
+      "notes": "only explicitly recorded properties; no inferred default state or inheritance values"
+    },
+    {
+      "path": "components.button-pill",
+      "source_lines": [
+        111,
+        118
+      ],
+      "kind": "component-transcription",
+      "notes": "only explicitly recorded properties; no inferred default state or inheritance values"
+    },
+    {
+      "path": "components.text-input",
+      "source_lines": [
+        126,
+        133
+      ],
+      "kind": "component-transcription",
+      "notes": "only explicitly recorded properties; no inferred default state or inheritance values"
+    }
+  ],
+  "omitted_properties": [
+    {
+      "path": "typography.display-hero.lineHeight",
+      "source_lines": [
+        59,
+        59
+      ],
+      "source_value": "1.00–1.10 (tight)",
+      "reason": "range, normal, missing or not representable as one alpha token; read prose"
+    },
+    {
+      "path": "typography.display-alt.letterSpacing",
+      "source_lines": [
+        60,
+        60
+      ],
+      "source_value": "normal",
+      "reason": "range, normal, missing or not representable as one alpha token; read prose"
+    },
+    {
+      "path": "typography.card-title.letterSpacing",
+      "source_lines": [
+        63,
+        63
+      ],
+      "source_value": "normal",
+      "reason": "range, normal, missing or not representable as one alpha token; read prose"
+    },
+    {
+      "path": "typography.body-large.letterSpacing",
+      "source_lines": [
+        64,
+        64
+      ],
+      "source_value": "normal",
+      "reason": "range, normal, missing or not representable as one alpha token; read prose"
+    },
+    {
+      "path": "typography.body.letterSpacing",
+      "source_lines": [
+        65,
+        65
+      ],
+      "source_value": "normal",
+      "reason": "range, normal, missing or not representable as one alpha token; read prose"
+    },
+    {
+      "path": "typography.button.letterSpacing",
+      "source_lines": [
+        66,
+        66
+      ],
+      "source_value": "normal",
+      "reason": "range, normal, missing or not representable as one alpha token; read prose"
+    },
+    {
+      "path": "typography.button-small.letterSpacing",
+      "source_lines": [
+        67,
+        67
+      ],
+      "source_value": "normal",
+      "reason": "range, normal, missing or not representable as one alpha token; read prose"
+    },
+    {
+      "path": "typography.link.letterSpacing",
+      "source_lines": [
+        68,
+        68
+      ],
+      "source_value": "normal",
+      "reason": "range, normal, missing or not representable as one alpha token; read prose"
+    },
+    {
+      "path": "typography.link-small.letterSpacing",
+      "source_lines": [
+        69,
+        69
+      ],
+      "source_value": "normal",
+      "reason": "range, normal, missing or not representable as one alpha token; read prose"
+    },
+    {
+      "path": "typography.caption.letterSpacing",
+      "source_lines": [
+        70,
+        70
+      ],
+      "source_value": "normal",
+      "reason": "range, normal, missing or not representable as one alpha token; read prose"
+    }
+  ],
+  "known_issues": [
+    "Hero Display 的行高表格是 1.00–1.10，未锁成单值；项目若采用示例中的 1.10，须记录是选定的使用配置。",
+    "正文同时出现 gradient 装饰与禁止饱和强调色；并非允许任意生成渐变，未补充渐变 stops。",
+    "Overview 的广泛 pill 表述不能覆盖具体 6px 矩形按钮及 Do/Don’t 的作用域。",
+    "阴影、active opacity 0.8、焦点环等未塞入非标准顶层组，必须继续读取正文。"
+  ],
+  "body_policy": "original body byte-preserved; ambiguities not silently resolved"
+}

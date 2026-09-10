@@ -1,0 +1,107 @@
+--- a/design-md/runwayml/DESIGN.md
++++ b/design-md/runwayml/DESIGN.md
+@@ -1,3 +1,104 @@
++---
++# Curator supplement, not official brand tokens.
++# Source notes: design-package attachments/sources/runwayml.json; Skill assets/source-notes/runwayml.json.
++# Partial tokens only: read the complete original prose and source notes.
++version: alpha
++name: Runway-Inspired-design-analysis
++description: 'Runway''s interface is a cinematic reel brought to life as a website — a dark, editorial, film-production-grade
++  design where full-bleed photography and video ARE the primary UI elements. This is not a typical tech product
++  page; it''s a visual manifesto for AI-powered creativity. Every section feels like a frame from a film: dramatic
++  lighting, sweeping landscapes, and intimate human moments captured in high-quality imagery that dominates the
++  viewport.'
++colors:
++  primary: '#000000'
++  canvas: '#000000'
++  ink: '#ffffff'
++  surface-deep: '#030303'
++  surface: '#1a1a1a'
++  canvas-light: '#ffffff'
++  canvas-near-white: '#fefefe'
++  canvas-cloud: '#e9ecf2'
++  hairline-dark: '#27272a'
++  ink-on-light: '#404040'
++  ink-on-light-secondary: '#3f3f3f'
++  muted: '#767d88'
++  muted-secondary: '#7d848e'
++  muted-soft: '#a7a7a7'
++  hairline-light: '#c9ccd1'
++  hairline-soft: '#d0d4d4'
++  neutral: '#6b7280'
++  link-dark: '#0c0c0c'
++  footer-text: '#999999'
++typography:
++  display-hero:
++    fontFamily: abcNormal
++    fontSize: 48px
++    fontWeight: 400
++    lineHeight: 1
++    letterSpacing: -1.2px
++  section-heading:
++    fontFamily: abcNormal
++    fontSize: 40px
++    fontWeight: 400
++  sub-heading:
++    fontFamily: abcNormal
++    fontSize: 36px
++    fontWeight: 400
++    lineHeight: 1
++    letterSpacing: -0.9px
++  card-title:
++    fontFamily: abcNormal
++    fontSize: 24px
++    fontWeight: 400
++    lineHeight: 1
++  feature-title:
++    fontFamily: abcNormal
++    fontSize: 20px
++    fontWeight: 400
++    lineHeight: 1
++  body-button:
++    fontFamily: abcNormal
++    fontSize: 16px
++  caption-label:
++    fontFamily: abcNormal
++    fontSize: 14px
++    letterSpacing: 0.35px
++  small:
++    fontFamily: abcNormal
++    fontSize: 13px
++    fontWeight: 400
++    lineHeight: 1.3
++  micro-tag:
++    fontFamily: abcNormal
++    fontSize: 11px
++    fontWeight: 450
++    lineHeight: 1.3
++rounded:
++  px-4: 4px
++  px-6: 6px
++  px-8: 8px
++  px-16: 16px
++spacing:
++  px-4: 4px
++  px-6: 6px
++  px-8: 8px
++  px-12: 12px
++  px-16: 16px
++  px-20: 20px
++  px-24: 24px
++  px-28: 28px
++  px-32: 32px
++  px-48: 48px
++  px-64: 64px
++  px-78: 78px
++components:
++  button-link:
++    rounded: '{rounded.px-4}'
++  mission-section:
++    backgroundColor: '{colors.canvas}'
++    textColor: '{colors.ink}'
++---
++
+ # Design System Inspired by Runway
+ 
+ ## 1. Visual Theme & Atmosphere

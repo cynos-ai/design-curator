@@ -1,0 +1,177 @@
+--- a/design-md/sanity/DESIGN.md
++++ b/design-md/sanity/DESIGN.md
+@@ -1,3 +1,174 @@
++---
++# Curator supplement, not official brand tokens.
++# Source notes: design-package attachments/sources/sanity.json; Skill assets/source-notes/sanity.json.
++# Partial tokens only: read the complete original prose and source notes.
++version: alpha
++name: Sanity-Inspired-design-analysis
++description: 'Sanity''s website is a developer-content platform rendered as a nocturnal command center -- dark,
++  precise, and deeply structured. The entire experience sits on a near-black canvas (`#0b0b0b`) that reads less
++  like a "dark mode toggle" and more like the natural state of a tool built for people who live in terminals. Where
++  most CMS marketing pages reach for friendly pastels and soft illustration, Sanity leans into the gravity of its
++  own product: structured content deserves a structured stage.'
++colors:
++  primary: '#f36458'
++  on-primary: '#ffffff'
++  canvas: '#0b0b0b'
++  canvas-deep: '#000000'
++  surface: '#212121'
++  surface-high: '#353535'
++  canvas-light: '#ededed'
++  ink: '#ffffff'
++  body: '#b9b9b9'
++  muted: '#797979'
++  ink-on-light: '#212121'
++  interactive: '#0052ef'
++  accent-blue-light: '#55beff'
++  accent-blue-soft: '#afe3ff'
++  success-srgb: '#19d600'
++  error: '#dd0000'
++  compliance: '#37cd84'
++  input-focus: '#072227'
++typography:
++  display-hero:
++    fontFamily: waldenburgNormal
++    fontSize: 112px
++    fontWeight: 400
++    lineHeight: 1
++    letterSpacing: -4.48px
++  hero-secondary:
++    fontFamily: waldenburgNormal
++    fontSize: 72px
++    fontWeight: 400
++    lineHeight: 1.05
++    letterSpacing: -2.88px
++  section-heading:
++    fontFamily: waldenburgNormal
++    fontSize: 48px
++    fontWeight: 400
++    lineHeight: 1.08
++    letterSpacing: -1.68px
++  heading-large:
++    fontFamily: waldenburgNormal
++    fontSize: 38px
++    fontWeight: 400
++    lineHeight: 1.1
++    letterSpacing: -1.14px
++  heading-medium:
++    fontFamily: waldenburgNormal
++    fontSize: 32px
++    fontWeight: 425
++    lineHeight: 1.24
++    letterSpacing: -0.32px
++  heading-small:
++    fontFamily: waldenburgNormal
++    fontSize: 24px
++    fontWeight: 425
++    lineHeight: 1.24
++    letterSpacing: -0.24px
++  subheading:
++    fontFamily: waldenburgNormal
++    fontSize: 20px
++    fontWeight: 425
++    lineHeight: 1.13
++    letterSpacing: -0.2px
++  body-large:
++    fontFamily: waldenburgNormal
++    fontSize: 18px
++    fontWeight: 400
++    lineHeight: 1.5
++    letterSpacing: -0.18px
++  body:
++    fontFamily: waldenburgNormal
++    fontSize: 16px
++    fontWeight: 400
++    lineHeight: 1.5
++  body-small:
++    fontFamily: waldenburgNormal
++    fontSize: 15px
++    fontWeight: 400
++    lineHeight: 1.5
++    letterSpacing: -0.15px
++  caption:
++    fontFamily: waldenburgNormal
++    fontSize: 13px
++    letterSpacing: -0.13px
++  small-caption:
++    fontFamily: waldenburgNormal
++    fontSize: 12px
++    fontWeight: 400
++    lineHeight: 1.5
++    letterSpacing: -0.12px
++  micro-label:
++    fontFamily: waldenburgNormal
++    fontSize: 11px
++  code-body:
++    fontFamily: IBM Plex Mono
++    fontSize: 15px
++    fontWeight: 400
++    lineHeight: 1.5
++  code-caption:
++    fontFamily: IBM Plex Mono
++    fontSize: 13px
++  code-micro:
++    fontFamily: IBM Plex Mono
++    fontWeight: 400
++rounded:
++  px-3: 3px
++  px-5: 5px
++  px-6: 6px
++  px-12: 12px
++  px-99999: 99999px
++spacing:
++  px-1: 1px
++  px-2: 2px
++  px-4: 4px
++  px-6: 6px
++  px-8: 8px
++  px-12: 12px
++  px-16: 16px
++  px-24: 24px
++  px-32: 32px
++  px-48: 48px
++  px-64: 64px
++components:
++  button-primary:
++    backgroundColor: '{colors.primary}'
++    textColor: '{colors.on-primary}'
++    padding: 8px 16px
++    rounded: '{rounded.px-99999}'
++  button-primary-hover:
++    backgroundColor: '{colors.interactive}'
++    textColor: '{colors.ink}'
++  button-secondary:
++    backgroundColor: '{colors.canvas}'
++    textColor: '{colors.body}'
++    padding: 8px 12px
++    rounded: '{rounded.px-99999}'
++  button-secondary-hover:
++    backgroundColor: '{colors.interactive}'
++    textColor: '{colors.ink}'
++  button-outline:
++    backgroundColor: '{colors.ink}'
++    textColor: '{colors.canvas}'
++    padding: 8px
++    rounded: '{rounded.px-99999}'
++  button-ghost:
++    backgroundColor: '{colors.surface}'
++    textColor: '{colors.body}'
++    padding: 0px 12px
++    rounded: '{rounded.px-5}'
++  text-input:
++    backgroundColor: '{colors.canvas}'
++    textColor: '{colors.body}'
++    padding: 8px 12px
++    rounded: '{rounded.px-3}'
++  search-input:
++    backgroundColor: '{colors.canvas}'
++    textColor: '{colors.body}'
++    padding: 0px 12px
++    rounded: '{rounded.px-3}'
++---
++
+ # Design System Inspired by Sanity
+ 
+ ## 1. Visual Theme & Atmosphere

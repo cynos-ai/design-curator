@@ -1,0 +1,209 @@
+--- a/design-md/theverge/DESIGN.md
++++ b/design-md/theverge/DESIGN.md
+@@ -1,3 +1,206 @@
++---
++# Curator supplement, not official brand tokens.
++# Source notes: design-package attachments/sources/theverge.json; Skill assets/source-notes/theverge.json.
++# Partial tokens only: read the complete original prose and source notes.
++version: alpha
++name: The Verge-Inspired-design-analysis
++description: 'The Verge''s 2024 redesign feels like somebody wired a Condé Nast magazine to a chiptune soundboard.
++  The canvas is almost-black (`#131313`), the headlines are built from a brutally heavy display face (Manuka) that
++  runs up to 107px, and the whole page is peppered with acid-mint `#3cffd0` and ultraviolet `#5200ff` that behave
++  less like brand colors and more like hazard tape. Story tiles are not quiet gray cards — they''re saturated, full-bleed
++  color blocks (yellow, pink, orange, blue, purple) that feel like pasted-up rave flyers arranged into a timeline.
++  The mood is "developer console meets club night meets tech tabloid": serious enough to cover a congressional hearing,
++  loud enough to review a synthesizer.'
++colors:
++  primary: '#3cffd0'
++  on-primary: '#000000'
++  secondary: '#5200ff'
++  canvas: '#131313'
++  ink: '#ffffff'
++  surface: '#2d2d2d'
++  image-frame: '#313131'
++  muted: '#949494'
++  button-muted: '#e9e9e9'
++  ink-inverted: '#131313'
++  primary-border: '#309875'
++  link-hover: '#3860be'
++  focus: '#1eaedb'
++  timeline-rule: '#3d00bf'
++  pressed: '#8c8c8c'
++  hover-surface: rgba(255,255,255,0.2)
++  hover-ring: '#c2c2c2'
++  active-surface: rgba(140,140,140,0.87)
++  focus-border: '#0500ff'
++  overlay: rgba(0,0,0,0.33)
++typography:
++  hero-wordmark-display:
++    fontFamily: Manuka
++    fontSize: 107px
++    fontWeight: 900
++    lineHeight: 0.8
++    letterSpacing: 1.07px
++  secondary-display:
++    fontFamily: Manuka
++    fontSize: 90px
++    fontWeight: 900
++    lineHeight: 0.8
++  tertiary-display:
++    fontFamily: Manuka
++    fontSize: 60px
++    fontWeight: 900
++    lineHeight: 0.8
++  large-headline:
++    fontFamily: PolySans
++    fontSize: 34px
++    fontWeight: 700
++    lineHeight: 1
++  heading-wide:
++    fontFamily: PolySans
++    fontSize: 32px
++    fontWeight: 400
++    lineHeight: 1.1
++    letterSpacing: 0.32px
++  heading-medium:
++    fontFamily: PolySans
++    fontSize: 24px
++    fontWeight: 700
++    lineHeight: 1
++  heading-small:
++    fontFamily: PolySans
++    fontSize: 20px
++    fontWeight: 700
++    lineHeight: 1
++  light-capitalized-label:
++    fontFamily: PolySans
++    fontSize: 19px
++    fontWeight: 300
++    lineHeight: 1.2
++    letterSpacing: 1.9px
++  all-caps-label-xl:
++    fontFamily: PolySans
++    fontSize: 18px
++    fontWeight: 400
++    lineHeight: 1.1
++    letterSpacing: 1.8px
++  bold-body:
++    fontFamily: PolySans
++    fontSize: 16px
++    fontWeight: 700
++    lineHeight: 1
++  body-relaxed:
++    fontFamily: PolySans
++    fontSize: 16px
++    fontWeight: 500
++    lineHeight: 1.6
++  inline-label:
++    fontFamily: PolySans
++    fontSize: 15px
++    fontWeight: 400
++    lineHeight: 1.2
++    letterSpacing: 0.15px
++  body-compact:
++    fontFamily: PolySans
++    fontSize: 13px
++    fontWeight: 400
++    lineHeight: 1.6
++  eyebrow-all-caps:
++    fontFamily: PolySans
++    fontSize: 12px
++    fontWeight: 400
++    lineHeight: 1.3
++    letterSpacing: 1.8px
++  tag-label:
++    fontFamily: PolySans
++    fontSize: 12px
++    fontWeight: 400
++    lineHeight: 1.2
++    letterSpacing: 0.72px
++  caption-micro:
++    fontFamily: PolySans
++    fontSize: 11px
++    fontWeight: 400
++    lineHeight: 1.2
++    letterSpacing: 1.1px
++  meta-nano:
++    fontFamily: PolySans
++    fontSize: 10px
++    fontWeight: 500
++    lineHeight: 1.4
++    letterSpacing: 1.5px
++  mono-button-label:
++    fontFamily: PolySans Mono
++    fontSize: 12px
++    fontWeight: 600
++    lineHeight: 2
++    letterSpacing: 1.5px
++  mono-timestamp:
++    fontFamily: PolySans Mono
++    fontSize: 11px
++    lineHeight: 1.2
++  serif-body:
++    fontFamily: FK Roman Standard
++    fontSize: 16px
++    fontWeight: 400
++    lineHeight: 1.3
++    letterSpacing: -0.16px
++  serif-caption:
++    fontFamily: FK Roman Standard
++    fontSize: 20px
++    fontWeight: 400
++    lineHeight: 1.2
++rounded:
++  px-2: 2px
++  px-3: 3px
++  px-4: 4px
++  px-20: 20px
++  px-24: 24px
++  px-30: 30px
++  px-40: 40px
++spacing:
++  px-1: 1px
++  px-2: 2px
++  px-4: 4px
++  px-5: 5px
++  px-6: 6px
++  px-8: 8px
++  px-9: 9px
++  px-10: 10px
++  px-12: 12px
++  px-14: 14px
++  px-15: 15px
++  px-16: 16px
++  px-20: 20px
++  px-24: 24px
++  px-25: 25px
++components:
++  button-primary:
++    backgroundColor: '{colors.primary}'
++    textColor: '{colors.on-primary}'
++    padding: 10px 24px
++    rounded: '{rounded.px-24}'
++  button-primary-hover:
++    backgroundColor: '{colors.hover-surface}'
++    textColor: '{colors.on-primary}'
++  button-primary-active:
++    backgroundColor: '{colors.active-surface}'
++  button-primary-focus:
++    backgroundColor: '{colors.focus}'
++    textColor: '{colors.ink}'
++  button-secondary:
++    backgroundColor: '{colors.surface}'
++    textColor: '{colors.button-muted}'
++    padding: 10px 24px
++    rounded: '{rounded.px-24}'
++  button-outline:
++    backgroundColor: transparent
++    textColor: '{colors.primary}'
++    rounded: '{rounded.px-40}'
++  text-input:
++    backgroundColor: '{colors.canvas}'
++    textColor: '{colors.ink}'
++    rounded: '{rounded.px-2}'
++---
++
+ # Design System Inspired by The Verge
+ 
+ ## 1. Visual Theme & Atmosphere

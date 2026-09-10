@@ -1,0 +1,112 @@
+# Curator supplement, not official brand tokens.
+# Source notes: design-package attachments/sources/mastercard.json; Skill assets/source-notes/mastercard.json.
+# Partial tokens only: read the complete original prose and source notes.
+version: alpha
+name: Mastercard-Inspired-design-analysis
+description: 'Mastercard''s experience reads like a warm, editorial magazine built from soft stone and signal orange.
+  The canvas is a muted putty-cream (`#F3F0EE`) — not white, not gray, but a color that feels like the paper of
+  a premium annual report. On top of that canvas, everything that matters is shaped like a stadium, a pill, or a
+  perfect circle. The dominant visual gesture is the **oversized radius**: heroes carry 40-point corners, cards
+  go fully pill-shaped, service images are cropped into circular orbits, and buttons either complete the pill or
+  fit snugly at 20 points. There are almost no sharp corners anywhere on the page.'
+colors:
+  primary: '#141413'
+  on-primary: '#F3F0EE'
+  canvas: '#F3F0EE'
+  ink: '#141413'
+  canvas-lifted: '#FCFBFA'
+  surface: '#FFFFFF'
+  surface-bone: '#F4F4F4'
+  text-secondary: '#262627'
+  muted: '#696969'
+  neutral-granite: '#555555'
+  neutral-graphite: '#565656'
+  whisper: '#D1CDC7'
+  consent: '#CF4500'
+  orbit: '#F37338'
+  consent-link: '#9A3A0A'
+  link: '#3860BE'
+  logo-red: '#EB001B'
+  logo-yellow: '#F79E1B'
+typography:
+  h1-hero:
+    fontFamily: MarkForMC
+    fontSize: 64px
+    fontWeight: 500
+    lineHeight: 64px
+    letterSpacing: -1.28px
+  h2-section:
+    fontFamily: MarkForMC
+    fontSize: 36px
+    fontWeight: 500
+    lineHeight: 44px
+    letterSpacing: -0.72px
+  h3-card-title:
+    fontFamily: MarkForMC
+    fontSize: 24px
+    fontWeight: 500
+    lineHeight: 28.8px
+    letterSpacing: -0.48px
+  h4-subhead:
+    fontFamily: MarkForMC
+    fontSize: 14px
+    fontWeight: 700
+    lineHeight: 18.2px
+  eyebrow-h5:
+    fontFamily: MarkForMC
+    fontSize: 14px
+    fontWeight: 700
+    lineHeight: 14px
+    letterSpacing: 0.56px
+  body-paragraph:
+    fontFamily: MarkForMC
+    fontSize: 16px
+    fontWeight: 450
+    lineHeight: 22.4px
+  nav-link-button-label:
+    fontFamily: MarkForMC
+    fontSize: 16px
+    fontWeight: 500
+    lineHeight: 16px
+    letterSpacing: -0.48px
+  footer-link:
+    fontFamily: MarkForMC
+    fontSize: 14px
+    fontWeight: 450
+  footer-column-header:
+    fontFamily: MarkForMC
+    fontWeight: 700
+    lineHeight: 14px
+    letterSpacing: 0.56px
+rounded:
+  px-20: 20px
+  px-24: 24px
+  px-40: 40px
+  px-99: 99px
+  px-999: 999px
+  px-1000: 1000px
+spacing:
+  px-8: 8px
+  px-16: 16px
+  px-24: 24px
+  px-32: 32px
+  px-48: 48px
+  px-64: 64px
+  px-96: 96px
+  px-128: 128px
+components:
+  button-primary:
+    backgroundColor: '{colors.primary}'
+    textColor: '{colors.on-primary}'
+    padding: 6px 24px
+    rounded: '{rounded.px-20}'
+  button-secondary:
+    backgroundColor: '{colors.surface}'
+    textColor: '{colors.ink}'
+    padding: 6px 24px
+    rounded: '{rounded.px-20}'
+  button-consent:
+    backgroundColor: '{colors.consent}'
+    textColor: '{colors.surface}'
+    padding: 1px 30px
+    rounded: '{rounded.px-24}'

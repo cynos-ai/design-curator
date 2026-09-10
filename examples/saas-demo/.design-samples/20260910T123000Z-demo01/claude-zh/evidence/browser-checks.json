@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "method": "isolated Chromium browser inspection against localhost-only Python static server",
+  "viewports": {
+    "1440": {
+      "overflow": false,
+      "button_heights_css_px": [
+        45.6875,
+        45.6875,
+        45.6875,
+        45.6875
+      ]
+    },
+    "768": {
+      "overflow": false,
+      "desktop_nav_hidden": true,
+      "cards_columns": 1
+    },
+    "375": {
+      "overflow": false,
+      "h1_css_px": 44,
+      "actions_layout": "grid",
+      "button_heights_css_px": [
+        45.6875,
+        45.6875,
+        45.6875,
+        45.6875
+      ]
+    }
+  },
+  "fonts": {
+    "document_status": "loaded",
+    "body_declared": "Inter, Noto Sans CJK SC, PingFang SC, Microsoft YaHei, sans-serif",
+    "heading_declared": "Georgia, Noto Serif CJK SC, Songti SC, STSong, serif",
+    "limit": "Declaration/loading checked; per-glyph provenance not claimed."
+  },
+  "focus": {
+    "keyboard_tab_target": "知澜 home link",
+    "outline": "3px solid rgb(93, 184, 166)",
+    "outline_offset": "3px"
+  },
+  "contrast": {
+    "coral_deep_ink": 5.625,
+    "active_coral_deep_ink": 4.77,
+    "dark_cream": 17.005,
+    "method": "WCAG relative luminance formula; opaque solid pairs used by sample"
+  },
+  "screenshots": {
+    "focus-375.png": "b1f9d881920ff4e7d67677282f59995a19efab8796d10b0b800eb7be890670b2",
+    "viewport-1440.png": "b095f9f8f4108bf6f578049cca70296ca838bb080f1cadca2f26502face81a93",
+    "viewport-375.png": "5d34f7a354da7d448928701b11308d90ef2a04bc94f657fdb816b4917029053d",
+    "viewport-768.png": "f331735b7b3ad5cb46e63677a2c9c5cdc87bc126f84bd8c59b5af1b14d4c5858"
+  },
+  "console_note": "An initial pre-fix navigation requested a missing favicon. sample.html then added an empty data favicon and all final screenshots were regenerated; no application script errors were observed."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-10",
+  "status": "pass-with-declared-limits",
+  "library": {
+    "count": 74,
+    "source_commit": "8147538b4226ae41e2487a9179e3bcc1f68e8554",
+    "check": "pass"
+  },
+  "automated_tests": {
+    "count": 15,
+    "passed": 15,
+    "failed": 0,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "skill_frontmatter": "pass",
+  "authored_local_links": "pass",
+  "demo": {
+    "status": "ready-machine-verified",
+    "design_sha256": "932ab9fad6b58f4d3125d6f25a46b217b23d8ae19dcfbd373486e4640ef37b88",
+    "sample_bundle_sha256": "d373e0733b45bc5453eca12a6119530a4d55c21216b2702db919568e36d8ccb1",
+    "viewports": [
+      375,
+      768,
+      1440
+    ],
+    "evidence": "examples/saas-demo/.design-samples/20260910T123000Z-demo01/claude-zh/evidence"
+  },
+  "limits": [
+    "Not all 74 systems were browser-rendered.",
+    "Agent semantic selection is an instruction-driven workflow, not an automated scorer.",
+    "Scoped demo checks are not complete WCAG certification.",
+    "Manual/not-executed scenario status remains explicit in tests/scenarios.md."
+  ]
+}

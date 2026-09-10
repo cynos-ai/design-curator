@@ -1,0 +1,153 @@
+--- a/design-md/starbucks/DESIGN.md
++++ b/design-md/starbucks/DESIGN.md
+@@ -1,3 +1,150 @@
++---
++# Curator supplement, not official brand tokens.
++# Source notes: design-package attachments/sources/starbucks.json; Skill assets/source-notes/starbucks.json.
++# Partial tokens only: read the complete original prose and source notes.
++version: alpha
++name: Starbucks-Inspired-design-analysis
++description: 'Starbucks'' design system is a **warm, confident retail flagship** wearing the green of their storefront
++  apron across every surface. The canvas alternates between a neutral-warm cream (`#f2f0eb`) and a ceramic off-white
++  (`#edebe9`) — colors that reference actual store materials: the paper napkins, the café walls, the wood finishes
++  — while the signature **Starbucks Green** (`#006241`) anchors the brand moment on hero bands, CTAs, and the Rewards
++  experience. The greens come in four calibrated shades (Starbucks, Accent, House, Uplift) each mapped to a specific
++  surface role, and gold (`#cba258`) appears only around Rewards-status ceremony — not as a general accent.'
++colors:
++  primary: '#00754A'
++  on-primary: '#ffffff'
++  brand-green: '#006241'
++  house-green: '#1E3932'
++  uplift: '#2b5148'
++  green-light: '#d4e9e2'
++  canvas: '#f2f0eb'
++  canvas-ceramic: '#edebe9'
++  surface: '#ffffff'
++  surface-cool: '#f9f9f9'
++  black: '#000000'
++  ink: rgba(0,0,0,0.87)
++  muted: rgba(0,0,0,0.58)
++  on-dark: rgba(255,255,255,1)
++  on-dark-soft: rgba(255,255,255,0.70)
++  rewards-text: '#33433d'
++  rewards-gold: '#cba258'
++  rewards-gold-light: '#dfc49d'
++  rewards-surface: '#faf6ee'
++  error: '#c82014'
++  warning: '#fbbc05'
++  valid-tint: hsl(160 32% 87% / 33%)
++  invalid-tint: hsl(4 82% 43% / 5%)
++  consent: rgb(0,130,72)
++  input-border: '#d6dbde'
++  table-hairline: '#e7e7e7'
++typography:
++  display-text-10:
++    fontFamily: SoDoSans
++    lineHeight: 1.2
++    letterSpacing: -0.16px
++  jumbo-text-9:
++    fontFamily: SoDoSans
++    lineHeight: 1.2
++    letterSpacing: -0.16px
++  hero-large-text-8:
++    fontFamily: SoDoSans
++    letterSpacing: -0.16px
++  h1:
++    fontFamily: SoDoSans
++    fontSize: 24px
++    fontWeight: 600
++    lineHeight: 36px
++    letterSpacing: -0.16px
++  h2:
++    fontFamily: SoDoSans
++    fontSize: 24px
++    fontWeight: 400
++    lineHeight: 36px
++    letterSpacing: -0.16px
++  body-large:
++    fontFamily: SoDoSans
++    fontSize: 19px
++    lineHeight: 33.25px
++    letterSpacing: -0.16px
++  body-text-3:
++    fontFamily: SoDoSans
++    fontSize: 16px
++    fontWeight: 400
++    lineHeight: 1.5
++    letterSpacing: -0.01em
++  small-text-2:
++    fontFamily: SoDoSans
++    fontSize: 14px
++    lineHeight: 1.5
++    letterSpacing: -0.01em
++  micro-text-1:
++    fontFamily: SoDoSans
++    fontSize: 13px
++    fontWeight: 400
++    lineHeight: 1.5
++    letterSpacing: -0.01em
++  button-label:
++    fontFamily: SoDoSans
++    lineHeight: 1.2
++    letterSpacing: -0.01em
++rounded:
++  px-4: 4px
++  px-12: 12px
++  px-50: 50px
++spacing:
++  px-4: 4px
++  px-8: 8px
++  px-16: 16px
++  px-24: 24px
++  px-32: 32px
++  px-40: 40px
++  px-48: 48px
++  px-56: 56px
++  px-64: 64px
++components:
++  button-primary:
++    backgroundColor: '{colors.primary}'
++    textColor: '{colors.on-primary}'
++    padding: 7px 16px
++    rounded: '{rounded.px-50}'
++  button-outline:
++    backgroundColor: transparent
++    textColor: '{colors.primary}'
++    padding: 7px 16px
++    rounded: '{rounded.px-50}'
++  button-black:
++    backgroundColor: '{colors.black}'
++    textColor: '{colors.on-primary}'
++    padding: 7px 16px
++    rounded: '{rounded.px-50}'
++  button-signin:
++    backgroundColor: transparent
++    textColor: '{colors.ink}'
++    padding: 7px 16px
++    rounded: '{rounded.px-50}'
++  button-inverted:
++    backgroundColor: '{colors.surface}'
++    textColor: '{colors.primary}'
++  button-consent:
++    backgroundColor: '{colors.consent}'
++    textColor: '{colors.on-primary}'
++    padding: 7px 16px
++    rounded: '{rounded.px-50}'
++  card-content:
++    backgroundColor: '{colors.surface}'
++    rounded: '{rounded.px-12}'
++  button-customize:
++    backgroundColor: '{colors.surface}'
++    textColor: '{colors.primary}'
++    padding: 14px 40px
++    rounded: '{rounded.px-50}'
++  button-add-order:
++    backgroundColor: '{colors.primary}'
++    textColor: '{colors.on-primary}'
++    padding: 14px 32px
++    rounded: '{rounded.px-50}'
++---
++
+ # Design System Inspired by Starbucks
+ 
+ ## 1. Visual Theme & Atmosphere

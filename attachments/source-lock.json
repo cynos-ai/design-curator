@@ -1,0 +1,559 @@
+{
+  "schema_version": 1,
+  "repo": "https://github.com/VoltAgent/awesome-design-md",
+  "commit": "8147538b4226ae41e2487a9179e3bcc1f68e8554",
+  "snapshot_kind": "README + LICENSE + 74 original DESIGN.md files; no other upstream files",
+  "files": [
+    {
+      "slug": "airbnb",
+      "path": "design-md/airbnb/DESIGN.md",
+      "sha256": "add34130d67209ad105346d60fe2b290728b9711683969db4b7760e29477a5fe"
+    },
+    {
+      "slug": "airtable",
+      "path": "design-md/airtable/DESIGN.md",
+      "sha256": "1d225e511213044d3c705bde50265ad010932bfd8a15740a144dd4f480128889"
+    },
+    {
+      "slug": "apple",
+      "path": "design-md/apple/DESIGN.md",
+      "sha256": "83fbc614443a9b3d7569e9956a43e7b8740f9d0f939f58b8154f7a7cec3002b2"
+    },
+    {
+      "slug": "binance",
+      "path": "design-md/binance/DESIGN.md",
+      "sha256": "378ff97d568ccbc316519b9d45a29d6649ed8961c9c486c3ed4cea7501d72371"
+    },
+    {
+      "slug": "bmw",
+      "path": "design-md/bmw/DESIGN.md",
+      "sha256": "b7268279e7c98e85fb80890e06765f4ee8340ba1ea1ccb5a8a5b134de43dac3e"
+    },
+    {
+      "slug": "bmw-m",
+      "path": "design-md/bmw-m/DESIGN.md",
+      "sha256": "824a1707c0a8d1609d72477d0fa211b9ebe4bdeb3e1fd701790af7b7bb669a4a"
+    },
+    {
+      "slug": "bugatti",
+      "path": "design-md/bugatti/DESIGN.md",
+      "sha256": "375f0a20ada88cdee5e995ca7edcfbd584ddf5f887024deebd1bc75bfd55b1bc"
+    },
+    {
+      "slug": "cal",
+      "path": "design-md/cal/DESIGN.md",
+      "sha256": "8cd21b7d67e94c899843d517f4b426e4fee33d47354a433d6a63ebcf79d5a654"
+    },
+    {
+      "slug": "claude",
+      "path": "design-md/claude/DESIGN.md",
+      "sha256": "3d972f34f8d4f33b442fa28220cf3b7ca2f13c0a97c468e3988148f82521f9df"
+    },
+    {
+      "slug": "clay",
+      "path": "design-md/clay/DESIGN.md",
+      "sha256": "1abd803a207fbe950a06e155adcd6013c2e149b13e7b88844f5069f9d3d99eb3"
+    },
+    {
+      "slug": "clickhouse",
+      "path": "design-md/clickhouse/DESIGN.md",
+      "sha256": "50987e29b603cc7503ebe724af810fcf43845e96fdd4083e0fbe5fe00d2cdd2e"
+    },
+    {
+      "slug": "cohere",
+      "path": "design-md/cohere/DESIGN.md",
+      "sha256": "1c49a5a5f88d43841d4f4afa33831328d47a5715048700a3b75086a822575883"
+    },
+    {
+      "slug": "coinbase",
+      "path": "design-md/coinbase/DESIGN.md",
+      "sha256": "c8c67800dd7f58fcc87ed7d267a3bba862e3419e499e8a66d67731a69d2de1d6"
+    },
+    {
+      "slug": "composio",
+      "path": "design-md/composio/DESIGN.md",
+      "sha256": "e7db886dabecca61f29b83e8f46d7a1e8a43889d30b81bc6e48162ccaafcbb2f"
+    },
+    {
+      "slug": "cursor",
+      "path": "design-md/cursor/DESIGN.md",
+      "sha256": "a3db9b3019dc2f514fdee7cd0ca0a5232c0bd0119e23178e8eebaf6916258d9d"
+    },
+    {
+      "slug": "dell-1996",
+      "path": "design-md/dell-1996/DESIGN.md",
+      "sha256": "e186c614b1223fe7015670472ac6bc84b5b3fdd5de5325b3ce5bfb7fbe9c8d6e"
+    },
+    {
+      "slug": "elevenlabs",
+      "path": "design-md/elevenlabs/DESIGN.md",
+      "sha256": "3b359acfaafadbb499c7ed3eebe813a76e0be497a7157b77de207fe275068a66"
+    },
+    {
+      "slug": "expo",
+      "path": "design-md/expo/DESIGN.md",
+      "sha256": "1be7e129b6f75afaa12318a7c51ab22f6f74a214dec22c4827cecc519f112363"
+    },
+    {
+      "slug": "ferrari",
+      "path": "design-md/ferrari/DESIGN.md",
+      "sha256": "1199e2832641cac7e384aaf3b1f3db87f992240cea5d3d1eee04d9dc00acb17c"
+    },
+    {
+      "slug": "figma",
+      "path": "design-md/figma/DESIGN.md",
+      "sha256": "716ce8431f47eb8b8135552710e3c4d538bccccf1202e4ceac5428c9aada9972"
+    },
+    {
+      "slug": "framer",
+      "path": "design-md/framer/DESIGN.md",
+      "sha256": "a5d47dddacf5a04577cec0be6fe0fc53b7402254c7686874af3e59bcc7588cb4"
+    },
+    {
+      "slug": "hashicorp",
+      "path": "design-md/hashicorp/DESIGN.md",
+      "sha256": "d2df9be72d867e48d318fd18db04e60a78357c27e392ab921fc2ba7f46951442"
+    },
+    {
+      "slug": "hp",
+      "path": "design-md/hp/DESIGN.md",
+      "sha256": "4c9a248046684bdde5311a0c9881814f50e2381c2b0f3c75b02a35fc64bc8bb8"
+    },
+    {
+      "slug": "ibm",
+      "path": "design-md/ibm/DESIGN.md",
+      "sha256": "46f6fd65b5e7524fed1133b9b3c0dd619f9a0f145fbb2b87f3675c701a88f3bd"
+    },
+    {
+      "slug": "intercom",
+      "path": "design-md/intercom/DESIGN.md",
+      "sha256": "962be23cd947e87a86b2ffbc0440e9d0808243a6ef3af2aa04e8e7cc04d48ba3"
+    },
+    {
+      "slug": "kraken",
+      "path": "design-md/kraken/DESIGN.md",
+      "sha256": "41bcbd5642c926a549f0d50f1151484c5776b4536233240c8415cfb79bcf1f38"
+    },
+    {
+      "slug": "lamborghini",
+      "path": "design-md/lamborghini/DESIGN.md",
+      "sha256": "9aa68c53b481a0befdf72859db5625f85454122294509989aa58414aaee04b34"
+    },
+    {
+      "slug": "linear.app",
+      "path": "design-md/linear.app/DESIGN.md",
+      "sha256": "30bd30e72c48a16e4bdbd010f2d1c85fab657c6fae3cc85389399aab10f9cb5f"
+    },
+    {
+      "slug": "lovable",
+      "path": "design-md/lovable/DESIGN.md",
+      "sha256": "92790895c833104072643929ba56ebbf42c8f88ffb7bff1926462545d0ace6c7"
+    },
+    {
+      "slug": "mastercard",
+      "path": "design-md/mastercard/DESIGN.md",
+      "sha256": "e76ceaa187f43bd24b8338d2b2314e71e9225b36492e40f32a55782281a10437"
+    },
+    {
+      "slug": "meta",
+      "path": "design-md/meta/DESIGN.md",
+      "sha256": "306dfad97c006d47b134fb0dbd55ff68d3baa526844d6eb37346373c9ef35339"
+    },
+    {
+      "slug": "minimax",
+      "path": "design-md/minimax/DESIGN.md",
+      "sha256": "2658b96488bb629749259b152c5ba2912a0e8feb6a03477e265879abd9264c50"
+    },
+    {
+      "slug": "mintlify",
+      "path": "design-md/mintlify/DESIGN.md",
+      "sha256": "754ffcf35dcd39ef8aef450085ce936aaca5b872ff92caa66be99e91a5c3d5ec"
+    },
+    {
+      "slug": "miro",
+      "path": "design-md/miro/DESIGN.md",
+      "sha256": "87c71f76297277d64f9679e015a50da88e72d86d7b41badf8733eae1e4cde335"
+    },
+    {
+      "slug": "mistral.ai",
+      "path": "design-md/mistral.ai/DESIGN.md",
+      "sha256": "40e2c692d72c54bae1e43446e2d059b71d773668d39d71ccb7ededa9fa07d145"
+    },
+    {
+      "slug": "mongodb",
+      "path": "design-md/mongodb/DESIGN.md",
+      "sha256": "4523f10efd5ccd46f9aeac3b98626e24bcf907bc0c1e46500cb0e3920f932e71"
+    },
+    {
+      "slug": "nike",
+      "path": "design-md/nike/DESIGN.md",
+      "sha256": "d2a3d363665839e2ddc15c91b8a9f3e92b1962ff55a7ca5d964ab3bb88b8186c"
+    },
+    {
+      "slug": "nintendo-2001",
+      "path": "design-md/nintendo-2001/DESIGN.md",
+      "sha256": "9630af17090d5c39ba9d8b5915a597a96c7552efe1422b3b8c3f31fb3e636716"
+    },
+    {
+      "slug": "notion",
+      "path": "design-md/notion/DESIGN.md",
+      "sha256": "fa9d6e78216d8f3e5d3990709ca2de6bc2e268e945bb94f255fd1bfb15455266"
+    },
+    {
+      "slug": "nvidia",
+      "path": "design-md/nvidia/DESIGN.md",
+      "sha256": "d649be85daf075c98a17071e707e3901c6e19150044a81716acd01ef1169cc83"
+    },
+    {
+      "slug": "ollama",
+      "path": "design-md/ollama/DESIGN.md",
+      "sha256": "3f36f897e5aad870344dd97e282c8f125ad208dc99449bb08dd38b9259d2f451"
+    },
+    {
+      "slug": "opencode.ai",
+      "path": "design-md/opencode.ai/DESIGN.md",
+      "sha256": "d1a8893c4b8ac90b1e86230eee2effa8bd15add3582853477920e32432336dda"
+    },
+    {
+      "slug": "pinterest",
+      "path": "design-md/pinterest/DESIGN.md",
+      "sha256": "26a202fd244e9213d5e2475d81581828da1dd97e089e44639d9783d04f96e4a8"
+    },
+    {
+      "slug": "playstation",
+      "path": "design-md/playstation/DESIGN.md",
+      "sha256": "2a56c109af6cb847fa091b768f719b498ac56b582d010860e73ea5fb72a1590d"
+    },
+    {
+      "slug": "posthog",
+      "path": "design-md/posthog/DESIGN.md",
+      "sha256": "01f497f751d56296bfcd5eb8806325a4bb4786d364941ec6e65c65fa9ee6d362"
+    },
+    {
+      "slug": "raycast",
+      "path": "design-md/raycast/DESIGN.md",
+      "sha256": "6e2c5137e4d914b70996d589688374a801b6f29a35c9c019c22abb5e0170bda3"
+    },
+    {
+      "slug": "renault",
+      "path": "design-md/renault/DESIGN.md",
+      "sha256": "b343df9a67e57f248e9eee704f52b17dff9cf6a46d1dc9f8d7ab36741940db59"
+    },
+    {
+      "slug": "replicate",
+      "path": "design-md/replicate/DESIGN.md",
+      "sha256": "c22062d7b4174bf9ced7bc61c48389086cf6eed96a958e098ee70389893b0a15"
+    },
+    {
+      "slug": "resend",
+      "path": "design-md/resend/DESIGN.md",
+      "sha256": "99536f1b2380511a539f7f3466d46d351e4bf35a5af0c0df395bdc20af05c9be"
+    },
+    {
+      "slug": "revolut",
+      "path": "design-md/revolut/DESIGN.md",
+      "sha256": "b7fa8473315541f5d7e7d76f68a77105d255e6dae00d31d5eb34621d1d52de59"
+    },
+    {
+      "slug": "runwayml",
+      "path": "design-md/runwayml/DESIGN.md",
+      "sha256": "b0e69bf643f89bb57ac0b82a3bf025e59ff1478c244cb0528ad1e38b3f80dac9"
+    },
+    {
+      "slug": "sanity",
+      "path": "design-md/sanity/DESIGN.md",
+      "sha256": "ea1c442de2b23443f79af46524a81f33951606c8ff043ea9c25ba886264fbdd8"
+    },
+    {
+      "slug": "sentry",
+      "path": "design-md/sentry/DESIGN.md",
+      "sha256": "655c91d7d23b5e869a966b7f1b63ae650567ad5d69003cfc64b0ee62c8e02c1f"
+    },
+    {
+      "slug": "shopify",
+      "path": "design-md/shopify/DESIGN.md",
+      "sha256": "495e89b8d0a1848ded013c040f7a2ae62077e9d87fc4385350e25dee02ccdb38"
+    },
+    {
+      "slug": "slack",
+      "path": "design-md/slack/DESIGN.md",
+      "sha256": "03cb243015a2e11d0faf05caba7f3d0c7fda6839b1f5ce707a23e8d46d1a11bd"
+    },
+    {
+      "slug": "spacex",
+      "path": "design-md/spacex/DESIGN.md",
+      "sha256": "495450c79faab54d12d677649ca0a2c30a60f64f536a802e945ad54185c5baad"
+    },
+    {
+      "slug": "spotify",
+      "path": "design-md/spotify/DESIGN.md",
+      "sha256": "72e964a6cf551d0603f9854f2f42ee08e97ad4d9e17e037f50f6233508288295"
+    },
+    {
+      "slug": "starbucks",
+      "path": "design-md/starbucks/DESIGN.md",
+      "sha256": "e20338ee10226c63cf2588207288c08e12d60754a53f681657adaf364dfe8fa7"
+    },
+    {
+      "slug": "stripe",
+      "path": "design-md/stripe/DESIGN.md",
+      "sha256": "5c8806b7dd3e0c2554ccba9d1e2a7c78e7c6e50e44fcf6ff5daea6026f8a9ed9"
+    },
+    {
+      "slug": "supabase",
+      "path": "design-md/supabase/DESIGN.md",
+      "sha256": "f57287d7f44d59e8169dc4b4304ff03c1a2efb37f5433b9c04460caae7710880"
+    },
+    {
+      "slug": "superhuman",
+      "path": "design-md/superhuman/DESIGN.md",
+      "sha256": "3640298bd2957aee80ce88eb465a7541ba835ec105cba364a6a621d885c7f34f"
+    },
+    {
+      "slug": "tesla",
+      "path": "design-md/tesla/DESIGN.md",
+      "sha256": "19f2f7e6073d708f46d2512e6bab3c7c417cf2b4d9f57ff6ec6f2e056ea942b0"
+    },
+    {
+      "slug": "theverge",
+      "path": "design-md/theverge/DESIGN.md",
+      "sha256": "5da2c3116e6845826b043ac115a80896a399efda2cebc0188981fba2ef9bb526"
+    },
+    {
+      "slug": "together.ai",
+      "path": "design-md/together.ai/DESIGN.md",
+      "sha256": "aee472c583f55a2f2c7ee1c403a96dddadb3ff6dc518335451f431e313bf43cf"
+    },
+    {
+      "slug": "uber",
+      "path": "design-md/uber/DESIGN.md",
+      "sha256": "f30d2257d2d090790332d00ccb16cd2516c3c6008be61ad2ce83c4e991bcc803"
+    },
+    {
+      "slug": "vercel",
+      "path": "design-md/vercel/DESIGN.md",
+      "sha256": "d0951b93c2b4ce9840c715c9f9b3e58a386c6c58ae5cc0f804dec3b116b95bd8"
+    },
+    {
+      "slug": "vodafone",
+      "path": "design-md/vodafone/DESIGN.md",
+      "sha256": "293a40951e654283978fa744b24177a159d8f2a60f402bc735bf081618af0ef6"
+    },
+    {
+      "slug": "voltagent",
+      "path": "design-md/voltagent/DESIGN.md",
+      "sha256": "4457887741ae5e965e205282b03c4bff83e47dd7a03cd7f38c64623a17569fcd"
+    },
+    {
+      "slug": "warp",
+      "path": "design-md/warp/DESIGN.md",
+      "sha256": "5b1201f7b1b4e72570d148d1f980fd1cb35e6e4122d48dd271787aa3538a25ad"
+    },
+    {
+      "slug": "webflow",
+      "path": "design-md/webflow/DESIGN.md",
+      "sha256": "9230c7b3951371fc2edc04958962e32bb7ec9a9b703aa6b72eaf5c7991b7c984"
+    },
+    {
+      "slug": "wired",
+      "path": "design-md/wired/DESIGN.md",
+      "sha256": "eb439dcc573401dc30583f40e7eef8a60b769232da59e524de6dce56d5c3593e"
+    },
+    {
+      "slug": "wise",
+      "path": "design-md/wise/DESIGN.md",
+      "sha256": "442df0ad7380efd8712f5574bdca34a73cfb41a2a43454ff459863a6258af547"
+    },
+    {
+      "slug": "x.ai",
+      "path": "design-md/x.ai/DESIGN.md",
+      "sha256": "9c9ef45d8c0c3b9a7622833cdff8bd125ed6bf296a82cc7274215276706e52eb"
+    },
+    {
+      "slug": "zapier",
+      "path": "design-md/zapier/DESIGN.md",
+      "sha256": "9aee43ba8ece1b4fd0753b4cad0a29f3497331882fa376f0dd4fea8a018c32fc"
+    }
+  ],
+  "overlays": [
+    {
+      "slug": "elevenlabs",
+      "kind": "quote-scalar",
+      "source_sha256": "3b359acfaafadbb499c7ed3eebe813a76e0be497a7157b77de207fe275068a66",
+      "normalized_sha256": "d16ae9d32c4544cbdc7465b6d1a48e91cdb25b491a5f892bdbc6b10224b7de0f",
+      "frontmatter_sha256": "23f865f4dbf47e2f8fe51aa48f7f5aa7dbb38fd87f9b39f4345d191996ea3555",
+      "normalized_path": "normalized/elevenlabs/DESIGN.md",
+      "frontmatter_path": "frontmatter/elevenlabs.yaml",
+      "patch_path": "patches/elevenlabs.patch",
+      "source_map_path": "sources/elevenlabs.json",
+      "source_map_sha256": "4831ffca303b2f3d5f574918f7c6d43a9e7bba7927825095b237140d7c2d8256",
+      "patch_sha256": "0746ed6056499a87a6a2e3a9a38c0dc0393aaf3ff83744e9a65a03ed3a54f4fa"
+    },
+    {
+      "slug": "kraken",
+      "kind": "prepend-frontmatter",
+      "source_sha256": "41bcbd5642c926a549f0d50f1151484c5776b4536233240c8415cfb79bcf1f38",
+      "normalized_sha256": "f0ce7b9a27e7290817e4e07ebebca5f1287a2e001442d28a8eb8f0ded3e31dc5",
+      "frontmatter_sha256": "acbe5fa04814c4f933ba12173da23ea06ceab1179bf5395b16abae6c7eb8e57d",
+      "normalized_path": "normalized/kraken/DESIGN.md",
+      "frontmatter_path": "frontmatter/kraken.yaml",
+      "patch_path": "patches/kraken.patch",
+      "source_map_path": "sources/kraken.json",
+      "source_map_sha256": "1021a5ceb1a5556402fed7279317d5fe74eb7560735b5d0d9e7615931f0c6a02",
+      "patch_sha256": "ed9d72abf16434e4e630776f31863e3f831026423a25230a4853898bdaca0059"
+    },
+    {
+      "slug": "lamborghini",
+      "kind": "prepend-frontmatter",
+      "source_sha256": "9aa68c53b481a0befdf72859db5625f85454122294509989aa58414aaee04b34",
+      "normalized_sha256": "9d56f738b1ff31d68af7f866914678d71e1f6a44079450f268370cda39ca0a4d",
+      "frontmatter_sha256": "f3d800afbabf5a97a50bab9bea7865cd05d0382e19eac64bc4b77c15b5b85845",
+      "normalized_path": "normalized/lamborghini/DESIGN.md",
+      "frontmatter_path": "frontmatter/lamborghini.yaml",
+      "patch_path": "patches/lamborghini.patch",
+      "source_map_path": "sources/lamborghini.json",
+      "source_map_sha256": "f3a623f04846227551b26cd17ea5f1b6021f25507d539e03d5fc7c3f0c4024de",
+      "patch_sha256": "337d8f97dbd62c00f5e016ff30a4a699fef5cf7c7d0b096691062fa8089bedf6"
+    },
+    {
+      "slug": "lovable",
+      "kind": "prepend-frontmatter",
+      "source_sha256": "92790895c833104072643929ba56ebbf42c8f88ffb7bff1926462545d0ace6c7",
+      "normalized_sha256": "b43b4137f02dd5e2296c0774ca033db9ecbe3c74d08666c465a1107f0a29fab1",
+      "frontmatter_sha256": "35cad2f04873099b7b0339ca1bab96abef7d4b1e3e2f31be64e6f3cb3c8baa27",
+      "normalized_path": "normalized/lovable/DESIGN.md",
+      "frontmatter_path": "frontmatter/lovable.yaml",
+      "patch_path": "patches/lovable.patch",
+      "source_map_path": "sources/lovable.json",
+      "source_map_sha256": "86eda042e108f7994cc5b7109c3ba906d3b55d974a2c294814bd99955f3dc9e5",
+      "patch_sha256": "d12f2c10be3c05ef534ba8b5181abc1a45bf66837cda078ee9c11a0c73281bf9"
+    },
+    {
+      "slug": "mastercard",
+      "kind": "prepend-frontmatter",
+      "source_sha256": "e76ceaa187f43bd24b8338d2b2314e71e9225b36492e40f32a55782281a10437",
+      "normalized_sha256": "469c39465797a4817c24c815342a258782e8396ad664e26f92a268d59b1a593c",
+      "frontmatter_sha256": "ae297aa47d6751e2e18a9f1f4884c1bac31499f040aaaba92ffd0f4df6b01b17",
+      "normalized_path": "normalized/mastercard/DESIGN.md",
+      "frontmatter_path": "frontmatter/mastercard.yaml",
+      "patch_path": "patches/mastercard.patch",
+      "source_map_path": "sources/mastercard.json",
+      "source_map_sha256": "9d211b779648bcc1578f2a1578ef67c0582ca7c372d6db5a9e1228053934725e",
+      "patch_sha256": "c0f660d85b1a30c883fc54257ac659c83b6c0f86c2e73605d9c32f044518458e"
+    },
+    {
+      "slug": "raycast",
+      "kind": "quote-scalar",
+      "source_sha256": "6e2c5137e4d914b70996d589688374a801b6f29a35c9c019c22abb5e0170bda3",
+      "normalized_sha256": "ffb0c95b0115cdf4ff980ab16725aaea9ab13c42952cfd782b2c874b98f42015",
+      "frontmatter_sha256": "358a3872c3a451c17c1936d991df3a6d2d4704707dd75fc4cc278bc25a491525",
+      "normalized_path": "normalized/raycast/DESIGN.md",
+      "frontmatter_path": "frontmatter/raycast.yaml",
+      "patch_path": "patches/raycast.patch",
+      "source_map_path": "sources/raycast.json",
+      "source_map_sha256": "6e333990268abdc4dbc695d8e038481d75488e9559ecc5d400758b3f4aaa613a",
+      "patch_sha256": "28526be270954c3451819619e9bc75bbeafd5947123dbea25b0069300410ee3e"
+    },
+    {
+      "slug": "runwayml",
+      "kind": "prepend-frontmatter",
+      "source_sha256": "b0e69bf643f89bb57ac0b82a3bf025e59ff1478c244cb0528ad1e38b3f80dac9",
+      "normalized_sha256": "bea7439ee125013678e523d708989f22f25fa750fca6073ca917a85211e3a875",
+      "frontmatter_sha256": "9e9a180d397eee4e56d314eff7cc840fca6ba5613dd38b0c75709648567802bb",
+      "normalized_path": "normalized/runwayml/DESIGN.md",
+      "frontmatter_path": "frontmatter/runwayml.yaml",
+      "patch_path": "patches/runwayml.patch",
+      "source_map_path": "sources/runwayml.json",
+      "source_map_sha256": "dd3eaf53c2155409018cbf78796bc3cfaa57d4f331c54a45f391c31093ca90fe",
+      "patch_sha256": "e75b783e63fbd16709e3a02718f58b3b02d3468dacdd532edee0d535548118c9"
+    },
+    {
+      "slug": "sanity",
+      "kind": "prepend-frontmatter",
+      "source_sha256": "ea1c442de2b23443f79af46524a81f33951606c8ff043ea9c25ba886264fbdd8",
+      "normalized_sha256": "e48ae576df0fb11c80d543276b945c3400f65ee6832de686d3645f752d43c1b4",
+      "frontmatter_sha256": "955e63dac70c1e7980bcb49f36001438b15b64899e4a6f2a0312d770424afce5",
+      "normalized_path": "normalized/sanity/DESIGN.md",
+      "frontmatter_path": "frontmatter/sanity.yaml",
+      "patch_path": "patches/sanity.patch",
+      "source_map_path": "sources/sanity.json",
+      "source_map_sha256": "8414a34ab66366d539cd2eff90c8bed56090bba5c6fbc27cfc665f05c2c78f34",
+      "patch_sha256": "1e2fd1b96095d12b91253aa3045bbb65906a6ce17962d68ae1c73c26c1b09ca9"
+    },
+    {
+      "slug": "spotify",
+      "kind": "prepend-frontmatter",
+      "source_sha256": "72e964a6cf551d0603f9854f2f42ee08e97ad4d9e17e037f50f6233508288295",
+      "normalized_sha256": "30d5c136ce11ccafaa6284ee9cf0971e73827b13007f5e8d45b1201779ea0260",
+      "frontmatter_sha256": "5ac1e108f0828db27262e6314553cf8f876a016396a4ec2464160229dc399f89",
+      "normalized_path": "normalized/spotify/DESIGN.md",
+      "frontmatter_path": "frontmatter/spotify.yaml",
+      "patch_path": "patches/spotify.patch",
+      "source_map_path": "sources/spotify.json",
+      "source_map_sha256": "5080e3167cc55dab4a1bf77961bc35b27b8f81471c8ccc5b26becc13e5abceec",
+      "patch_sha256": "8519c5cbfdfee11f820b395bf41631f97444c001bc894c5a9d00ba813cb25392"
+    },
+    {
+      "slug": "starbucks",
+      "kind": "prepend-frontmatter",
+      "source_sha256": "e20338ee10226c63cf2588207288c08e12d60754a53f681657adaf364dfe8fa7",
+      "normalized_sha256": "75b19c4ce87ed43457d4903888a90c33dd86630118416e897b664f5e6d4d4769",
+      "frontmatter_sha256": "3eef29bac836818072bf8d703110380e0dabc4a1296d87e6ebc615d9f85d08e8",
+      "normalized_path": "normalized/starbucks/DESIGN.md",
+      "frontmatter_path": "frontmatter/starbucks.yaml",
+      "patch_path": "patches/starbucks.patch",
+      "source_map_path": "sources/starbucks.json",
+      "source_map_sha256": "40758f8ac13d8da1b7920e2ac65e6d865087900699b46d6912e2e8b1b2a6af0c",
+      "patch_sha256": "e69782d4016b98bd527084467203d007333eaa2ade1728c5b5174e17caec7611"
+    },
+    {
+      "slug": "supabase",
+      "kind": "quote-scalar",
+      "source_sha256": "f57287d7f44d59e8169dc4b4304ff03c1a2efb37f5433b9c04460caae7710880",
+      "normalized_sha256": "fe523656ef75d0a27178b9fc5a6bdb12a55b4fc21252e30bc2919ff31fc9e470",
+      "frontmatter_sha256": "86c4738defa09934c2fba31025e4509d28c2c28026429d4b875f07fa4e8ae21d",
+      "normalized_path": "normalized/supabase/DESIGN.md",
+      "frontmatter_path": "frontmatter/supabase.yaml",
+      "patch_path": "patches/supabase.patch",
+      "source_map_path": "sources/supabase.json",
+      "source_map_sha256": "0be1c8503c6a46b911f6d63390ea6969bc36e936126eecaac5fda3c38ff931c4",
+      "patch_sha256": "b39aacc54f5024ab65cb6d22aa49d5cd06d36c20b002e21670a61bdcb59246f2"
+    },
+    {
+      "slug": "tesla",
+      "kind": "prepend-frontmatter",
+      "source_sha256": "19f2f7e6073d708f46d2512e6bab3c7c417cf2b4d9f57ff6ec6f2e056ea942b0",
+      "normalized_sha256": "177b6bd1eef5bc9fe0128de1fb475724d64fae8c05f46c07024db5e87c761552",
+      "frontmatter_sha256": "4970750d3a0fd9d196441882462e19b4b6cff9d599ddf15778e5c8d247d79db9",
+      "normalized_path": "normalized/tesla/DESIGN.md",
+      "frontmatter_path": "frontmatter/tesla.yaml",
+      "patch_path": "patches/tesla.patch",
+      "source_map_path": "sources/tesla.json",
+      "source_map_sha256": "e4ea6fa6cba13b3ffdaab30c943f52074a4cbef2f1d6355c766d5fa9d0f6cebb",
+      "patch_sha256": "bb0c80d6c2ef4a5ea79a7a3413e64a2b84993979e1a384e4aa5f4dd3f29ed2b0"
+    },
+    {
+      "slug": "theverge",
+      "kind": "prepend-frontmatter",
+      "source_sha256": "5da2c3116e6845826b043ac115a80896a399efda2cebc0188981fba2ef9bb526",
+      "normalized_sha256": "15ff31cbbe5eb4c1802dc47603b87b9611a081323f3d9312c9cd1013b967ccb9",
+      "frontmatter_sha256": "9629343c3fd201c81c1bf43baaf44147581c2d4bdd801e6b66f6e18c20ef48d2",
+      "normalized_path": "normalized/theverge/DESIGN.md",
+      "frontmatter_path": "frontmatter/theverge.yaml",
+      "patch_path": "patches/theverge.patch",
+      "source_map_path": "sources/theverge.json",
+      "source_map_sha256": "2c53bbed61b347bd5a58145bc6a4ceaf7b6233b68771811e26d63d04944f57db",
+      "patch_sha256": "db4a44dfb1668c5541e6f0693a4ee8aba16b0c33dd831c2dbb6e8064de76a112"
+    }
+  ],
+  "metadata_files": [
+    {
+      "path": "README.md",
+      "sha256": "3f60b909bf66f844a0d122b45c3e39eaaffc43bfcf3c8717e9bc6b47c781457b"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "6d4bdc9a9cf30e7beb593475fdcdbf29f981ea6bd7923f202866145409f87b44"
+    }
+  ]
+}

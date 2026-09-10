@@ -1,0 +1,147 @@
+# Curator supplement, not official brand tokens.
+# Source notes: design-package attachments/sources/lamborghini.json; Skill assets/source-notes/lamborghini.json.
+# Partial tokens only: read the complete original prose and source notes.
+version: alpha
+name: Lamborghini-Inspired-design-analysis
+description: Lamborghini's website is a cathedral of darkness — a digital stage where jet-black surfaces stretch
+  infinitely and every element emerges from the void like a machine under a spotlight. The page is almost entirely
+  black. Not dark gray, not near-black — true, uncompromising black (`#000000`) that saturates the viewport and
+  refuses to yield. Into this abyss, white type and Lamborghini Gold (`#FFC000`) are deployed with surgical precision,
+  creating a visual language that feels like walking through a nighttime motorsport event where every surface absorbs
+  light except the things that matter.
+colors:
+  primary: '#FFC000'
+  primary-hover: '#917300'
+  primary-text: '#FFCE3E'
+  canvas: '#000000'
+  ink: '#FFFFFF'
+  on-primary: '#000000'
+  surface: '#202020'
+  surface-deep: '#181818'
+  surface-light: '#F8F8F8'
+  surface-mist: '#E6E6E6'
+  text-secondary: '#F5F5F5'
+  text-on-light: '#494949'
+  muted: '#7D7D7D'
+  disabled: '#969696'
+  neutral: '#666666'
+  neutral-deep: '#555555'
+  neutral-shadow: '#313131'
+  info: '#29ABE2'
+  link-hover: '#3860BE'
+  ghost-hover: '#1EAEDB'
+  overlay: rgba(0,0,0,0.7)
+typography:
+  hero-display:
+    fontFamily: LamboType
+    fontSize: 120px
+    fontWeight: 400
+    lineHeight: 0.92
+  display-2:
+    fontFamily: LamboType
+    fontSize: 80px
+    fontWeight: 400
+    lineHeight: 1.13
+  section-title:
+    fontFamily: LamboType
+    fontSize: 54px
+    fontWeight: 400
+    lineHeight: 1.19
+  sub-section:
+    fontFamily: LamboType
+    fontSize: 40px
+    fontWeight: 400
+    lineHeight: 1.15
+  feature-heading:
+    fontFamily: LamboType
+    fontSize: 27px
+    fontWeight: 400
+    lineHeight: 1.37
+  card-title:
+    fontFamily: LamboType
+    fontSize: 24px
+    fontWeight: 400
+  body-large:
+    fontFamily: LamboType
+    fontSize: 18px
+    fontWeight: 400
+    lineHeight: 1.56
+  body-ui:
+    fontFamily: LamboType
+    fontSize: 16px
+    lineHeight: 1.5
+  button-large:
+    fontFamily: LamboType
+    fontSize: 16px
+    fontWeight: 400
+    lineHeight: 1.5
+  button-standard:
+    fontFamily: LamboType
+    fontSize: 14.4px
+    lineHeight: 1
+  button-small:
+    fontFamily: LamboType
+    fontSize: 13px
+    lineHeight: 1.2
+  caption:
+    fontFamily: LamboType
+    fontSize: 14px
+    letterSpacing: -0.42px
+  label:
+    fontFamily: LamboType
+    fontSize: 12px
+    lineHeight: 1.83
+    letterSpacing: 0.96px
+  micro:
+    fontFamily: LamboType
+    fontSize: 10px
+    fontWeight: 400
+    letterSpacing: 0.225px
+rounded:
+  px-0: 0px
+  px-1: 1px
+  px-2: 2px
+  px-20: 20px
+spacing:
+  px-2: 2px
+  px-4: 4px
+  px-5: 5px
+  px-8: 8px
+  px-10: 10px
+  px-12: 12px
+  px-15: 15px
+  px-16: 16px
+  px-20: 20px
+  px-24: 24px
+  px-32: 32px
+  px-40: 40px
+  px-48: 48px
+  px-56: 56px
+components:
+  button-primary:
+    backgroundColor: '{colors.primary}'
+    textColor: '{colors.on-primary}'
+    padding: 24px
+    rounded: '{rounded.px-0}'
+  button-primary-hover:
+    backgroundColor: '{colors.primary-hover}'
+  button-ghost:
+    backgroundColor: transparent
+    textColor: '{colors.ink}'
+    padding: 16px
+    rounded: '{rounded.px-0}'
+  button-ghost-hover:
+    backgroundColor: '{colors.ghost-hover}'
+    textColor: '{colors.ink}'
+  button-white:
+    backgroundColor: '{colors.ink}'
+    textColor: '{colors.surface}'
+    rounded: '{rounded.px-0}'
+  button-black:
+    backgroundColor: '{colors.canvas}'
+    textColor: '{colors.surface}'
+    rounded: '{rounded.px-0}'
+  button-gray:
+    backgroundColor: '{colors.disabled}'
+    textColor: '{colors.surface}'
+    rounded: '{rounded.px-0}'
