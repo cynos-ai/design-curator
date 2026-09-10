@@ -34,7 +34,8 @@
     "review_status": "ready-machine-verified",
     "commit_receipt": "examples/saas-demo/.design-samples/20260910T062049Z-audit02/commit-receipt.json",
     "backup_path": "examples/saas-demo/.design-samples/20260910T062049Z-audit02/backup/DESIGN.before.md",
-    "previous_version_backed_up": true
+    "previous_version_backed_up": true,
+    "record_sanitization": "Machine-specific absolute paths in the two demo session.json files and two validate-design.json evidence reports were replaced with the neutral prefix /srv/projects/zhilan-demo before publication. No specification, sample, review, receipt or confirmation hash changed."
   },
   "limits": [
     "Audit02 scoped checks and user confirmation complete; unused systems/components and broader accessibility coverage remain outside scope.",

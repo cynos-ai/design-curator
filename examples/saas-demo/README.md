@@ -25,7 +25,9 @@ SHA：
 
 ## 历史与恢复
 
-原运行 `.design-samples/20260910T123000Z-demo01/` 的session、确认、规范、证据和回执均保持原始字节。旧版一致性通过结论已被审核撤回，但历史提交事实不被重写。
+原运行 `.design-samples/20260910T123000Z-demo01/` 的规范、review、确认与回执保留原始字节。旧版一致性通过结论已被审核撤回，但历史提交事实不被重写。
+
+为公开发布，两个 `session.json` 和两份 `validate-design.json` 证据中的本机绝对路径已替换为中性前缀 `/srv/projects/zhilan-demo`；规范、样张、review、回执和确认的哈希均未改变，审计链依然成立。
 
 新 baseline 与 root_design_before 固定指向旧版 SHA。只有用户确认后，根规范才由提交脚本更新；旧版完整保存在 backup/，前后 SHA 不同。
 

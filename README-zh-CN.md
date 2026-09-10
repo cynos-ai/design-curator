@@ -128,7 +128,7 @@ python -m unittest discover -s tests -v
 
 自动测试覆盖：74 条构建、Slack 补项、raw/overlay/source-note 哈希门禁、构建锁与回执；重复键、缺失与循环引用、代码围栏、类型检查和 baseline diff；新建与替换根规范、备份权限、幂等重跑、过期候选、外部编辑、符号链接、提交锁、崩溃恢复与 review 门禁。
 
-`tests/scenarios.md` 列出 10 个 Agent/浏览器场景及其真实执行状态。`examples/saas-demo/` 是隔离演练夹具：此前的 committed run 逐字节保留，修订在新运行 `20260910T062049Z-audit02` 中完成，以旧根规范为不可变 baseline，并最终经真实脚本确认落定。夹具与故障注入测试均明确标注，绝不当成真实用户或浏览器验收。
+`tests/scenarios.md` 列出 10 个 Agent/浏览器场景及其真实执行状态。`examples/saas-demo/` 是隔离演练夹具：此前的 committed run 保留其规范、review、确认与回执字节，修订在新运行 `20260910T062049Z-audit02` 中完成，以旧根规范为不可变 baseline，并最终经真实脚本确认落定。发布时已把 `session.json` 与 `validate-design.json` 内的本机绝对路径替换为中性的 `/srv/projects/zhilan-demo` 前缀，规范、样张、review、回执和确认的哈希均未受影响。夹具与故障注入测试均明确标注，绝不当成真实用户或浏览器验收。
 
 ## 来源与许可
 

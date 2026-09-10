@@ -1,6 +1,6 @@
 {
   "baseline_diff": {
-    "baseline": "/home/sj/Codes/cynos/design-curator/examples/saas-demo/.design-samples/20260910T123000Z-demo01/claude-zh/baseline.DESIGN.md",
+    "baseline": "/srv/projects/zhilan-demo/.design-samples/20260910T123000Z-demo01/claude-zh/baseline.DESIGN.md",
     "baseline_sha256": "3d972f34f8d4f33b442fa28220cf3b7ca2f13c0a97c468e3988148f82521f9df",
     "body_changed": true,
     "headings": {
@@ -107,7 +107,7 @@
     }
   },
   "blocking_findings": [],
-  "file": "/home/sj/Codes/cynos/design-curator/examples/saas-demo/.design-samples/20260910T123000Z-demo01/claude-zh/DESIGN.md",
+  "file": "/srv/projects/zhilan-demo/.design-samples/20260910T123000Z-demo01/claude-zh/DESIGN.md",
   "findings": [],
   "schema_version": 1,
   "scope": "structure, known token types and references only; not visual/WCAG certification",

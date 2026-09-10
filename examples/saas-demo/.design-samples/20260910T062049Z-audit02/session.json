@@ -12,7 +12,7 @@
     }
   ],
   "phase": "committed",
-  "project_root": "/home/sj/Codes/cynos/design-curator/examples/saas-demo",
+  "project_root": "/srv/projects/zhilan-demo",
   "root_design_before": {
     "exists": true,
     "sha256": "932ab9fad6b58f4d3125d6f25a46b217b23d8ae19dcfbd373486e4640ef37b88"

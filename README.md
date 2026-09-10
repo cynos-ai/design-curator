@@ -128,7 +128,7 @@ python -m unittest discover -s tests -v
 
 Automated coverage includes: 74-entry build, the Slack supplement, raw/overlay/source-note hash gates, build lock and receipt; duplicate keys, missing and cyclic references, code fences, type checks and baseline diff; root creation and replacement, backup permissions, idempotent re-runs, stale candidates, external edits, symbolic links, commit lock, crash recovery and review gating.
 
-`tests/scenarios.md` lists ten agent/browser scenarios with their real execution status. `examples/saas-demo/` is an isolated drill fixture: the earlier committed run is preserved byte-for-byte, and the revision was completed in run `20260910T062049Z-audit02` with the previous root as its immutable baseline, then confirmed and committed through the real script. Fixture and fault-injection tests are labelled as such and are never presented as real user or browser acceptance.
+`tests/scenarios.md` lists ten agent/browser scenarios with their real execution status. `examples/saas-demo/` is an isolated drill fixture: the earlier committed run keeps its specification, review, confirmation and receipt bytes, and the revision was completed in run `20260910T062049Z-audit02` with the previous root as its immutable baseline, then confirmed and committed through the real script. Machine-specific absolute paths inside the published `session.json` and `validate-design.json` records were replaced with the neutral prefix `/srv/projects/zhilan-demo`; no specification, sample, review, receipt or confirmation hash was affected. Fixture and fault-injection tests are labelled as such and are never presented as real user or browser acceptance.
 
 ## Source and license
 
