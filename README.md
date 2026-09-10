@@ -63,8 +63,19 @@ python scripts/validate-design.py /path/to/candidate/DESIGN.md \
 - `scripts/build-library.py`：固定哈希门禁、overlay、目录和回执构建。
 - `scripts/validate-design.py`：严格 YAML、重复键、已知类型、引用、正文引用和 baseline diff。
 - `scripts/commit-design.py`：候选/review/确认/bundle 哈希门禁、备份及原子根文件落定。
+- `scripts/package-skill.py`：按运行时白名单生成确定性轻量 ZIP，并验证包内清单和校验和。
 
 完整实施依据保存在 `IMPLEMENTATION-SPEC.md`。
+
+## 轻量打包
+
+开发仓库保留 tests、examples 与验收证据；安装包不携带这些文件：
+
+```bash
+python scripts/package-skill.py --skill-root . --version 1.0.0
+```
+
+默认输出 `dist/design-curator-skill-1.0.0.zip`。压缩包排除 `examples/`、`tests/`、`attachments/`、`assets/audit/` 和开发报告，保留 74 份运行规范、可重建来源、脚本与工作流参考。ZIP 内的 `PACKAGE-MANIFEST.json` 和 `PACKAGE-CHECKSUMS.sha256` 用于独立校验。相同输入和版本会生成字节一致的 ZIP。
 
 ## 安全与恢复
 

@@ -8,10 +8,11 @@
     "check": "pass"
   },
   "automated_tests": {
-    "count": 25,
-    "passed": 25,
+    "count": 26,
+    "passed": 26,
     "failed": 0,
-    "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v"
+    "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v",
+    "runtime_package": "deterministic whitelist ZIP test passed"
   },
   "demo": {
     "status": "committed",

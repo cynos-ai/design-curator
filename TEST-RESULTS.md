@@ -11,7 +11,7 @@ PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v
 PYTHONDONTWRITEBYTECODE=1 python scripts/build-library.py --skill-root . --check
 ```
 
-- Unit tests: **25 passed, 0 failed** (previously 15).
+- Unit tests: **26 passed, 0 failed** (previously 15); includes deterministic lightweight-package verification.
 - Locked library consistency: **74 effective specifications passed**; source assets, overlays and generated library content were not modified.
 - Revised demo structure/reference validation: passed.
 
@@ -26,6 +26,7 @@ New regression coverage:
 - Color alias/optional-alpha/angle-unit regressions: rgb(1, 2, 3, 0.5) and hsl(120deg, 50%, 40%) accepted; percentage hue rejected; unsupported syntax remains not-checked.
 - Failed intent cleanup retried after records are already committed; mismatched intent retained.
 - Confirmed audit02 root equals the candidate; confirmation, review, receipt and bundle identities agree. Backup equals baseline and the true prior root SHA; before/after differ. Original run/session/receipt remain unchanged. These assertions do not prove full semantic consistency.
+- Runtime packaging is deterministic for equal inputs/version, contains 74 effective designs and package-local checksums, and excludes examples/tests/audit/development material.
 
 ## Demo status: Agent/browser reviewed, user confirmed, committed
 
