@@ -1,39 +1,62 @@
 # design-curator
 
-独立 Agent Skill：从 74 份锁定的品牌灵感 DESIGN.md 中语义选择一套，用用户真实产品内容生成 HTML 样张，经验证和当前版本确认后，安全交付项目根 `DESIGN.md`。
+> **Language:** English · [简体中文](./README-zh-CN.md)
 
-它不是自动评分器、网页模板库、品牌官方规范或 WCAG 认证工具。默认不混搭，不在确认前覆盖项目文件。
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/cynos-ai/design-curator.svg)](https://github.com/cynos-ai/design-curator/releases)
 
-## 环境
+An independent agent skill that picks one design system from 74 pinned brand-inspired `DESIGN.md` specifications, renders a real-content HTML sample for confirmation, and safely delivers a complete project-root `DESIGN.md`.
+
+It is **not** an automatic scorer, a page-template library, an official brand system, or a WCAG certification tool. It adopts one existing system by default, never mixes systems without an explicit decision, and never overwrites project files before confirmation.
+
+## Contents
+
+- [Requirements](#requirements)
+- [Install](#install)
+- [Usage](#usage)
+- [How it works](#how-it-works)
+- [Repository layout](#repository-layout)
+- [Lightweight packaging](#lightweight-packaging)
+- [Safety and recovery](#safety-and-recovery)
+- [Testing and evidence](#testing-and-evidence)
+- [Source and license](#source-and-license)
+- [Known limits](#known-limits)
+
+## Requirements
 
 - Python 3.11+
 - `PyYAML==6.0.2`
-- 建议具备真实浏览器能力，用于响应式、字体、交互和对比验证
+- A real browser capability is recommended for responsive, font, interaction and contrast verification
 
 ```bash
 python -m pip install -r requirements.txt
 python scripts/build-library.py --skill-root .
 python scripts/build-library.py --skill-root . --check
-python -m unittest discover -s tests -v
 ```
 
-构建完全离线，固定到 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md/tree/8147538b4226ae41e2487a9179e3bcc1f68e8554) 提交 `8147538b4226ae41e2487a9179e3bcc1f68e8554`。`--check` 在 Skill 内临时目录重建并逐字节比较，不修改发布产物。
+Builds are fully offline and pinned to [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md/tree/8147538b4226ae41e2487a9179e3bcc1f68e8554) commit `8147538b4226ae41e2487a9179e3bcc1f68e8554`. `--check` rebuilds in a temporary directory inside the skill and compares byte-for-byte without touching published artifacts.
 
-## 安装
+## Install
 
-将整个 `design-curator/` 目录复制到宿主支持的 skills 目录，保留 `SKILL.md`、scripts、references 和 assets。以 pi 为例，可放在 `~/.pi/agent/skills/design-curator/`，或受信任项目的 `.pi/skills/design-curator/`；也可通过 `--skill <path>` 加载。
+Download the packaged skill from [Releases](https://github.com/cynos-ai/design-curator/releases) and unzip it, or copy this repository and keep `SKILL.md`, `scripts/`, `references/` and `assets/` together.
 
-首次安装运行一次构建命令；日常使用前由 Skill 执行 `--check`。不要只复制 SKILL.md 或 13 份 overlays。
+Then place the whole `design-curator/` directory in a skills location supported by your host:
 
-## 使用
+- pi global: `~/.pi/agent/skills/design-curator/`
+- pi project (trusted): `.pi/skills/design-curator/`
+- explicit: `--skill /absolute/path/to/design-curator`
 
-示例请求：
+Run the build once after installing. Do not copy only `SKILL.md` or only the 13 overlay files.
 
-- “给这个中文 SaaS 落地页选两套风格，先出真实内容样张。”
-- “参考 Linear，但先别改根 DESIGN.md。”
-- “重新选择项目设计规范；我确认样张后再替换。”
+## Usage
 
-Agent 会读取 `INDEX.md` 的 74 条完整 description，全文复核入围规范和 source notes，在目标项目 `.design-samples/<run-id>/` 工作。它只在用户确认当前候选和覆盖授权后调用：
+Example requests:
+
+- "Pick two styles for this Chinese SaaS landing page and show me real-content samples first."
+- "Something like Linear, but don't touch the root DESIGN.md yet."
+- "Re-select the project's design system; replace it after I confirm the sample."
+
+The agent reads all 74 descriptions in `INDEX.md`, then reads the full specification and source notes of each shortlisted candidate, and works inside the target project's `.design-samples/<run-id>/`. It only calls the commit script after the user confirms the current version and authorizes replacement:
 
 ```bash
 python scripts/commit-design.py \
@@ -41,80 +64,87 @@ python scripts/commit-design.py \
   --session .design-samples/<run-id>/session.json
 ```
 
-结构检查：
+Structural validation:
 
 ```bash
 python scripts/validate-design.py /path/to/candidate/DESIGN.md \
   --baseline /path/to/candidate/baseline.DESIGN.md
 ```
 
-退出 0 仅表示没有结构阻断，不代表浏览器和无障碍全部合格。
+Exit code 0 means "no structural blockers" only. It does not mean the browser and accessibility checks passed.
 
-## 文件职责
+## How it works
 
-- `SKILL.md`：短而完整的 Agent 执行协议。
-- `INDEX.md` / `assets/catalog.json`：构建生成的描述目录，不含分数和标签。
-- `assets/upstream/`：只读的 74 份原始裁剪快照。
-- `assets/overlays/`：13 份完整修订文件。
-- `assets/source-notes/`：修订来源、遗漏和已知冲突。
-- `assets/audit/`：13 份独立 frontmatter YAML 与 unified patches，供审计，不参与运行时叠加。
-- `assets/design-md/`：构建后的 74 份有效运行时规范。
-- `assets/build-receipt.json`：当前发布产物哈希完成标记。
-- `scripts/build-library.py`：固定哈希门禁、overlay、目录和回执构建。
-- `scripts/validate-design.py`：严格 YAML、重复键、已知类型、引用、正文引用和 baseline diff。
-- `scripts/commit-design.py`：候选/review/确认/bundle 哈希门禁、备份及原子根文件落定。
-- `scripts/package-skill.py`：按运行时白名单生成确定性轻量 ZIP，并验证包内清单和校验和。
+1. **Inspect the project** — record whether a root `DESIGN.md` exists, its SHA-256 and whether it is a regular file. Existing systems win unless the user asks to replace them.
+2. **Build a minimal brief** — product, page type, audience, language, viewports, preferences, exclusions, assets and content status.
+3. **Recommend semantically** — no scores, no tag weights, no vector ranking. Categories are for browsing only; explicit user constraints beat brand industry.
+4. **Full-text review** — shortlisted candidates are read in full, together with their source notes, before any sample is generated.
+5. **Real-content sample** — candidates share one content inventory but not one layout. Photography-driven systems show photography; docs systems show reading hierarchy.
+6. **Adjust inside the candidate** — every adaptation is written back into the candidate `DESIGN.md` first, then the sample is re-rendered and re-checked.
+7. **Verify honestly** — structure, prose consistency, fonts, responsive behaviour, interaction and contrast are recorded per check with `pass` / `fail` / `not-checked` / `not-applicable`.
+8. **Confirm and commit safely** — the root file is replaced only with a current-version confirmation, a hash-bound candidate/sample bundle and a verified backup.
 
-完整实施依据保存在 `IMPLEMENTATION-SPEC.md`。
+## Repository layout
 
-## 轻量打包
+- `SKILL.md` — short, complete execution protocol for the agent.
+- `INDEX.md` / `assets/catalog.json` — generated description index; no scores or tags.
+- `assets/upstream/` — read-only pinned snapshot of the 74 original files.
+- `assets/overlays/` — 13 complete corrected documents.
+- `assets/source-notes/` — provenance, omitted properties and known conflicts per overlay.
+- `assets/audit/` — 13 standalone frontmatter YAML files and unified patches for auditing; not applied at runtime.
+- `assets/design-md/` — the 74 effective runtime specifications produced by the build.
+- `assets/build-receipt.json` — completion marker with artifact hashes.
+- `scripts/build-library.py` — hash gates, overlay application, catalog and index generation.
+- `scripts/validate-design.py` — strict YAML, duplicate keys, known token types, reference and baseline diff checks.
+- `scripts/commit-design.py` — candidate/review/confirmation/bundle hash gates, backup and atomic root commit.
+- `scripts/package-skill.py` — deterministic runtime-only ZIP with manifest and inner checksums.
+- `IMPLEMENTATION-SPEC.md` — the full implementation specification (Chinese).
 
-开发仓库保留 tests、examples 与验收证据；安装包不携带这些文件：
+## Lightweight packaging
+
+The development repository keeps tests, examples and acceptance evidence. Install packages deliberately exclude them:
 
 ```bash
 python scripts/package-skill.py --skill-root . --version 1.0.0
 ```
 
-默认输出 `dist/design-curator-skill-1.0.0.zip`。压缩包排除 `examples/`、`tests/`、`attachments/`、`assets/audit/` 和开发报告，保留 74 份运行规范、可重建来源、脚本与工作流参考。ZIP 内的 `PACKAGE-MANIFEST.json` 和 `PACKAGE-CHECKSUMS.sha256` 用于独立校验。相同输入和版本会生成字节一致的 ZIP。
+Default output: `dist/design-curator-skill-1.0.0.zip`. The archive excludes `examples/`, `tests/`, `attachments/`, `assets/audit/` and development reports, while keeping the 74 runtime specifications, the rebuildable sources, scripts and workflow references. `PACKAGE-MANIFEST.json` and `PACKAGE-CHECKSUMS.sha256` inside the archive allow independent verification. Identical inputs and version produce a byte-identical ZIP.
 
-## 安全与恢复
+## Safety and recovery
 
-提交器拒绝符号链接、路径越界、过期证据、缺少必要检查、根文件外部变化和未授权替换。已有规范备份到运行目录的 `backup/DESIGN.before.md`，回执写入 `commit-receipt.json`。
+The committer rejects symbolic links, path escapes, stale evidence, missing required checks, external changes to the root file and unauthorized replacement. An existing specification is backed up to `backup/DESIGN.before.md` in the run directory, and the receipt is written to `commit-receipt.json`.
 
-根文件写入前会保存运行目录内的 `commit-intent.json`。若根文件已写入但回执/session 失败，保持候选、review 和确认不变，重跑同一提交命令即可：脚本核对 intent、根 SHA 和原备份后只补记录，不重新覆盖。成功后移除 intent；若最后清理失败，重跑 already-committed 分支会核对其与回执/session 匹配后清除遗留 intent，不匹配则保留并报错。
+Before writing the root file, `commit-intent.json` is stored in the run directory. If the root file is written but the receipt or session write fails, keep the candidate, review and confirmation unchanged and re-run the same command: the script verifies the intent, root SHA and original backup, then only completes the records without overwriting again. If the final cleanup fails, the `already-committed` branch verifies the leftover intent against the receipt and session before removing it; a mismatch is preserved and reported.
 
-构建发布失败时尝试恢复旧产物；恢复也失败则保留 `.build-backup-*` 并输出位置，不删除剩余备份、不标记库可用。
+If publishing the built library fails, the previous artifacts are restored; if the rollback also fails, the remaining `.build-backup-*` directory is retained and reported, and the completion marker is removed so an incomplete library is never treated as usable.
 
-恢复也需要用户确认。只有当前根 SHA 等于回执 `after_sha` 且备份 SHA 等于 `before_sha` 时，才可用同样的临时文件+原子替换方式恢复；根已被后续编辑时先展示差异，不自动覆盖。工具锁只协调本工具，运行提交时应避免外部编辑。
+Restoring an older specification also requires user confirmation. It is only safe when the current root SHA equals the receipt's `after_sha` and the backup SHA equals `before_sha`; if the root has been edited since, the difference is shown instead of being overwritten. The lock only coordinates this tool, so avoid external editing during a commit.
 
-## 测试与证据
+## Testing and evidence
 
 ```bash
 python -m unittest discover -s tests -v
 ```
 
-自动测试覆盖：74 条构建、Slack 补项、哈希/overlay/source-note 门禁、构建锁、回执；重复键、缺失引用、引用循环、代码围栏、类型和 baseline diff；新建/替换根规范、备份权限、幂等重跑、过期候选、外部编辑、符号链接和提交锁。
+Automated coverage includes: 74-entry build, the Slack supplement, raw/overlay/source-note hash gates, build lock and receipt; duplicate keys, missing and cyclic references, code fences, type checks and baseline diff; root creation and replacement, backup permissions, idempotent re-runs, stale candidates, external edits, symbolic links, commit lock, crash recovery and review gating.
 
-`tests/scenarios.md` 列出 10 个 Agent/浏览器场景及当前执行状态。`examples/saas-demo/` 是独立演练夹具：旧 committed run 保持不变；修订在新运行 `20260910T062049Z-audit02` 完成，baseline 来自旧根规范。现已通过 Agent 一致性/真实浏览器复核并取得用户确认，经提交脚本落定；旧根规范保存在本轮 backup/。旧截图留在旧运行，本轮截图独立生成；历史通过结论已由审核声明撤回，详见示例 README。
+`tests/scenarios.md` lists ten agent/browser scenarios with their real execution status. `examples/saas-demo/` is an isolated drill fixture: the earlier committed run is preserved byte-for-byte, and the revision was completed in run `20260910T062049Z-audit02` with the previous root as its immutable baseline, then confirmed and committed through the real script. Fixture and fault-injection tests are labelled as such and are never presented as real user or browser acceptance.
 
-新增回归覆盖：必检项不适用/空证据拒绝、人工路径保留 not-checked、回执/session 写失败后恢复、构建回滚失败保留备份、基础颜色和引用漏检、示例草稿状态一致性。
+## Source and license
 
-## 来源与许可
+Released under the MIT license, see [`LICENSE`](LICENSE).
 
-本项目以 MIT 许可发布，见 [`LICENSE`](LICENSE)。
+- Upstream data: [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md), pinned commit `8147538b4226ae41e2487a9179e3bcc1f68e8554`, MIT licensed. The complete notice is preserved in [`assets/UPSTREAM-LICENSE.txt`](assets/UPSTREAM-LICENSE.txt) and byte-identically in [`assets/upstream/LICENSE`](assets/upstream/LICENSE).
+- Dependency: PyYAML 6.0.2, MIT licensed.
+- Details: [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
-- 上游数据：[VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md)，固定提交 `8147538b4226ae41e2487a9179e3bcc1f68e8554`，MIT 许可；完整通知保存在 [`assets/UPSTREAM-LICENSE.txt`](assets/UPSTREAM-LICENSE.txt)，并逐字节保留在 [`assets/upstream/LICENSE`](assets/upstream/LICENSE)。
-- 依赖：PyYAML 6.0.2，MIT 许可。
-- 详见 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)。
+The upstream content is unofficial inspiration analysis. The MIT license does not cover trademarks, brand marks, product imagery or proprietary fonts; confirm those rights independently before redistribution or commercial use.
 
-上游内容是非官方品牌灵感分析。MIT 许可不覆盖商标、品牌标识、产品图片或专有字体权利，分发与商用前需独立确认。
+## Known limits
 
-## 已知边界
-
-- AI 语义选型由 Agent 阅读完成，不由脚本自动打分。
-- 颜色基础检查支持 3/4/6/8 位 hex、传统逗号 rgb/rgba、hsl/hsla 数值语法（两组均为别名且 alpha 可选；Hue 接受无单位数或 deg/grad/rad/turn，拒绝百分比），以及 transparent/currentColor；CSS 允许的数值截断不当作范围错误。现代空格/slash、var/calc、命名色等不在该小型解析器范围内，明确 color-not-checked，实际颜色仍需浏览器复核。
-- 引用检查识别完整 token 路径，component.* 作为源文 components.* 别名；frontmatter 断裂引用/整组引用阻断，正文未知形式给出人工复核 finding。components 可引用一个复合 typography token，不可引用整个 typography 组。
-- 正文语义一致性、实际字体字形、透明/图片背景对比和布局必须结合人工/浏览器检查。
-- 无浏览器时只能走明确的用户人工检查路径，不能自动标 ready。
-- 上游是非官方品牌灵感分析；MIT 通知见 `assets/UPSTREAM-LICENSE.txt`。商标、图片和字体权利需独立确认。
-- v1 不提供全量 HTML 风格浏览器、不支持默认混搭和原生移动端自动转换。
+- Semantic selection is performed by the agent reading the specifications; nothing is auto-scored.
+- Color checking covers 3/4/6/8-digit hex, legacy comma `rgb()`/`rgba()` and numeric `hsl()`/`hsla()` (both pairs are aliases and alpha is optional; hue accepts a unitless number or `deg`/`grad`/`rad`/`turn`, and rejects percentages), plus `transparent`/`currentColor`. Modern space or slash syntax, `var()`/`calc()` and named colors are explicitly reported as `color-not-checked` rather than judged; real colors still need browser verification.
+- Reference checking understands full token paths and treats `component.*` as an alias for the upstream `components.*`. Broken and whole-group references block; unknown prose forms are reported for human review. A component may reference one composite typography token but not the whole typography group.
+- Prose consistency, actual glyph provenance, transparency or image-backed contrast and layout require human or browser checks.
+- Without a browser, only the explicit human-review path is allowed; the tool never auto-approves.
+- v1 has no full HTML style browser, no default mixing of systems, and no automatic native mobile conversion.
