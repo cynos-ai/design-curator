@@ -17,7 +17,7 @@ python scripts/build-library.py --skill-root . --check
 python -m unittest discover -s tests -v
 ```
 
-构建完全离线，固定到 `VoltAgent/awesome-design-md@8147538b4226ae41e2487a9179e3bcc1f68e8554`。`--check` 在 Skill 内临时目录重建并逐字节比较，不修改发布产物。
+构建完全离线，固定到 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md/tree/8147538b4226ae41e2487a9179e3bcc1f68e8554) 提交 `8147538b4226ae41e2487a9179e3bcc1f68e8554`。`--check` 在 Skill 内临时目录重建并逐字节比较，不修改发布产物。
 
 ## 安装
 
@@ -98,6 +98,16 @@ python -m unittest discover -s tests -v
 `tests/scenarios.md` 列出 10 个 Agent/浏览器场景及当前执行状态。`examples/saas-demo/` 是独立演练夹具：旧 committed run 保持不变；修订在新运行 `20260910T062049Z-audit02` 完成，baseline 来自旧根规范。现已通过 Agent 一致性/真实浏览器复核并取得用户确认，经提交脚本落定；旧根规范保存在本轮 backup/。旧截图留在旧运行，本轮截图独立生成；历史通过结论已由审核声明撤回，详见示例 README。
 
 新增回归覆盖：必检项不适用/空证据拒绝、人工路径保留 not-checked、回执/session 写失败后恢复、构建回滚失败保留备份、基础颜色和引用漏检、示例草稿状态一致性。
+
+## 来源与许可
+
+本项目以 MIT 许可发布，见 [`LICENSE`](LICENSE)。
+
+- 上游数据：[VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md)，固定提交 `8147538b4226ae41e2487a9179e3bcc1f68e8554`，MIT 许可；完整通知保存在 [`assets/UPSTREAM-LICENSE.txt`](assets/UPSTREAM-LICENSE.txt)，并逐字节保留在 [`assets/upstream/LICENSE`](assets/upstream/LICENSE)。
+- 依赖：PyYAML 6.0.2，MIT 许可。
+- 详见 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)。
+
+上游内容是非官方品牌灵感分析。MIT 许可不覆盖商标、品牌标识、产品图片或专有字体权利，分发与商用前需独立确认。
 
 ## 已知边界
 

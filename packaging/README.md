@@ -44,6 +44,8 @@ python scripts/build-library.py --skill-root . --check
 
 ## 来源与限制
 
-规范固定来源于 `VoltAgent/awesome-design-md@8147538b4226ae41e2487a9179e3bcc1f68e8554`，属于非官方品牌灵感分析。MIT 通知见 `assets/UPSTREAM-LICENSE.txt`；商标、图片和专有字体权利需独立确认。
+本 Skill 以 MIT 许可发布（见 `LICENSE`）。规范固定来源于 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md/tree/8147538b4226ae41e2487a9179e3bcc1f68e8554) 提交 `8147538b4226ae41e2487a9179e3bcc1f68e8554`，同样为 MIT 许可；完整通知见 `assets/UPSTREAM-LICENSE.txt`，依赖与第三方说明见 `THIRD_PARTY_NOTICES.md`。
+
+上游内容属于非官方品牌灵感分析；MIT 许可不覆盖商标、产品图片或专有字体权利。
 
 结构校验通过不等于浏览器、字体、可用性或完整 WCAG 认证。无浏览器能力时必须走明确的用户人工检查路径。
