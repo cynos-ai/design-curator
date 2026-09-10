@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "candidate_id": "claude-zh",
+  "design_sha256": "932ab9fad6b58f4d3125d6f25a46b217b23d8ae19dcfbd373486e4640ef37b88",
+  "sample_sha256": "11938a471f7c1ebdce314ce94a66e8367f394b971eb9c587aefbe079c5605351",
+  "asset_hashes": {},
+  "sample_bundle_sha256": "d373e0733b45bc5453eca12a6119530a4d55c21216b2702db919568e36d8ccb1",
+  "external_assets": [],
+  "status": "ready-machine-verified",
+  "checks": [
+    {
+      "id": "structure",
+      "status": "pass",
+      "method": "validate-design.py with baseline",
+      "evidence": [
+        "claude-zh/evidence/validate-design.json"
+      ],
+      "findings": []
+    },
+    {
+      "id": "references",
+      "status": "pass",
+      "method": "strict frontmatter and prose reference check",
+      "evidence": [
+        "claude-zh/evidence/validate-design.json"
+      ],
+      "findings": []
+    },
+    {
+      "id": "prose-consistency",
+      "status": "pass",
+      "method": "manual baseline diff and synchronized search for on-primary/primary-active prose",
+      "evidence": [
+        "claude-zh/changes.md",
+        "claude-zh/evidence/validate-design.json"
+      ],
+      "findings": []
+    },
+    {
+      "id": "fonts",
+      "status": "pass",
+      "method": "browser document.fonts status plus computed fallback declarations",
+      "evidence": [
+        "claude-zh/evidence/browser-checks.json",
+        "claude-zh/evidence/viewport-375.png"
+      ],
+      "findings": [
+        "Per-glyph font source not proven; proprietary source fonts intentionally not loaded."
+      ]
+    },
+    {
+      "id": "responsive",
+      "status": "pass",
+      "method": "real browser viewports 375/768/1440 and scrollWidth check",
+      "evidence": [
+        "claude-zh/evidence/browser-checks.json",
+        "claude-zh/evidence/viewport-375.png",
+        "claude-zh/evidence/viewport-768.png",
+        "claude-zh/evidence/viewport-1440.png"
+      ],
+      "findings": []
+    },
+    {
+      "id": "interaction",
+      "status": "pass",
+      "method": "keyboard Tab focus and rendered control-size inspection",
+      "evidence": [
+        "claude-zh/evidence/browser-checks.json",
+        "claude-zh/evidence/focus-375.png"
+      ],
+      "findings": []
+    },
+    {
+      "id": "contrast",
+      "status": "pass",
+      "method": "opaque pair luminance calculation and rendered color inspection",
+      "evidence": [
+        "claude-zh/evidence/browser-checks.json"
+      ],
+      "findings": []
+    },
+    {
+      "id": "content-authenticity",
+      "status": "pass",
+      "method": "manual content review; demo labels included and no customer/metric/compliance claims",
+      "evidence": [
+        "claude-zh/sample.html"
+      ],
+      "findings": []
+    }
+  ],
+  "blocking_findings": [],
+  "accepted_limitations": [
+    "Scoped landing-page sample only; not complete WCAG certification.",
+    "CJK/system font fallbacks used; proprietary source fonts not bundled.",
+    "No production imagery or real customer data used."
+  ]
+}

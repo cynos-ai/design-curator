@@ -1,40 +1,42 @@
 # Test Results
 
-Validation date: 2026-09-10
+## Current audit revision
 
-## Automated
+Scope: internal Skill contracts only. No external-security framework, CSS engine or evidence-authentication system was added.
 
-Commands:
+Executed:
 
 ```bash
-python -m py_compile scripts/*.py tests/*.py
-python scripts/build-library.py --skill-root . --check
-python -m unittest discover -s tests -v
+PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v
+PYTHONDONTWRITEBYTECODE=1 python scripts/build-library.py --skill-root . --check
 ```
 
-Results:
+- Unit tests: **25 passed, 0 failed** (previously 15).
+- Locked library consistency: **74 effective specifications passed**; source assets, overlays and generated library content were not modified.
+- Revised demo structure/reference validation: passed.
 
-- Python compilation: passed.
-- Deterministic library check: passed, 74 effective specifications at locked commit.
-- Unit tests: **15 passed, 0 failed**.
-- Project audit: Skill frontmatter, authored local links, build receipt hashes and demo commit receipt passed.
+New regression coverage:
 
-Covered areas: source/overlay/note hash gates, 74-entry inventory, Slack supplement, deterministic receipt, active build lock, strict YAML and duplicate keys, missing/cyclic/prose references, type checks, baseline diff, candidate/sample/asset bundle identity, required review checks, confirmation and replacement authorization, backup permissions, external root changes, stale samples, symlinks, commit lock and idempotent rerun.
+- Required review checks cannot all be not-applicable; passing checks need nonempty method/evidence records.
+- User-reviewed path may retain machine not-checked with explicit human-review scope and feedback; missing feedback rejects. These are fixtures, not actual user acceptance.
+- Root written but receipt/session write fails: retry completes records for both new and replaced roots, preserving the original backup; later root edits are not overwritten.
+- Build publish failure restores old outputs; rollback failure retains the remaining backup and removes the completion marker.
+- Unknown/missing and whole-group references, singular component prose aliases, ambiguous prose placeholders.
+- Invalid basic hex/rgb colors; explicit not-checked for unsupported modern CSS syntax.
+- Color alias/optional-alpha/angle-unit regressions: rgb(1, 2, 3, 0.5) and hsl(120deg, 50%, 40%) accepted; percentage hue rejected; unsupported syntax remains not-checked.
+- Failed intent cleanup retried after records are already committed; mismatched intent retained.
+- New audit candidate removes known stale values and stays pending. Tests assert the original committed root/session/receipt remain unchanged, the new baseline matches that root, and no historical browser files enter new evidence/. These limited assertions do not prove full semantic consistency.
 
-## Browser exercise
+## Demo status: pending fresh acceptance
 
-`examples/saas-demo` was rendered in an isolated browser at 375, 768 and 1440 CSS px.
+Audit found a stale on-primary literal and unsynchronized font/responsive rules in the formerly committed demo. The prior prose-consistency pass was withdrawn.
 
-- No horizontal overflow at the three target widths.
-- Navigation collapsed at narrow widths; content remained readable.
-- All rendered `.btn` controls measured about 45.69 CSS px high.
-- Keyboard Tab produced a visible 3px teal outline with 3px offset.
-- Computed primary colors matched deep ink on coral.
-- Calculated opaque contrast ratios: coral/deep-ink 5.625:1; adjusted active coral/deep-ink 4.770:1; dark/cream 17.005:1.
-- Final screenshots were regenerated after the last HTML change.
+The project root and original committed run `20260910T123000Z-demo01` remain byte-identical to their original version, including confirmation and receipt. A new run `20260910T062049Z-audit02` copies that root as its immutable baseline and fixes root_design_before to the original SHA. Only its candidate contains the revised typography/component/responsive rules. New review is pending, user_confirmation is null and no new receipt exists. The old consistency pass is withdrawn in the audit documentation without rewriting commit history.
 
-Evidence is in `examples/saas-demo/.design-samples/20260910T123000Z-demo01/claude-zh/evidence/`. This is scoped sample evidence, not full WCAG certification or validation of all 74 systems.
+Original-record copies are retained under:
 
-## Not executed as passing browser tests
+`examples/saas-demo/.design-samples/20260910T062049Z-audit02/evidence-before-audit/`
 
-The remaining cross-domain scenarios in `tests/scenarios.md` are explicitly marked as protocol/manual or not executed. They are not represented as successful browser runs.
+Historical viewport screenshots remain only in the old run. New candidate evidence/ contains only the freshly generated structural validation report. This revision did **not** rerun browser checks or claim fresh visual acceptance, per-glyph font proof, complete semantic consistency or WCAG certification.
+
+The other Agent/browser scenarios remain scoped as recorded in `tests/scenarios.md`; protocol checks and fault-injection tests are not browser evidence.

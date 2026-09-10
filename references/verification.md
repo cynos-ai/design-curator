@@ -35,7 +35,27 @@
 }
 ```
 
-checks 至少分别记录 structure、references、prose-consistency、fonts、responsive、interaction、contrast、content-authenticity；状态用 pass/fail/not-checked/not-applicable，并写 method、evidence、findings。
+checks 至少分别记录 structure、references、prose-consistency、fonts、responsive、interaction、contrast、content-authenticity；id 不重复。每项写 method、evidence、findings，pass 必须有非空证据路径或具体检查说明。
+
+最小放行表：
+
+| 路径 | 结构、引用、正文一致性、内容真实性 | 字体、响应式、交互、对比 |
+|---|---|---|
+| ready-machine-verified | 全部 pass | 全部 pass，记录实际浏览器/检查证据 |
+| ready-user-reviewed | 全部 pass | 可保留机器 not-checked，但须有下面的人工检查反馈 |
+
+八个必检项不能用 not-applicable 绕过；额外检查项可使用该状态并说明原因。无表单等局部不适用范围写在检查说明中，不代表整个 interaction 不适用。
+
+人工路径另加：
+
+```json
+"human_review": {
+  "checked_ids": ["fonts", "responsive", "interaction", "contrast"],
+  "feedback": "摘录用户对具体视口、字体/图片、操作和可读性检查的反馈；不是简单选A"
+}
+```
+
+反馈对应当前 review 的 DESIGN/bundle，仍须取得当前版本的 session.user_confirmation。脚本只检查记录完整性，不认证证据真伪；Agent 不得编造反馈。
 
 bundle 映射含 `sample.html` 和 assets/ 下每个普通文件。按 POSIX 相对路径排序，用：
 

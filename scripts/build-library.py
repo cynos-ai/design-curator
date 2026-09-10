@@ -249,6 +249,7 @@ def publish(root: Path, staging: Path) -> None:
     backup.mkdir()
     moved: list[tuple[Path, Path]] = []
     installed: list[Path] = []
+    safe_to_cleanup = False
     try:
         for target in targets:
             if target.exists() or target.is_symlink():
@@ -260,15 +261,23 @@ def publish(root: Path, staging: Path) -> None:
             target.parent.mkdir(parents=True, exist_ok=True)
             os.replace(source, target)
             installed.append(target)
-    except Exception:
-        for target in reversed(installed):
-            if target.is_dir(): shutil.rmtree(target, ignore_errors=True)
-            else: target.unlink(missing_ok=True)
-        for saved, target in reversed(moved):
-            if saved.exists(): os.replace(saved, target)
+        safe_to_cleanup = True
+    except Exception as publish_error:
+        try:
+            for target in reversed(installed):
+                if target.is_dir(): shutil.rmtree(target)
+                else: target.unlink(missing_ok=True)
+            for saved, target in reversed(moved):
+                if saved.exists(): os.replace(saved, target)
+            safe_to_cleanup = True
+        except Exception as restore_error:
+            # An incomplete library must not carry a completion marker.
+            (root / "assets" / "build-receipt.json").unlink(missing_ok=True)
+            raise OSError(f"publish failed: {publish_error}; restore failed: {restore_error}; retained backup: {backup}") from restore_error
         raise
     finally:
-        shutil.rmtree(backup, ignore_errors=True)
+        if safe_to_cleanup:
+            shutil.rmtree(backup, ignore_errors=True)
 
 
 def main() -> int:

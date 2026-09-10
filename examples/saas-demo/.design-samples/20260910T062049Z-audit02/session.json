@@ -1,0 +1,24 @@
+{
+  "candidates": [
+    {
+      "baseline_sha256": "932ab9fad6b58f4d3125d6f25a46b217b23d8ae19dcfbd373486e4640ef37b88",
+      "current_design_sha256": "a446dceec62f7c4a7814dd6567b367c83a4ece944d72a5ca07a0c91ebea6279d",
+      "id": "claude-zh",
+      "relative_path": "claude-zh",
+      "review_path": "claude-zh/review.json",
+      "sample_bundle_sha256": "d373e0733b45bc5453eca12a6119530a4d55c21216b2702db919568e36d8ccb1",
+      "sample_sha256": "11938a471f7c1ebdce314ce94a66e8367f394b971eb9c587aefbe079c5605351",
+      "slug": "claude"
+    }
+  ],
+  "phase": "sample-review",
+  "project_root": "/home/sj/Codes/cynos/design-curator/examples/saas-demo",
+  "root_design_before": {
+    "exists": true,
+    "sha256": "932ab9fad6b58f4d3125d6f25a46b217b23d8ae19dcfbd373486e4640ef37b88"
+  },
+  "run_id": "20260910T062049Z-audit02",
+  "schema_version": 1,
+  "selected_candidate": null,
+  "user_confirmation": null
+}

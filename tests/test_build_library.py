@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import hashlib
+import importlib.util
+import os
+from unittest.mock import patch
 import json
 import shutil
 import subprocess
@@ -88,6 +91,37 @@ class BuildTests(unittest.TestCase):
             self.assertIn("active lock", result.stderr)
         finally:
             (ROOT / ".build-library.lock").unlink()
+
+    def test_publish_failure_restores_or_retains_backup(self):
+        sys.path.insert(0, str(ROOT / "scripts"))
+        spec = importlib.util.spec_from_file_location("build_library", SCRIPT)
+        builder = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(builder)
+        for fail_restore in (False, True):
+            with self.subTest(fail_restore=fail_restore), tempfile.TemporaryDirectory() as temp:
+                root, staging = Path(temp) / "skill", Path(temp) / "staging"
+                for base, content in ((root, b"old"), (staging, b"new")):
+                    (base / "assets/design-md/a").mkdir(parents=True)
+                    for relative in ("assets/design-md/a/DESIGN.md", "assets/catalog.json", "INDEX.md", "assets/build-receipt.json"):
+                        (base / relative).write_bytes(content)
+                replace = os.replace
+                def fail(source, target):
+                    source = Path(source)
+                    if source == staging / "assets/catalog.json": raise OSError("publish failure")
+                    if fail_restore and ".build-backup-" in str(source) and source.name == "catalog.json":
+                        raise OSError("restore failure")
+                    return replace(source, target)
+                with patch.object(builder.os, "replace", side_effect=fail), self.assertRaises(OSError):
+                    builder.publish(root, staging)
+                backups = list(root.glob(".build-backup-*"))
+                if fail_restore:
+                    self.assertEqual(len(backups), 1)
+                    self.assertEqual((backups[0] / "assets/catalog.json").read_bytes(), b"old")
+                    self.assertFalse((root / "assets/build-receipt.json").exists())
+                else:
+                    self.assertEqual(backups, [])
+                    self.assertEqual((root / "assets/catalog.json").read_bytes(), b"old")
+                    self.assertEqual((root / "assets/build-receipt.json").read_bytes(), b"old")
 
     def test_receipt_covers_catalog_index_and_74_designs(self):
         receipt = json.loads((ROOT / "assets/build-receipt.json").read_text())

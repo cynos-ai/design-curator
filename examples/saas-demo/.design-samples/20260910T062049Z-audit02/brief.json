@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "product": "知澜（演示）",
+  "page_type": "landing",
+  "audience": "需要检索团队知识的中文产品与研发团队",
+  "language": "zh-CN",
+  "viewports": [
+    375,
+    768,
+    1440
+  ],
+  "style_preferences": [
+    "温暖、人文、编辑感、可信"
+  ],
+  "must_not": [
+    "冷蓝色通用SaaS模板",
+    "伪造业务指标"
+  ],
+  "reference_brand": "Claude",
+  "available_assets": [],
+  "content_status": "approved-draft",
+  "assumptions": [
+    "全部业务内容和联系方式为演示数据"
+  ]
+}

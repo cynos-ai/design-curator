@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "candidate_id": "claude-zh",
+  "design_sha256": "a446dceec62f7c4a7814dd6567b367c83a4ece944d72a5ca07a0c91ebea6279d",
+  "sample_sha256": "11938a471f7c1ebdce314ce94a66e8367f394b971eb9c587aefbe079c5605351",
+  "asset_hashes": {},
+  "sample_bundle_sha256": "d373e0733b45bc5453eca12a6119530a4d55c21216b2702db919568e36d8ccb1",
+  "external_assets": [],
+  "status": "pending",
+  "checks": [
+    {
+      "id": "structure",
+      "status": "pass",
+      "method": "Revised bundled validator; audit revision",
+      "evidence": [
+        "claude-zh/evidence/validate-design.json"
+      ],
+      "findings": []
+    },
+    {
+      "id": "references",
+      "status": "pass",
+      "method": "Revised bundled validator; no blocking reference errors; warning retained for review",
+      "evidence": [
+        "claude-zh/evidence/validate-design.json"
+      ],
+      "findings": [
+        {
+          "code": "ambiguous-prose-reference",
+          "line": 298,
+          "reference": "token.refs",
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+      "id": "prose-consistency",
+      "status": "not-checked",
+      "method": "Awaiting fresh review of revised specification; previous evidence is historical only",
+      "evidence": [],
+      "findings": []
+    },
+    {
+      "id": "fonts",
+      "status": "not-checked",
+      "method": "Awaiting fresh review of revised specification; previous evidence is historical only",
+      "evidence": [],
+      "findings": []
+    },
+    {
+      "id": "responsive",
+      "status": "not-checked",
+      "method": "Awaiting fresh review of revised specification; previous evidence is historical only",
+      "evidence": [],
+      "findings": []
+    },
+    {
+      "id": "interaction",
+      "status": "not-checked",
+      "method": "Awaiting fresh review of revised specification; previous evidence is historical only",
+      "evidence": [],
+      "findings": []
+    },
+    {
+      "id": "contrast",
+      "status": "not-checked",
+      "method": "Awaiting fresh review of revised specification; previous evidence is historical only",
+      "evidence": [],
+      "findings": []
+    },
+    {
+      "id": "content-authenticity",
+      "status": "not-checked",
+      "method": "Awaiting fresh review of revised specification; previous evidence is historical only",
+      "evidence": [],
+      "findings": []
+    }
+  ],
+  "blocking_findings": [
+    "Revised draft: fresh consistency/visual review and current-version confirmation pending."
+  ],
+  "accepted_limitations": []
+}

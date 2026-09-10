@@ -14,10 +14,37 @@ from typing import Any
 from designlib import (
     DesignError, atomic_write, canonical_json, exclusive_lock, json_dump,
     parse_frontmatter, resolve_within, sha256_bytes, sha256_file,
-    validate_prose_references, validate_references, validate_types,
+    validate_colors, validate_prose_references, validate_references, validate_types,
 )
 
 READY = {"ready-machine-verified", "ready-user-reviewed"}
+REQUIRED_CHECKS = {"structure", "references", "prose-consistency", "fonts", "responsive", "interaction", "contrast", "content-authenticity"}
+CORE_CHECKS = {"structure", "references", "prose-consistency", "content-authenticity"}
+
+
+def validate_review(review: dict[str, Any]) -> None:
+    checks = review.get("checks")
+    if not isinstance(checks, list) or any(not isinstance(c, dict) or not isinstance(c.get("id"), str) for c in checks):
+        raise DesignError("review checks must be objects with string ids")
+    by_id = {c["id"]: c for c in checks}
+    if len(by_id) != len(checks) or not REQUIRED_CHECKS.issubset(by_id):
+        raise DesignError("review lacks passing required checks or has duplicate ids")
+    if review.get("status") not in READY or review.get("blocking_findings") != []:
+        raise DesignError("review is not ready")
+    manual = review["status"] == "ready-user-reviewed"
+    for key in REQUIRED_CHECKS:
+        check = by_id[key]
+        state = check.get("status")
+        allowed = {"pass", "not-checked"} if manual and key not in CORE_CHECKS else {"pass"}
+        if state not in allowed or not isinstance(check.get("method"), str) or not check["method"].strip():
+            raise DesignError(f"review lacks passing required checks: {key}")
+        if state == "pass" and (not isinstance(check.get("evidence"), list) or not check["evidence"] or any(not isinstance(e, str) or not e.strip() for e in check["evidence"])):
+            raise DesignError(f"review check needs evidence: {key}")
+    if manual:
+        human = review.get("human_review")
+        if not isinstance(human, dict) or not isinstance(human.get("checked_ids"), list) or any(not isinstance(key, str) for key in human["checked_ids"]) or not (REQUIRED_CHECKS - CORE_CHECKS).issubset(set(human["checked_ids"])) or not isinstance(human.get("feedback"), str) or not human["feedback"].strip():
+            raise DesignError("user-reviewed path needs human_review checked_ids and specific user feedback")
+    # Evidence/feedback are workflow records, not cryptographic attestations.
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -111,6 +138,21 @@ def main() -> int:
                 receipt = load_json(receipt_path)
                 root_file = root / "DESIGN.md"
                 if root_file.is_file() and sha256_file(root_file) == receipt.get("after_sha"):
+                    intent_path = session_path.parent / "commit-intent.json"
+                    if intent_path.exists():
+                        expected_intent = {
+                            "before": session.get("root_design_before"),
+                            "after_sha": receipt.get("after_sha"),
+                            "candidate_id": receipt.get("candidate_id"),
+                            "sample_bundle_sha256": receipt.get("sample_bundle_sha256"),
+                        }
+                        if load_json(intent_path) != expected_intent:
+                            raise DesignError("leftover intent does not match completed commit")
+                        # Records and root already agree; retry only the failed cleanup.
+                        root_changed = True
+                        before_sha, after_sha = receipt.get("before_sha"), receipt.get("after_sha")
+                        backup_path = receipt.get("backup_path")
+                        intent_path.unlink()
                     print(json.dumps({**receipt, "status": "already-committed"}, ensure_ascii=False, sort_keys=True))
                     return 0
                 raise DesignError("session says committed but receipt/root do not agree")
@@ -151,31 +193,35 @@ def main() -> int:
                 raise DesignError("review asset hash inventory mismatch")
             if confirmation.get("candidate_id") != candidate.get("id") or not isinstance(confirmation.get("confirmation_text"), str) or not confirmation["confirmation_text"].strip():
                 raise DesignError("confirmation identity/text missing")
-            required_checks = {"structure", "references", "prose-consistency", "fonts", "responsive", "interaction", "contrast", "content-authenticity"}
-            checks = review.get("checks")
-            check_ids = {item.get("id") for item in checks if isinstance(item, dict)} if isinstance(checks, list) else set()
-            checks_by_id = {item.get("id"): item for item in checks if isinstance(item, dict)} if isinstance(checks, list) else {}
-            bad_check_states = {key: checks_by_id.get(key, {}).get("status") for key in required_checks if checks_by_id.get(key, {}).get("status") not in {"pass", "not-applicable"}}
-            if review.get("candidate_id") != candidate.get("id") or review.get("status") not in READY or review.get("blocking_findings") or not required_checks.issubset(check_ids) or bad_check_states:
-                raise DesignError("review is not ready or lacks passing required checks")
+            if review.get("candidate_id") != candidate.get("id"):
+                raise DesignError("review candidate mismatch")
+            validate_review(review)
             if not isinstance(review.get("accepted_limitations"), list) or not isinstance(review.get("external_assets"), list):
                 raise DesignError("review limitations/external_assets must be lists")
             if not isinstance(confirmation.get("confirmed_at"), str) or "T" not in confirmation["confirmed_at"]:
                 raise DesignError("confirmation timestamp missing")
             frontmatter, body, _ = parse_frontmatter(design)
-            blocking = [item for item in validate_types(frontmatter) + validate_references(frontmatter) + validate_prose_references(frontmatter, body) if item.get("severity") == "error"]
+            blocking = [item for item in validate_types(frontmatter) + validate_references(frontmatter) + validate_prose_references(frontmatter, body) + validate_colors(frontmatter) if item.get("severity") == "error"]
             if blocking:
                 raise DesignError(f"candidate failed structural validation: {blocking[:3]}")
             root_file = root / "DESIGN.md"
             actual_before = current_root_state(root_file)
             expected_before = session.get("root_design_before")
-            if actual_before != expected_before:
+            if not isinstance(expected_before, dict) or not isinstance(expected_before.get("exists"), bool):
+                raise DesignError("root_design_before missing")
+            intent_path = session_path.parent / "commit-intent.json"
+            intent = {"before": expected_before, "after_sha": design_sha, "candidate_id": candidate["id"], "sample_bundle_sha256": bundle_sha}
+            recovering = (intent_path.is_file() and load_json(intent_path) == intent
+                          and actual_before == {"exists": True, "sha256": design_sha})
+            if actual_before != expected_before and not recovering:
                 raise DesignError("project DESIGN.md changed since session started")
-            if actual_before["exists"] and confirmation.get("replacement_approved") is not True:
+            if expected_before["exists"] and confirmation.get("replacement_approved") is not True:
                 raise DesignError("explicit replacement approval is required")
-            before_sha = actual_before["sha256"]
+            before_sha = expected_before["sha256"]
             backup = session_path.parent / "backup" / "DESIGN.before.md"
-            if actual_before["exists"]:
+            if recovering and expected_before["exists"] and (not backup.is_file() or sha256_file(backup) != before_sha):
+                raise DesignError("recovery backup does not match original root DESIGN")
+            if expected_before["exists"]:
                 backup.parent.mkdir(parents=True, exist_ok=True)
                 if backup.exists():
                     if backup.is_symlink() or sha256_file(backup) != before_sha:
@@ -184,11 +230,13 @@ def main() -> int:
                     shutil.copyfile(root_file, backup)
                     os.chmod(backup, stat.S_IMODE(root_file.stat().st_mode))
                 backup_path = backup.relative_to(root).as_posix()
-            mode = stat.S_IMODE(root_file.stat().st_mode) if root_file.exists() else None
-            # Last pre-write guard; the advisory lock only coordinates this tool.
-            if current_root_state(root_file) != expected_before:
-                raise DesignError("project DESIGN.md changed immediately before commit")
-            atomic_write(root_file, design.read_bytes(), mode)
+            if not recovering:
+                mode = stat.S_IMODE(root_file.stat().st_mode) if root_file.exists() else None
+                atomic_write(intent_path, json_dump(intent), 0o600)
+                # Last pre-write guard; the advisory lock only coordinates this tool.
+                if current_root_state(root_file) != expected_before:
+                    raise DesignError("project DESIGN.md changed immediately before commit")
+                atomic_write(root_file, design.read_bytes(), mode)
             root_changed = True
             after_sha = sha256_file(root_file)
             if after_sha != design_sha:
@@ -203,6 +251,7 @@ def main() -> int:
             atomic_write(session_path.parent / "commit-receipt.json", json_dump(receipt), 0o600)
             session["phase"] = "committed"
             atomic_write(session_path, json_dump(session), stat.S_IMODE(session_path.stat().st_mode))
+            intent_path.unlink(missing_ok=True)
             print(json.dumps(receipt, ensure_ascii=False, sort_keys=True))
             return 0
     except DesignError as exc:

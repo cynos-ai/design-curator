@@ -70,6 +70,10 @@ python scripts/validate-design.py /path/to/candidate/DESIGN.md \
 
 提交器拒绝符号链接、路径越界、过期证据、缺少必要检查、根文件外部变化和未授权替换。已有规范备份到运行目录的 `backup/DESIGN.before.md`，回执写入 `commit-receipt.json`。
 
+根文件写入前会保存运行目录内的 `commit-intent.json`。若根文件已写入但回执/session 失败，保持候选、review 和确认不变，重跑同一提交命令即可：脚本核对 intent、根 SHA 和原备份后只补记录，不重新覆盖。成功后移除 intent；若最后清理失败，重跑 already-committed 分支会核对其与回执/session 匹配后清除遗留 intent，不匹配则保留并报错。
+
+构建发布失败时尝试恢复旧产物；恢复也失败则保留 `.build-backup-*` 并输出位置，不删除剩余备份、不标记库可用。
+
 恢复也需要用户确认。只有当前根 SHA 等于回执 `after_sha` 且备份 SHA 等于 `before_sha` 时，才可用同样的临时文件+原子替换方式恢复；根已被后续编辑时先展示差异，不自动覆盖。工具锁只协调本工具，运行提交时应避免外部编辑。
 
 ## 测试与证据
@@ -80,12 +84,15 @@ python -m unittest discover -s tests -v
 
 自动测试覆盖：74 条构建、Slack 补项、哈希/overlay/source-note 门禁、构建锁、回执；重复键、缺失引用、引用循环、代码围栏、类型和 baseline diff；新建/替换根规范、备份权限、幂等重跑、过期候选、外部编辑、符号链接和提交锁。
 
-`tests/scenarios.md` 列出 10 个 Agent/浏览器场景及当前执行状态。`examples/saas-demo/` 是独立演练项目，包含最终规范、候选样张、review、截图与 commit receipt。
+`tests/scenarios.md` 列出 10 个 Agent/浏览器场景及当前执行状态。`examples/saas-demo/` 是独立演练夹具：原根规范及 committed run 保持不变；修订放在新的 `20260910T062049Z-audit02` 运行，baseline 来自原根规范，review=pending，尚无新确认。旧截图留在旧运行，不进入新候选 evidence/；历史通过结论已由审核声明撤回，详见示例 README。
+
+新增回归覆盖：必检项不适用/空证据拒绝、人工路径保留 not-checked、回执/session 写失败后恢复、构建回滚失败保留备份、基础颜色和引用漏检、示例草稿状态一致性。
 
 ## 已知边界
 
 - AI 语义选型由 Agent 阅读完成，不由脚本自动打分。
-- 校验器只支持文档声明的已知类型和基础颜色语法；现代颜色可标 not-checked。
+- 颜色基础检查支持 3/4/6/8 位 hex、传统逗号 rgb/rgba、hsl/hsla 数值语法（两组均为别名且 alpha 可选；Hue 接受无单位数或 deg/grad/rad/turn，拒绝百分比），以及 transparent/currentColor；CSS 允许的数值截断不当作范围错误。现代空格/slash、var/calc、命名色等不在该小型解析器范围内，明确 color-not-checked，实际颜色仍需浏览器复核。
+- 引用检查识别完整 token 路径，component.* 作为源文 components.* 别名；frontmatter 断裂引用/整组引用阻断，正文未知形式给出人工复核 finding。components 可引用一个复合 typography token，不可引用整个 typography 组。
 - 正文语义一致性、实际字体字形、透明/图片背景对比和布局必须结合人工/浏览器检查。
 - 无浏览器时只能走明确的用户人工检查路径，不能自动标 ready。
 - 上游是非官方品牌灵感分析；MIT 通知见 `assets/UPSTREAM-LICENSE.txt`。商标、图片和字体权利需独立确认。

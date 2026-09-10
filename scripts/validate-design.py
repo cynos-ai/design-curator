@@ -4,31 +4,21 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import sys
 from pathlib import Path
 from typing import Any
 
 from designlib import (
     DesignError, flatten, heading_list, parse_frontmatter, sha256_file,
-    validate_prose_references, validate_references, validate_types,
+    validate_colors, validate_prose_references, validate_references, validate_types,
 )
-
-COLOR_RE = re.compile(r"^(?:#[0-9A-Fa-f]{3,8}|rgba?\([^\n]+\)|hsla?\([^\n]+\)|transparent|currentColor)$")
 
 
 def validate(path: Path) -> tuple[dict[str, Any], dict[str, Any], str]:
     if path.is_symlink() or not path.is_file():
         raise DesignError(f"regular non-symlink file required: {path}")
     frontmatter, body, _ = parse_frontmatter(path)
-    findings = validate_types(frontmatter) + validate_references(frontmatter) + validate_prose_references(frontmatter, body)
-    colors = frontmatter.get("colors", {})
-    if isinstance(colors, dict):
-        for name, value in colors.items():
-            if isinstance(value, str) and value.startswith("{"):
-                continue
-            if not isinstance(value, str) or not COLOR_RE.fullmatch(value.strip()):
-                findings.append({"code": "color-not-checked", "severity": "warning", "path": f"colors.{name}", "value": value})
+    findings = validate_types(frontmatter) + validate_references(frontmatter) + validate_prose_references(frontmatter, body) + validate_colors(frontmatter)
     blocking = [item for item in findings if item.get("severity") == "error"]
     report = {
         "schema_version": 1,

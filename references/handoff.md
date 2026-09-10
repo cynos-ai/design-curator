@@ -18,7 +18,7 @@
 
 ## 异常恢复
 
-若输出 `root_changed=true` 且 `recovery_required=true`，先比较根文件 SHA、候选 SHA 和备份 SHA；根已等于候选时只补全记录，不再次覆盖。若根文件已被后续编辑，停止并展示差异。
+若输出 `root_changed=true` 且 `recovery_required=true`，保持本轮候选、review 和确认不变，重跑同一提交命令。脚本根据 `commit-intent.json` 比较根文件 SHA、候选 SHA 和原备份 SHA；一致时只补回执/session，不再次覆盖，成功后清除 intent。若根文件已被后续编辑或 intent/备份不符，停止并展示诊断，不自行改哈希凑齐状态。
 
 恢复旧规范也要用户确认。仅当当前根 SHA 等于 receipt 的 after_sha，且 backup SHA 等于 before_sha 时，才将备份按与提交相同的安全方式恢复；否则不得自动覆盖。
 

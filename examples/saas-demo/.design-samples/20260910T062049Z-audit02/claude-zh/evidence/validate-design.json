@@ -1,0 +1,287 @@
+{
+  "baseline_diff": {
+    "baseline": "/home/sj/Codes/cynos/design-curator/examples/saas-demo/.design-samples/20260910T062049Z-audit02/claude-zh/baseline.DESIGN.md",
+    "baseline_sha256": "932ab9fad6b58f4d3125d6f25a46b217b23d8ae19dcfbd373486e4640ef37b88",
+    "body_changed": true,
+    "headings": {
+      "after": [
+        "## Overview",
+        "## Colors",
+        "### Brand & Accent",
+        "### Surface",
+        "### Text",
+        "### Semantic",
+        "## Typography",
+        "### Font Family",
+        "### Hierarchy",
+        "### Principles",
+        "### Note on Font Substitutes",
+        "## Layout",
+        "### Project Layout Profile (current sample)",
+        "### Source layout reference (not current sample rules)",
+        "### Spacing System",
+        "### Grid & Container",
+        "### Whitespace Philosophy",
+        "## Elevation & Depth",
+        "### Decorative Depth",
+        "## Shapes",
+        "### Border Radius Scale",
+        "### Photography & Illustrations",
+        "## Components",
+        "### Top Navigation",
+        "### Buttons",
+        "### Cards & Containers",
+        "### Inputs & Forms",
+        "### Tags / Badges",
+        "### Tab / Filter",
+        "### CTA / Footer",
+        "## Do's and Don'ts",
+        "### Do",
+        "### Don't",
+        "## Responsive Behavior",
+        "### Breakpoints",
+        "### Touch Targets",
+        "### Collapsing Strategy",
+        "### Image Behavior",
+        "## Iteration Guide",
+        "## Known Gaps",
+        "## Project Application & Provenance",
+        "### Scope",
+        "### Source",
+        "### Applied Adaptations",
+        "### Verification & Limits",
+        "### Attribution"
+      ],
+      "before": [
+        "## Overview",
+        "## Colors",
+        "### Brand & Accent",
+        "### Surface",
+        "### Text",
+        "### Semantic",
+        "## Typography",
+        "### Font Family",
+        "### Hierarchy",
+        "### Principles",
+        "### Note on Font Substitutes",
+        "## Layout",
+        "### Spacing System",
+        "### Grid & Container",
+        "### Whitespace Philosophy",
+        "## Elevation & Depth",
+        "### Decorative Depth",
+        "## Shapes",
+        "### Border Radius Scale",
+        "### Photography & Illustrations",
+        "## Components",
+        "### Top Navigation",
+        "### Buttons",
+        "### Cards & Containers",
+        "### Inputs & Forms",
+        "### Tags / Badges",
+        "### Tab / Filter",
+        "### CTA / Footer",
+        "## Do's and Don'ts",
+        "### Do",
+        "### Don't",
+        "## Responsive Behavior",
+        "### Breakpoints",
+        "### Touch Targets",
+        "### Collapsing Strategy",
+        "### Image Behavior",
+        "## Iteration Guide",
+        "## Known Gaps",
+        "## Project Application & Provenance",
+        "### Scope",
+        "### Source",
+        "### Applied Adaptations",
+        "### Verification & Limits",
+        "### Attribution"
+      ]
+    },
+    "tokens": {
+      "added": {
+        "components.button-primary.minHeight": "44px",
+        "components.button-secondary.minHeight": "44px"
+      },
+      "changed": {
+        "components.button-primary.padding": {
+          "after": "11px 20px",
+          "before": "12px 20px"
+        },
+        "components.button-secondary.backgroundColor": {
+          "after": "transparent",
+          "before": "{colors.canvas}"
+        },
+        "components.button-secondary.padding": {
+          "after": "11px 20px",
+          "before": "12px 20px"
+        },
+        "components.cta-band-coral.padding": {
+          "after": "56px",
+          "before": "64px"
+        },
+        "components.cta-band-coral.rounded": {
+          "after": "14px",
+          "before": "{rounded.lg}"
+        },
+        "components.feature-card.padding": {
+          "after": "30px",
+          "before": "32px"
+        },
+        "components.footer.backgroundColor": {
+          "after": "{colors.canvas}",
+          "before": "{colors.surface-dark}"
+        },
+        "components.footer.padding": {
+          "after": "30px 0 45px",
+          "before": "64px"
+        },
+        "components.footer.textColor": {
+          "after": "{colors.muted}",
+          "before": "{colors.on-dark-soft}"
+        },
+        "components.hero-band.padding": {
+          "after": "100px 0 88px",
+          "before": "96px"
+        },
+        "components.product-mockup-card-dark.padding": {
+          "after": "24px",
+          "before": "32px"
+        },
+        "components.product-mockup-card-dark.rounded": {
+          "after": "{rounded.xl}",
+          "before": "{rounded.lg}"
+        },
+        "components.product-mockup-card-dark.typography": {
+          "after": "{typography.body-md}",
+          "before": "{typography.title-md}"
+        },
+        "components.top-nav.height": {
+          "after": "72px",
+          "before": "64px"
+        },
+        "typography.body-md.fontFamily": {
+          "after": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+          "before": "StyreneB, Inter, sans-serif"
+        },
+        "typography.body-sm.fontFamily": {
+          "after": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+          "before": "StyreneB, Inter, sans-serif"
+        },
+        "typography.button.fontFamily": {
+          "after": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+          "before": "StyreneB, Inter, sans-serif"
+        },
+        "typography.button.fontWeight": {
+          "after": 650,
+          "before": 500
+        },
+        "typography.button.lineHeight": {
+          "after": 1.55,
+          "before": 1
+        },
+        "typography.caption-uppercase.fontFamily": {
+          "after": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+          "before": "StyreneB, Inter, sans-serif"
+        },
+        "typography.caption.fontFamily": {
+          "after": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+          "before": "StyreneB, Inter, sans-serif"
+        },
+        "typography.code.fontFamily": {
+          "after": "ui-monospace, monospace",
+          "before": "JetBrains Mono, ui-monospace, monospace"
+        },
+        "typography.display-lg.fontFamily": {
+          "after": "Georgia, \"Noto Serif CJK SC\", \"Songti SC\", STSong, serif",
+          "before": "Copernicus, Tiempos Headline, serif"
+        },
+        "typography.display-lg.fontSize": {
+          "after": "50px",
+          "before": "48px"
+        },
+        "typography.display-lg.lineHeight": {
+          "after": 1.12,
+          "before": 1.1
+        },
+        "typography.display-md.fontFamily": {
+          "after": "Georgia, \"Noto Serif CJK SC\", \"Songti SC\", STSong, serif",
+          "before": "Copernicus, Tiempos Headline, serif"
+        },
+        "typography.display-sm.fontFamily": {
+          "after": "Georgia, \"Noto Serif CJK SC\", \"Songti SC\", STSong, serif",
+          "before": "Copernicus, Tiempos Headline, serif"
+        },
+        "typography.display-xl.fontFamily": {
+          "after": "Georgia, \"Noto Serif CJK SC\", \"Songti SC\", STSong, serif",
+          "before": "Copernicus, Tiempos Headline, serif"
+        },
+        "typography.display-xl.fontSize": {
+          "after": "72px",
+          "before": "64px"
+        },
+        "typography.display-xl.letterSpacing": {
+          "after": "-1px",
+          "before": "-1.5px"
+        },
+        "typography.display-xl.lineHeight": {
+          "after": 1.03,
+          "before": 1.05
+        },
+        "typography.nav-link.fontFamily": {
+          "after": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+          "before": "StyreneB, Inter, sans-serif"
+        },
+        "typography.nav-link.fontWeight": {
+          "after": 600,
+          "before": 500
+        },
+        "typography.nav-link.lineHeight": {
+          "after": 1.55,
+          "before": 1.4
+        },
+        "typography.title-lg.fontFamily": {
+          "after": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+          "before": "StyreneB, Inter, sans-serif"
+        },
+        "typography.title-md.fontFamily": {
+          "after": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+          "before": "StyreneB, Inter, sans-serif"
+        },
+        "typography.title-md.fontWeight": {
+          "after": 700,
+          "before": 500
+        },
+        "typography.title-md.lineHeight": {
+          "after": 1.55,
+          "before": 1.4
+        },
+        "typography.title-sm.fontFamily": {
+          "after": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+          "before": "StyreneB, Inter, sans-serif"
+        }
+      },
+      "removed": {
+        "components.button-primary.height": "40px",
+        "components.button-secondary.height": "40px",
+        "components.cta-band-coral.typography": "{typography.display-sm}",
+        "components.footer.typography": "{typography.body-sm}"
+      }
+    }
+  },
+  "blocking_findings": [],
+  "file": "/home/sj/Codes/cynos/design-curator/examples/saas-demo/.design-samples/20260910T062049Z-audit02/claude-zh/DESIGN.md",
+  "findings": [
+    {
+      "code": "ambiguous-prose-reference",
+      "line": 298,
+      "reference": "token.refs",
+      "severity": "warning"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "structure, known token types and references only; not visual/WCAG certification",
+  "sha256": "a446dceec62f7c4a7814dd6567b367c83a4ece944d72a5ca07a0c91ebea6279d",
+  "status": "structurally-valid"
+}

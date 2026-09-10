@@ -13,7 +13,12 @@ from typing import Any, Iterator
 
 import yaml
 
-REF_RE = re.compile(r"\{((?:colors|typography|spacing|rounded|components)\.[A-Za-z0-9_.-]+)\}")
+REF_RE = re.compile(r"\{([A-Za-z_][A-Za-z0-9_-]*(?:\.[A-Za-z0-9_-]+)*)\}")
+
+
+def reference_path(value: str) -> str:
+    # Upstream prose uses singular component.* for the components mapping.
+    return "components." + value[len("component."):] if value.startswith("component.") else value
 DIMENSION_RE = re.compile(r"^-?\d+(?:\.\d+)?(?:px|em|rem)$")
 SLUG_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9.-]*$")
 KNOWN_GROUPS = ("colors", "typography", "rounded", "spacing", "components")
@@ -109,14 +114,16 @@ def validate_references(frontmatter: dict[str, Any]) -> list[dict[str, Any]]:
     findings: list[dict[str, Any]] = []
     graph: dict[str, set[str]] = {}
     for location, value in walk_strings(frontmatter):
-        refs = REF_RE.findall(value)
+        refs = [reference_path(ref) for ref in REF_RE.findall(value)]
         if refs:
             graph.setdefault(location, set()).update(refs)
         for ref in refs:
             exists, target = lookup(frontmatter, ref)
             if not exists:
                 findings.append({"code": "missing-reference", "severity": "error", "path": location, "reference": ref})
-            elif location.startswith("colors.") and isinstance(target, dict):
+            elif isinstance(target, dict) and not (
+                location.startswith("components.") and ref.startswith("typography.") and ref.count(".") == 1
+            ):
                 findings.append({"code": "invalid-group-reference", "severity": "error", "path": location, "reference": ref})
     visiting: set[str] = set()
     visited: set[str] = set()
@@ -181,6 +188,57 @@ def validate_types(frontmatter: dict[str, Any]) -> list[dict[str, Any]]:
     return findings
 
 
+def validate_colors(frontmatter: dict[str, Any]) -> list[dict[str, Any]]:
+    """Check hex and legacy comma rgb/hsl; leave other CSS syntax explicit."""
+    findings = []
+    colors = frontmatter.get("colors", {})
+    if not isinstance(colors, dict):
+        return findings
+    number = r"[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?"
+    for name, value in colors.items():
+        code, severity = "color-not-checked", "warning"
+        if isinstance(value, str):
+            text = value.strip()
+            if REF_RE.fullmatch(text) or text in {"transparent", "currentColor"}:
+                continue
+            if text.startswith("#"):
+                if re.fullmatch(r"#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})", text):
+                    continue
+                code, severity = "invalid-color", "error"
+            else:
+                match = re.fullmatch(r"(rgba?|hsla?)\((.*)\)", text, re.IGNORECASE)
+                if match:
+                    function, args = match.groups()
+                    function, args = function.lower(), args.strip()
+                    # Nested CSS functions, relative colors and space/slash syntax
+                    # are outside this small checker, not necessarily invalid.
+                    unsupported = "(" in args or "/" in args or args.lower().startswith("from ")
+                    if "," in args and not unsupported:
+                        parts = [x.strip().lower() for x in args.split(",")]
+                        # rgb/rgba and hsl/hsla are aliases; alpha is optional for both.
+                        valid = len(parts) in (3, 4)
+                        for i, part in enumerate(parts):
+                            if function.startswith("hsl") and i == 0:
+                                pattern = number + r"(?:deg|grad|rad|turn)?"
+                            elif function.startswith("hsl") and i in (1, 2):
+                                pattern = number + "%"
+                            else:
+                                pattern = number + "%?"
+                            valid = valid and bool(re.fullmatch(pattern, part))
+                        if function.startswith("rgb") and len(parts) >= 3:
+                            # Legacy comma channels must all be numbers or all percentages.
+                            valid = valid and len({p.endswith("%") for p in parts[:3]}) == 1
+                        if valid:
+                            continue
+                        code, severity = "invalid-color", "error"
+                    elif not unsupported and re.fullmatch(r"[A-Za-z_-]+", args) and args.lower() != "none":
+                        code, severity = "invalid-color", "error"
+        else:
+            code, severity = "invalid-color", "error"
+        findings.append({"code": code, "severity": severity, "path": f"colors.{name}", "value": value})
+    return findings
+
+
 def strip_code_fences(markdown: str) -> str:
     output: list[str] = []
     in_fence = False
@@ -202,9 +260,14 @@ def strip_code_fences(markdown: str) -> str:
 def validate_prose_references(frontmatter: dict[str, Any], body: str) -> list[dict[str, Any]]:
     findings: list[dict[str, Any]] = []
     for line_no, line in enumerate(strip_code_fences(body).splitlines(), 1):
-        for ref in REF_RE.findall(line):
-            if not lookup(frontmatter, ref)[0]:
-                findings.append({"code": "missing-prose-reference", "severity": "error", "line": line_no, "reference": ref})
+        for raw_ref in REF_RE.findall(line):
+            ref = reference_path(raw_ref)
+            if ref.split(".")[0] not in KNOWN_GROUPS:
+                findings.append({"code": "ambiguous-prose-reference", "severity": "warning", "line": line_no, "reference": raw_ref})
+            elif not lookup(frontmatter, ref)[0]:
+                findings.append({"code": "missing-prose-reference", "severity": "error", "line": line_no, "reference": raw_ref})
+            elif ref in KNOWN_GROUPS:
+                findings.append({"code": "invalid-group-reference", "severity": "error", "line": line_no, "reference": ref})
     return findings
 
 
