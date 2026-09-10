@@ -193,6 +193,10 @@
           "after": "ui-monospace, monospace",
           "before": "JetBrains Mono, ui-monospace, monospace"
         },
+        "typography.code.lineHeight": {
+          "after": 1.55,
+          "before": 1.6
+        },
         "typography.display-lg.fontFamily": {
           "after": "Georgia, \"Noto Serif CJK SC\", \"Songti SC\", STSong, serif",
           "before": "Copernicus, Tiempos Headline, serif"
@@ -272,16 +276,9 @@
   },
   "blocking_findings": [],
   "file": "/home/sj/Codes/cynos/design-curator/examples/saas-demo/.design-samples/20260910T062049Z-audit02/claude-zh/DESIGN.md",
-  "findings": [
-    {
-      "code": "ambiguous-prose-reference",
-      "line": 298,
-      "reference": "token.refs",
-      "severity": "warning"
-    }
-  ],
+  "findings": [],
   "schema_version": 1,
   "scope": "structure, known token types and references only; not visual/WCAG certification",
-  "sha256": "a446dceec62f7c4a7814dd6567b367c83a4ece944d72a5ca07a0c91ebea6279d",
+  "sha256": "d962edd85b3781e9dbc7cca32ff3e71af906e456d53fc8f6f61bfd0ed006cb48",
   "status": "structurally-valid"
 }

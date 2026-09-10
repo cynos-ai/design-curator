@@ -1,0 +1,12 @@
+{
+  "after_sha": "d962edd85b3781e9dbc7cca32ff3e71af906e456d53fc8f6f61bfd0ed006cb48",
+  "backup_path": ".design-samples/20260910T062049Z-audit02/backup/DESIGN.before.md",
+  "before_sha": "932ab9fad6b58f4d3125d6f25a46b217b23d8ae19dcfbd373486e4640ef37b88",
+  "candidate_id": "claude-zh",
+  "project_design": "DESIGN.md",
+  "recovery_required": false,
+  "root_changed": true,
+  "sample_bundle_sha256": "da1b553f5506ea1029770fe76063c6bf1e202bd23674dcb11c0c641f916a345c",
+  "schema_version": 1,
+  "status": "committed"
+}

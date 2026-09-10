@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "revision": "internal-contract-audit-followup",
-  "status": "automated-pass-demo-pending",
+  "revision": "audit02-confirmed-handoff",
+  "status": "pass-with-declared-limits",
   "library": {
     "count": 74,
     "source_commit": "8147538b4226ae41e2487a9179e3bcc1f68e8554",
@@ -14,20 +14,29 @@
     "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -v"
   },
   "demo": {
-    "status": "pending",
-    "design_sha256": "a446dceec62f7c4a7814dd6567b367c83a4ece944d72a5ca07a0c91ebea6279d",
-    "sample_bundle_sha256": "d373e0733b45bc5453eca12a6119530a4d55c21216b2702db919568e36d8ccb1",
+    "status": "committed",
+    "design_sha256": "d962edd85b3781e9dbc7cca32ff3e71af906e456d53fc8f6f61bfd0ed006cb48",
+    "sample_bundle_sha256": "da1b553f5506ea1029770fe76063c6bf1e202bd23674dcb11c0c641f916a345c",
     "structure_check": "pass",
-    "browser_revalidated": false,
-    "user_confirmation": null,
+    "browser_revalidated": true,
+    "user_confirmation": {
+      "candidate_id": "claude-zh",
+      "confirmation_text": "可以，继续",
+      "confirmed_at": "2026-09-10T07:17:03.569446+00:00",
+      "replacement_approved": true
+    },
     "historical_records": "examples/saas-demo/.design-samples/20260910T062049Z-audit02/evidence-before-audit",
     "run_id": "20260910T062049Z-audit02",
     "baseline_sha256": "932ab9fad6b58f4d3125d6f25a46b217b23d8ae19dcfbd373486e4640ef37b88",
     "previous_committed_run": "examples/saas-demo/.design-samples/20260910T123000Z-demo01",
-    "previous_root_preserved": true
+    "evidence": "examples/saas-demo/.design-samples/20260910T062049Z-audit02/claude-zh/evidence",
+    "review_status": "ready-machine-verified",
+    "commit_receipt": "examples/saas-demo/.design-samples/20260910T062049Z-audit02/commit-receipt.json",
+    "backup_path": "examples/saas-demo/.design-samples/20260910T062049Z-audit02/backup/DESIGN.before.md",
+    "previous_version_backed_up": true
   },
   "limits": [
-    "Revised demo requires fresh consistency/visual review and current-version confirmation.",
+    "Audit02 scoped checks and user confirmation complete; unused systems/components and broader accessibility coverage remain outside scope.",
     "Historical screenshots and commit receipt do not certify the revised specification.",
     "Unit-test user feedback and fault injection are fixtures, not real user/browser acceptance.",
     "No additional external-security mechanisms introduced."

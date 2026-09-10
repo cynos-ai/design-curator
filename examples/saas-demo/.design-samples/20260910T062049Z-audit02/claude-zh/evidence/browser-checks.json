@@ -1,0 +1,641 @@
+{
+  "schema_version": 1,
+  "sample_sha256": "63611f5105164dfba178e15bf9212d5c1cd57cb506eebc07bef3dae82e420279",
+  "render_design_sha256": "14b71d8b6ebc9c043da392789969a7e78ae5ccdfc350e16eab05bc13ce1f63b3",
+  "method": "Isolated Chromium; real viewport navigation, scoped DOM measurements, real Tab/Enter/hover/pointerdown; no external assets",
+  "observations": {
+    "375": {
+      "viewport": [
+        375,
+        900
+      ],
+      "scrollWidth": 375,
+      "overflow": [],
+      "fontsStatus": "loaded",
+      "body": {
+        "font": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24.8px",
+        "weight": "400",
+        "columns": "none",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "h1": {
+        "font": "Georgia, \"Noto Serif CJK SC\", \"Songti SC\", STSong, serif",
+        "fontSize": "44px",
+        "lineHeight": "45.32px",
+        "weight": "400",
+        "columns": "none",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "hero": {
+        "font": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24.8px",
+        "weight": "400",
+        "columns": "351px",
+        "padding": "48px 0px 64px",
+        "radius": "0px"
+      },
+      "cards": {
+        "font": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24.8px",
+        "weight": "400",
+        "columns": "351px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "product": {
+        "font": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24.8px",
+        "weight": "400",
+        "columns": "none",
+        "padding": "18px",
+        "radius": "16px"
+      },
+      "controls": [
+        {
+          "text": "知知澜",
+          "width": 69.203125,
+          "height": 44,
+          "href": "#top",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        },
+        {
+          "text": "查看演示",
+          "width": 86,
+          "height": 45.6875,
+          "href": "#try",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        },
+        {
+          "text": "开始演示",
+          "width": 351,
+          "height": 45.6875,
+          "href": "#demo-answer",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        },
+        {
+          "text": "了解工作方式",
+          "width": 351,
+          "height": 45.6875,
+          "href": "#workflow",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        },
+        {
+          "text": "查看示例回答",
+          "width": 150,
+          "height": 45.6875,
+          "href": "#demo-answer",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        }
+      ],
+      "textPairs": [
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(250, 249, 245)",
+          "ratio": 17.497722780575504,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(250, 249, 245)",
+          "background": "rgb(20, 20, 19)",
+          "ratio": 17.497722780575504,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(204, 120, 92)",
+          "ratio": 5.625478970584097,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(108, 106, 100)",
+          "background": "rgb(250, 249, 245)",
+          "ratio": 5.133205624972125,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(250, 249, 245)",
+          "ratio": 17.497722780575504,
+          "target": 3
+        },
+        {
+          "color": "rgb(61, 61, 58)",
+          "background": "rgb(250, 249, 245)",
+          "ratio": 10.34428152145095,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(160, 157, 150)",
+          "background": "rgb(24, 23, 21)",
+          "ratio": 6.618103228587927,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(250, 249, 245)",
+          "background": "rgb(37, 35, 32)",
+          "ratio": 14.876559173731252,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(250, 249, 245)",
+          "background": "rgb(24, 23, 21)",
+          "ratio": 17.004913172879238,
+          "target": 3
+        },
+        {
+          "color": "rgb(250, 249, 245)",
+          "background": "rgb(24, 23, 21)",
+          "ratio": 17.004913172879238,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(216, 212, 204)",
+          "background": "rgb(31, 30, 27)",
+          "ratio": 11.27888606659405,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(191, 107, 80)",
+          "background": "rgb(239, 233, 222)",
+          "ratio": 3.198360670148187,
+          "target": 3
+        },
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(239, 233, 222)",
+          "ratio": 15.256617056230207,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(61, 61, 58)",
+          "background": "rgb(239, 233, 222)",
+          "ratio": 9.019387486799857,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(204, 120, 92)",
+          "ratio": 5.625478970584097,
+          "target": 3
+        }
+      ],
+      "textFailures": [],
+      "images": 0,
+      "remoteResources": [],
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36"
+    },
+    "768": {
+      "viewport": [
+        768,
+        1024
+      ],
+      "scrollWidth": 768,
+      "overflow": [],
+      "fontsStatus": "loaded",
+      "body": {
+        "font": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24.8px",
+        "weight": "400",
+        "columns": "none",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "h1": {
+        "font": "Georgia, \"Noto Serif CJK SC\", \"Songti SC\", STSong, serif",
+        "fontSize": "46px",
+        "lineHeight": "47.38px",
+        "weight": "400",
+        "columns": "none",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "hero": {
+        "font": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24.8px",
+        "weight": "400",
+        "columns": "680px",
+        "padding": "64px 0px",
+        "radius": "0px"
+      },
+      "cards": {
+        "font": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24.8px",
+        "weight": "400",
+        "columns": "680px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "product": {
+        "font": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24.8px",
+        "weight": "400",
+        "columns": "none",
+        "padding": "18px",
+        "radius": "16px"
+      },
+      "controls": [
+        {
+          "text": "知知澜",
+          "width": 69.203125,
+          "height": 44,
+          "href": "#top",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        },
+        {
+          "text": "查看演示",
+          "width": 98,
+          "height": 45.6875,
+          "href": "#try",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        },
+        {
+          "text": "开始演示",
+          "width": 98,
+          "height": 45.6875,
+          "href": "#demo-answer",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        },
+        {
+          "text": "了解工作方式",
+          "width": 126,
+          "height": 45.6875,
+          "href": "#workflow",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        },
+        {
+          "text": "查看示例回答",
+          "width": 150,
+          "height": 45.6875,
+          "href": "#demo-answer",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        }
+      ],
+      "textPairs": [
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(250, 249, 245)",
+          "ratio": 17.497722780575504,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(250, 249, 245)",
+          "background": "rgb(20, 20, 19)",
+          "ratio": 17.497722780575504,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(204, 120, 92)",
+          "ratio": 5.625478970584097,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(108, 106, 100)",
+          "background": "rgb(250, 249, 245)",
+          "ratio": 5.133205624972125,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(250, 249, 245)",
+          "ratio": 17.497722780575504,
+          "target": 3
+        },
+        {
+          "color": "rgb(61, 61, 58)",
+          "background": "rgb(250, 249, 245)",
+          "ratio": 10.34428152145095,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(160, 157, 150)",
+          "background": "rgb(24, 23, 21)",
+          "ratio": 6.618103228587927,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(250, 249, 245)",
+          "background": "rgb(37, 35, 32)",
+          "ratio": 14.876559173731252,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(250, 249, 245)",
+          "background": "rgb(24, 23, 21)",
+          "ratio": 17.004913172879238,
+          "target": 3
+        },
+        {
+          "color": "rgb(250, 249, 245)",
+          "background": "rgb(24, 23, 21)",
+          "ratio": 17.004913172879238,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(216, 212, 204)",
+          "background": "rgb(31, 30, 27)",
+          "ratio": 11.27888606659405,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(191, 107, 80)",
+          "background": "rgb(239, 233, 222)",
+          "ratio": 3.198360670148187,
+          "target": 3
+        },
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(239, 233, 222)",
+          "ratio": 15.256617056230207,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(61, 61, 58)",
+          "background": "rgb(239, 233, 222)",
+          "ratio": 9.019387486799857,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(204, 120, 92)",
+          "ratio": 5.625478970584097,
+          "target": 3
+        }
+      ],
+      "textFailures": [],
+      "images": 0,
+      "remoteResources": [],
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36"
+    },
+    "1440": {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "scrollWidth": 1440,
+      "overflow": [],
+      "fontsStatus": "loaded",
+      "body": {
+        "font": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24.8px",
+        "weight": "400",
+        "columns": "none",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "h1": {
+        "font": "Georgia, \"Noto Serif CJK SC\", \"Songti SC\", STSong, serif",
+        "fontSize": "72px",
+        "lineHeight": "74.16px",
+        "weight": "400",
+        "columns": "none",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "hero": {
+        "font": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24.8px",
+        "weight": "400",
+        "columns": "570.609px 537.391px",
+        "padding": "100px 0px 88px",
+        "radius": "0px"
+      },
+      "cards": {
+        "font": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24.8px",
+        "weight": "400",
+        "columns": "381.328px 381.328px 381.344px",
+        "padding": "0px",
+        "radius": "0px"
+      },
+      "product": {
+        "font": "Inter, \"Noto Sans CJK SC\", \"PingFang SC\", \"Microsoft YaHei\", sans-serif",
+        "fontSize": "16px",
+        "lineHeight": "24.8px",
+        "weight": "400",
+        "columns": "none",
+        "padding": "24px",
+        "radius": "16px"
+      },
+      "controls": [
+        {
+          "text": "知知澜",
+          "width": 69.203125,
+          "height": 44,
+          "href": "#top",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        },
+        {
+          "text": "工作方式",
+          "width": 56,
+          "height": 44,
+          "href": "#workflow",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        },
+        {
+          "text": "数据边界",
+          "width": 56,
+          "height": 44,
+          "href": "#security",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        },
+        {
+          "text": "查看演示",
+          "width": 98,
+          "height": 45.6875,
+          "href": "#try",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        },
+        {
+          "text": "开始演示",
+          "width": 98,
+          "height": 45.6875,
+          "href": "#demo-answer",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        },
+        {
+          "text": "了解工作方式",
+          "width": 126,
+          "height": 45.6875,
+          "href": "#workflow",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        },
+        {
+          "text": "查看示例回答",
+          "width": 150,
+          "height": 45.6875,
+          "href": "#demo-answer",
+          "targetExists": true,
+          "outlineColor": "rgb(20, 20, 19)"
+        }
+      ],
+      "textPairs": [
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(250, 249, 245)",
+          "ratio": 17.497722780575504,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(250, 249, 245)",
+          "background": "rgb(20, 20, 19)",
+          "ratio": 17.497722780575504,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(204, 120, 92)",
+          "ratio": 5.625478970584097,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(108, 106, 100)",
+          "background": "rgb(250, 249, 245)",
+          "ratio": 5.133205624972125,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(250, 249, 245)",
+          "ratio": 17.497722780575504,
+          "target": 3
+        },
+        {
+          "color": "rgb(61, 61, 58)",
+          "background": "rgb(250, 249, 245)",
+          "ratio": 10.34428152145095,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(160, 157, 150)",
+          "background": "rgb(24, 23, 21)",
+          "ratio": 6.618103228587927,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(250, 249, 245)",
+          "background": "rgb(37, 35, 32)",
+          "ratio": 14.876559173731252,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(250, 249, 245)",
+          "background": "rgb(24, 23, 21)",
+          "ratio": 17.004913172879238,
+          "target": 3
+        },
+        {
+          "color": "rgb(250, 249, 245)",
+          "background": "rgb(24, 23, 21)",
+          "ratio": 17.004913172879238,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(216, 212, 204)",
+          "background": "rgb(31, 30, 27)",
+          "ratio": 11.27888606659405,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(191, 107, 80)",
+          "background": "rgb(239, 233, 222)",
+          "ratio": 3.198360670148187,
+          "target": 3
+        },
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(239, 233, 222)",
+          "ratio": 15.256617056230207,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(61, 61, 58)",
+          "background": "rgb(239, 233, 222)",
+          "ratio": 9.019387486799857,
+          "target": 4.5
+        },
+        {
+          "color": "rgb(20, 20, 19)",
+          "background": "rgb(204, 120, 92)",
+          "ratio": 5.625478970584097,
+          "target": 3
+        }
+      ],
+      "textFailures": [],
+      "images": 0,
+      "remoteResources": [],
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36"
+    },
+    "keyboard375": {
+      "sequence": [
+        "brand",
+        "nav CTA",
+        "primary CTA"
+      ],
+      "text": "开始演示",
+      "focusVisible": true,
+      "outline": "rgb(20, 20, 19) solid 3px",
+      "offset": "3px"
+    },
+    "enter375": {
+      "hash": "#demo-answer",
+      "active": "demo-answer",
+      "targetTop": -0.234375,
+      "outline": "rgb(250, 249, 245) solid 3px",
+      "focusVisible": true
+    },
+    "reverseTab375": {
+      "text": "了解工作方式",
+      "focusVisible": true
+    },
+    "secondary375": {
+      "hash": "#workflow",
+      "targetTop": 0.046875
+    },
+    "callout768": {
+      "hash": "#demo-answer",
+      "active": "demo-answer",
+      "targetTop": -0.046875
+    },
+    "hover1440": {
+      "hover": true,
+      "color": "rgb(20, 20, 19)",
+      "background": "rgb(191, 107, 80)"
+    },
+    "active1440": {
+      "active": true,
+      "color": "rgb(20, 20, 19)",
+      "background": "rgb(191, 107, 80)"
+    }
+  }
+}

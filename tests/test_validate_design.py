@@ -106,13 +106,14 @@ class ValidateTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0)
             self.assertIn("color-not-checked", {f["code"] for f in payload["findings"]})
 
-    def test_audit_candidate_removes_known_stale_values_and_is_pending(self):
+    def test_confirmed_audit_commit_preserves_baseline_and_current_evidence(self):
         project = ROOT / "examples/saas-demo"
         run_dir = project / ".design-samples/20260910T062049Z-audit02"
         candidate = run_dir / "claude-zh"
         design = (candidate / "DESIGN.md").read_text()
-        self.assertNotEqual((project / "DESIGN.md").read_bytes(), (candidate / "DESIGN.md").read_bytes())
-        self.assertEqual((project / "DESIGN.md").read_bytes(), (candidate / "baseline.DESIGN.md").read_bytes())
+        self.assertEqual((project / "DESIGN.md").read_bytes(), (candidate / "DESIGN.md").read_bytes())
+        self.assertNotEqual((project / "DESIGN.md").read_bytes(), (candidate / "baseline.DESIGN.md").read_bytes())
+        self.assertEqual((run_dir / "backup/DESIGN.before.md").read_bytes(), (candidate / "baseline.DESIGN.md").read_bytes())
         self.assertIn('**On Primary** (`{colors.on-primary}` — #141413)', design)
         self.assertNotIn('fontFamily: "Copernicus', design)
         self.assertNotIn('hero h1 64→32px', design)
@@ -120,22 +121,39 @@ class ValidateTests(unittest.TestCase):
         report = json.loads((candidate / "review.json").read_text())
         session = json.loads((run_dir / "session.json").read_text())
         self.assertEqual(report["design_sha256"], hashlib.sha256((candidate / "DESIGN.md").read_bytes()).hexdigest())
-        self.assertEqual(report["status"], "pending")
-        self.assertIsNone(session["user_confirmation"])
-        self.assertEqual(session["phase"], "sample-review")
-        self.assertFalse((run_dir / "commit-receipt.json").exists())
-        self.assertEqual(set(p.name for p in (candidate / "evidence").iterdir()), {"validate-design.json"})
-        root_sha = hashlib.sha256((project / "DESIGN.md").read_bytes()).hexdigest()
-        self.assertEqual(session["root_design_before"], {"exists": True, "sha256": root_sha})
-        self.assertEqual(session["candidates"][0]["baseline_sha256"], root_sha)
-        self.assertNotEqual(root_sha, report["design_sha256"])
+        self.assertEqual(report["status"], "ready-machine-verified")
+        confirmation = session["user_confirmation"]
+        self.assertEqual(confirmation["design_sha256"], report["design_sha256"])
+        self.assertEqual(confirmation["sample_bundle_sha256"], report["sample_bundle_sha256"])
+        self.assertTrue(confirmation["replacement_approved"])
+        self.assertTrue(confirmation["confirmation_text"].strip())
+        self.assertEqual(session["phase"], "committed")
+        receipt = json.loads((run_dir / "commit-receipt.json").read_text())
+        self.assertEqual(receipt["after_sha"], report["design_sha256"])
+        self.assertEqual(receipt["sample_bundle_sha256"], report["sample_bundle_sha256"])
+        self.assertFalse((run_dir / "commit-intent.json").exists())
+        self.assertTrue((candidate / "evidence/validate-design.json").is_file())
+        if report["status"] == "ready-machine-verified":
+            browser = json.loads((candidate / "evidence/browser-checks.json").read_text())
+            sample_sha = hashlib.sha256((candidate / "sample.html").read_bytes()).hexdigest()
+            self.assertEqual(browser["sample_sha256"], sample_sha)
+            self.assertEqual(report["sample_sha256"], sample_sha)
+            for viewport in ("375", "768", "1440"):
+                self.assertFalse(browser["observations"][viewport]["overflow"])
+                self.assertFalse(browser["observations"][viewport]["textFailures"])
+            self.assertTrue((candidate / "evidence/agent-review.md").is_file())
+        before_sha = hashlib.sha256((candidate / "baseline.DESIGN.md").read_bytes()).hexdigest()
+        self.assertEqual(session["root_design_before"], {"exists": True, "sha256": before_sha})
+        self.assertEqual(session["candidates"][0]["baseline_sha256"], before_sha)
+        self.assertEqual(receipt["before_sha"], before_sha)
+        self.assertNotEqual(before_sha, report["design_sha256"])
         old = project / ".design-samples/20260910T123000Z-demo01"
         old_session = json.loads((old / "session.json").read_text())
         self.assertEqual(old_session["phase"], "committed")
         self.assertEqual(old_session["root_design_before"], {"exists": False, "sha256": None})
         self.assertIsNotNone(old_session["user_confirmation"])
-        self.assertEqual(json.loads((old / "commit-receipt.json").read_text())["after_sha"], root_sha)
-        self.assertEqual(root_sha, "932ab9fad6b58f4d3125d6f25a46b217b23d8ae19dcfbd373486e4640ef37b88")
+        self.assertEqual(json.loads((old / "commit-receipt.json").read_text())["after_sha"], before_sha)
+        self.assertEqual(before_sha, "932ab9fad6b58f4d3125d6f25a46b217b23d8ae19dcfbd373486e4640ef37b88")
         self.assertEqual(run(design)[0].returncode, 0)
 
     def test_duplicate_key_is_rejected(self):

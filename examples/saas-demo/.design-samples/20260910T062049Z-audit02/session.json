@@ -2,16 +2,16 @@
   "candidates": [
     {
       "baseline_sha256": "932ab9fad6b58f4d3125d6f25a46b217b23d8ae19dcfbd373486e4640ef37b88",
-      "current_design_sha256": "a446dceec62f7c4a7814dd6567b367c83a4ece944d72a5ca07a0c91ebea6279d",
+      "current_design_sha256": "d962edd85b3781e9dbc7cca32ff3e71af906e456d53fc8f6f61bfd0ed006cb48",
       "id": "claude-zh",
       "relative_path": "claude-zh",
       "review_path": "claude-zh/review.json",
-      "sample_bundle_sha256": "d373e0733b45bc5453eca12a6119530a4d55c21216b2702db919568e36d8ccb1",
-      "sample_sha256": "11938a471f7c1ebdce314ce94a66e8367f394b971eb9c587aefbe079c5605351",
+      "sample_bundle_sha256": "da1b553f5506ea1029770fe76063c6bf1e202bd23674dcb11c0c641f916a345c",
+      "sample_sha256": "63611f5105164dfba178e15bf9212d5c1cd57cb506eebc07bef3dae82e420279",
       "slug": "claude"
     }
   ],
-  "phase": "sample-review",
+  "phase": "committed",
   "project_root": "/home/sj/Codes/cynos/design-curator/examples/saas-demo",
   "root_design_before": {
     "exists": true,
@@ -19,6 +19,14 @@
   },
   "run_id": "20260910T062049Z-audit02",
   "schema_version": 1,
-  "selected_candidate": null,
-  "user_confirmation": null
+  "selected_candidate": "claude-zh",
+  "user_confirmation": {
+    "candidate_id": "claude-zh",
+    "confirmation_context": "用户在收到当前样张与截图文件路径、以及采用该样张替换 examples/saas-demo/DESIGN.md 并做第二次 Git 提交的确认请求后，同意继续。",
+    "confirmation_text": "可以，继续",
+    "confirmed_at": "2026-09-10T07:17:03.569446+00:00",
+    "design_sha256": "d962edd85b3781e9dbc7cca32ff3e71af906e456d53fc8f6f61bfd0ed006cb48",
+    "replacement_approved": true,
+    "sample_bundle_sha256": "da1b553f5506ea1029770fe76063c6bf1e202bd23674dcb11c0c641f916a345c"
+  }
 }

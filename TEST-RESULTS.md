@@ -25,18 +25,18 @@ New regression coverage:
 - Invalid basic hex/rgb colors; explicit not-checked for unsupported modern CSS syntax.
 - Color alias/optional-alpha/angle-unit regressions: rgb(1, 2, 3, 0.5) and hsl(120deg, 50%, 40%) accepted; percentage hue rejected; unsupported syntax remains not-checked.
 - Failed intent cleanup retried after records are already committed; mismatched intent retained.
-- New audit candidate removes known stale values and stays pending. Tests assert the original committed root/session/receipt remain unchanged, the new baseline matches that root, and no historical browser files enter new evidence/. These limited assertions do not prove full semantic consistency.
+- Confirmed audit02 root equals the candidate; confirmation, review, receipt and bundle identities agree. Backup equals baseline and the true prior root SHA; before/after differ. Original run/session/receipt remain unchanged. These assertions do not prove full semantic consistency.
 
-## Demo status: pending fresh acceptance
+## Demo status: Agent/browser reviewed, user confirmed, committed
 
 Audit found a stale on-primary literal and unsynchronized font/responsive rules in the formerly committed demo. The prior prose-consistency pass was withdrawn.
 
-The project root and original committed run `20260910T123000Z-demo01` remain byte-identical to their original version, including confirmation and receipt. A new run `20260910T062049Z-audit02` copies that root as its immutable baseline and fixes root_design_before to the original SHA. Only its candidate contains the revised typography/component/responsive rules. New review is pending, user_confirmation is null and no new receipt exists. The old consistency pass is withdrawn in the audit documentation without rewriting commit history.
+The original committed run `20260910T123000Z-demo01` remains byte-identical, including its confirmation and receipt. New run `20260910T062049Z-audit02` preserves the former root as immutable baseline and fixes root_design_before to that SHA. After scoped Agent/browser review and the user's explicit continuation confirmation following sample presentation, commit-design.py copied the unchanged confirmed candidate into the root and preserved the original bytes in backup/DESIGN.before.md. Session is committed, review is ready-machine-verified and the new receipt records distinct before/after hashes. The old consistency pass is withdrawn in audit documentation without rewriting commit history.
 
 Original-record copies are retained under:
 
 `examples/saas-demo/.design-samples/20260910T062049Z-audit02/evidence-before-audit/`
 
-Historical viewport screenshots remain only in the old run. New candidate evidence/ contains only the freshly generated structural validation report. This revision did **not** rerun browser checks or claim fresh visual acceptance, per-glyph font proof, complete semantic consistency or WCAG certification.
+Historical viewport screenshots remain only in the old run. New candidate evidence/ now contains the fresh structural report, agent-review.md, browser-checks.json, 375/768/1440 screenshots and keyboard focus screenshot. Checks found and repaired insufficient focus/number contrast, an invalid email action and callout alignment. Real viewport overflow checks, text contrast pairs, Tab/Shift+Tab/Enter navigation, hover and active pointer state were rerun on the final HTML. All action targets are at least 44px high. Fonts were checked as readable local CJK fallback, not per-glyph identity proof. User acceptance was recorded separately after this scoped sample validation. Neither the checks nor user acceptance imply complete WCAG or cross-browser/native-touch/200%-zoom certification.
 
 The other Agent/browser scenarios remain scoped as recorded in `tests/scenarios.md`; protocol checks and fault-injection tests are not browser evidence.

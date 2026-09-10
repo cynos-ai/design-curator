@@ -1,6 +1,21 @@
 # Changes
 
-## Audit revision — current draft, not confirmed
+## Confirmed handoff
+
+After the sample/screenshots and local paths were presented, the user replied “可以，继续”. The session records that exact reply and the current DESIGN/bundle hashes with replacement approval. commit-design.py copied the confirmed bytes without further DESIGN/HTML edits, backed up the previous root and wrote the new receipt. Root after SHA: d962edd85b3781e9dbc7cca32ff3e71af906e456d53fc8f6f61bfd0ed006cb48. Before SHA: 932ab9fad6b58f4d3125d6f25a46b217b23d8ae19dcfbd373486e4640ef37b88. Earlier waiting-state notes below describe the review timeline, not the current session state.
+
+## Audit02 browser acceptance — review-time record (before user confirmation)
+
+- Request: perform the consistency and real-browser review before presenting the candidate; do not commit the root without user confirmation.
+- Low-contrast teal focus → 3px ink outline; target panel uses on-dark. Primary-active step-number text replaces primary coral (large-text contrast 2.712→3.198).
+- All nav/brand targets now minimum 44px; query line-height synchronized to 1.55.
+- Invalid demo email removed. Primary/callout actions navigate locally to #demo-answer; navigation says 查看演示, not real trial registration. No remote action or business submission.
+- Fixed callout centering (auto horizontal margins); h1 width 11ch→8em to reduce awkward CJK word splitting; these rules are written in Layout first.
+- Removed ambiguous token.refs placeholder and obsolete hover/footer/Claude-chrome instructions from active rules. Elevation explicitly describes the project panel shadow.
+- Executing Agent completed scoped source/diff/HTML review and real 375/768/1440 viewport checks. New evidence: evidence/agent-review.md, browser-checks.json, viewport-*.png, focus-375.png. Initial failing screenshot moved to ../evidence-before-audit/.
+- DESIGN/sample/bundle hashes refreshed; original root, old committed run and new baseline remain unchanged. No current user confirmation and no new commit receipt. Browser verification does not imply user aesthetic acceptance.
+
+## Initial audit revision — historical preparation, not confirmed
 
 - Request: repair the fixture's internal specification/sample inconsistencies, not invent a new style.
 - On Primary prose: stale #ffffff → #141413, matching the existing token and HTML.

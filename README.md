@@ -84,7 +84,7 @@ python -m unittest discover -s tests -v
 
 自动测试覆盖：74 条构建、Slack 补项、哈希/overlay/source-note 门禁、构建锁、回执；重复键、缺失引用、引用循环、代码围栏、类型和 baseline diff；新建/替换根规范、备份权限、幂等重跑、过期候选、外部编辑、符号链接和提交锁。
 
-`tests/scenarios.md` 列出 10 个 Agent/浏览器场景及当前执行状态。`examples/saas-demo/` 是独立演练夹具：原根规范及 committed run 保持不变；修订放在新的 `20260910T062049Z-audit02` 运行，baseline 来自原根规范，review=pending，尚无新确认。旧截图留在旧运行，不进入新候选 evidence/；历史通过结论已由审核声明撤回，详见示例 README。
+`tests/scenarios.md` 列出 10 个 Agent/浏览器场景及当前执行状态。`examples/saas-demo/` 是独立演练夹具：旧 committed run 保持不变；修订在新运行 `20260910T062049Z-audit02` 完成，baseline 来自旧根规范。现已通过 Agent 一致性/真实浏览器复核并取得用户确认，经提交脚本落定；旧根规范保存在本轮 backup/。旧截图留在旧运行，本轮截图独立生成；历史通过结论已由审核声明撤回，详见示例 README。
 
 新增回归覆盖：必检项不适用/空证据拒绝、人工路径保留 not-checked、回执/session 写失败后恢复、构建回滚失败保留备份、基础颜色和引用漏检、示例草稿状态一致性。
 

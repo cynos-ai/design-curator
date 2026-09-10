@@ -32,88 +32,88 @@ colors:
 
 typography:
   display-xl:
-    fontFamily: 'Georgia, "Noto Serif CJK SC", "Songti SC", STSong, serif'
-    fontSize: 72px
+    fontFamily: "Copernicus, Tiempos Headline, serif"
+    fontSize: 64px
     fontWeight: 400
-    lineHeight: 1.03
-    letterSpacing: -1px
+    lineHeight: 1.05
+    letterSpacing: -1.5px
   display-lg:
-    fontFamily: 'Georgia, "Noto Serif CJK SC", "Songti SC", STSong, serif'
-    fontSize: 50px
+    fontFamily: "Copernicus, Tiempos Headline, serif"
+    fontSize: 48px
     fontWeight: 400
-    lineHeight: 1.12
+    lineHeight: 1.1
     letterSpacing: -1px
   display-md:
-    fontFamily: 'Georgia, "Noto Serif CJK SC", "Songti SC", STSong, serif'
+    fontFamily: "Copernicus, Tiempos Headline, serif"
     fontSize: 36px
     fontWeight: 400
     lineHeight: 1.15
     letterSpacing: -0.5px
   display-sm:
-    fontFamily: 'Georgia, "Noto Serif CJK SC", "Songti SC", STSong, serif'
+    fontFamily: "Copernicus, Tiempos Headline, serif"
     fontSize: 28px
     fontWeight: 400
     lineHeight: 1.2
     letterSpacing: -0.3px
   title-lg:
-    fontFamily: 'Inter, "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif'
+    fontFamily: "StyreneB, Inter, sans-serif"
     fontSize: 22px
     fontWeight: 500
     lineHeight: 1.3
     letterSpacing: 0
   title-md:
-    fontFamily: 'Inter, "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif'
+    fontFamily: "StyreneB, Inter, sans-serif"
     fontSize: 18px
-    fontWeight: 700
-    lineHeight: 1.55
+    fontWeight: 500
+    lineHeight: 1.4
     letterSpacing: 0
   title-sm:
-    fontFamily: 'Inter, "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif'
+    fontFamily: "StyreneB, Inter, sans-serif"
     fontSize: 16px
     fontWeight: 500
     lineHeight: 1.4
     letterSpacing: 0
   body-md:
-    fontFamily: 'Inter, "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif'
+    fontFamily: "StyreneB, Inter, sans-serif"
     fontSize: 16px
     fontWeight: 400
     lineHeight: 1.55
     letterSpacing: 0
   body-sm:
-    fontFamily: 'Inter, "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif'
+    fontFamily: "StyreneB, Inter, sans-serif"
     fontSize: 14px
     fontWeight: 400
     lineHeight: 1.55
     letterSpacing: 0
   caption:
-    fontFamily: 'Inter, "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif'
+    fontFamily: "StyreneB, Inter, sans-serif"
     fontSize: 13px
     fontWeight: 500
     lineHeight: 1.4
     letterSpacing: 0
   caption-uppercase:
-    fontFamily: 'Inter, "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif'
+    fontFamily: "StyreneB, Inter, sans-serif"
     fontSize: 12px
     fontWeight: 500
     lineHeight: 1.4
     letterSpacing: 1.5px
   code:
-    fontFamily: "ui-monospace, monospace"
+    fontFamily: "JetBrains Mono, ui-monospace, monospace"
     fontSize: 14px
     fontWeight: 400
-    lineHeight: 1.55
+    lineHeight: 1.6
     letterSpacing: 0
   button:
-    fontFamily: 'Inter, "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif'
+    fontFamily: "StyreneB, Inter, sans-serif"
     fontSize: 14px
-    fontWeight: 650
-    lineHeight: 1.55
+    fontWeight: 500
+    lineHeight: 1
     letterSpacing: 0
   nav-link:
-    fontFamily: 'Inter, "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif'
+    fontFamily: "StyreneB, Inter, sans-serif"
     fontSize: 14px
-    fontWeight: 600
-    lineHeight: 1.55
+    fontWeight: 500
+    lineHeight: 1.4
     letterSpacing: 0
 
 rounded:
@@ -141,8 +141,8 @@ components:
     textColor: "{colors.on-primary}"
     typography: "{typography.button}"
     rounded: "{rounded.md}"
-    padding: 11px 20px
-    minHeight: 44px
+    padding: 12px 20px
+    height: 40px
   button-primary-active:
     backgroundColor: "{colors.primary-active}"
     textColor: "{colors.on-primary}"
@@ -152,12 +152,12 @@ components:
     textColor: "{colors.muted}"
     rounded: "{rounded.md}"
   button-secondary:
-    backgroundColor: transparent
+    backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink}"
     typography: "{typography.button}"
     rounded: "{rounded.md}"
-    padding: 11px 20px
-    minHeight: 44px
+    padding: 12px 20px
+    height: 40px
   button-secondary-on-dark:
     backgroundColor: "{colors.surface-dark-elevated}"
     textColor: "{colors.on-dark}"
@@ -181,12 +181,12 @@ components:
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink}"
     typography: "{typography.nav-link}"
-    height: 72px
+    height: 64px
   hero-band:
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink}"
     typography: "{typography.display-xl}"
-    padding: 100px 0 88px
+    padding: 96px
   hero-illustration-card:
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink}"
@@ -196,13 +196,13 @@ components:
     textColor: "{colors.ink}"
     typography: "{typography.title-md}"
     rounded: "{rounded.lg}"
-    padding: 30px
+    padding: 32px
   product-mockup-card-dark:
     backgroundColor: "{colors.surface-dark}"
     textColor: "{colors.on-dark}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.xl}"
-    padding: 24px
+    typography: "{typography.title-md}"
+    rounded: "{rounded.lg}"
+    padding: 32px
   code-window-card:
     backgroundColor: "{colors.surface-dark}"
     textColor: "{colors.on-dark}"
@@ -282,8 +282,9 @@ components:
   cta-band-coral:
     backgroundColor: "{colors.primary}"
     textColor: "{colors.on-primary}"
-    rounded: 14px
-    padding: 56px
+    typography: "{typography.display-sm}"
+    rounded: "{rounded.lg}"
+    padding: 64px
   cta-band-dark:
     backgroundColor: "{colors.surface-dark}"
     textColor: "{colors.on-dark}"
@@ -291,14 +292,13 @@ components:
     rounded: "{rounded.lg}"
     padding: 64px
   footer:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.muted}"
-    padding: 30px 0 45px
+    backgroundColor: "{colors.surface-dark}"
+    textColor: "{colors.on-dark-soft}"
+    typography: "{typography.body-sm}"
+    padding: 64px
 ---
 
 ## Overview
-
-Project status: revised draft fixture, not a newly confirmed commit. The frontmatter description and brand overview describe the source inspiration. Typography and the Project Layout Profile below define this sample. Components explicitly marked as source reference are unused defaults, not a claim they were rendered or validated.
 
 Claude.com is the warmest, most editorial interface in the AI-product category. The base atmosphere is a **tinted cream canvas** (`{colors.canvas}` — #faf9f5) — distinctly warm, deliberately not the cool gray-white that every other AI brand uses. Headlines run a **slab-serif display** ("Copernicus" / Tiempos Headline) at weight 400 with negative letter-spacing, paired with **StyreneB / Inter** body sans. The combination feels like a literary publication, not a SaaS marketing page.
 
@@ -347,7 +347,7 @@ The dark surfaces are where Claude shows its product chrome — code blocks, ter
 - **Body** (`{colors.body}` — #3d3d3a): Default running-text color.
 - **Muted** (`{colors.muted}` — #6c6a64): Sub-headings, breadcrumbs, footer-adjacent secondary text.
 - **Muted Soft** (`{colors.muted-soft}` — #8e8b82): Captions, fine-print, copyright lines.
-- **On Primary** (`{colors.on-primary}` — #141413): Deep ink text on coral buttons. For this Chinese project this is an accessibility adaptation from the source white text.
+- **On Primary** (`{colors.on-primary}` — #ffffff): Deep ink text on coral buttons. For this Chinese project this is an accessibility adaptation from the source white text.
 - **On Dark** (`{colors.on-dark}` — #faf9f5): Cream-tinted white used on dark surfaces (echoes the canvas tone).
 - **On Dark Soft** (`{colors.on-dark-soft}` — #a09d96): Footer body text, secondary labels in dark mockups.
 
@@ -359,62 +359,41 @@ The dark surfaces are where Claude shows its product chrome — code blocks, ter
 ## Typography
 
 ### Font Family
-The project uses `Georgia, "Noto Serif CJK SC", "Songti SC", STSong, serif` for h1/h2, and `Inter, "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif` for body and UI. The query uses `ui-monospace, monospace`. These are local fallback declarations, not proof of installed fonts or per-glyph coverage. Copernicus and StyreneB describe the historical inspiration only; they are not project requirements.
+The system runs **Copernicus** (or **Tiempos Headline** as substitute) as the slab-serif display face for headlines, and **StyreneB** (or **Inter** as substitute) as the humanist sans for body, navigation, and UI labels. **JetBrains Mono** handles code blocks. The fallback stack walks `Tiempos Headline, Garamond, "Times New Roman", serif` for display and `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif` for body.
 
 The display/body split is editorial:
-- Local serif display (weight 400, -1px tracking on h1/h2).
-- Local sans body (400), navigation (600), buttons (650), card h3 (700).
-- System monospace for the static query mockup.
+- Copernicus serif (weight 400, negative tracking) → h1, h2, h3, hero display
+- StyreneB sans (weight 400-500) → body, navigation, buttons, captions, labels
+- JetBrains Mono → all code blocks and terminal text
 
 ### Hierarchy
 
 | Token | Size | Weight | Line Height | Letter Spacing | Use |
 |---|---|---|---|---|---|
-| `{typography.display-xl}` | 72px maximum | 400 | 1.03 | -1px | Project h1: clamp(46px, 5.5vw, 72px); 44px at ≤430px |
-| `{typography.display-lg}` | 50px maximum | 400 | 1.12 | -1px | Section h2: clamp(34px, 4vw, 50px); 36px at ≤430px |
+| `{typography.display-xl}` | 64px | 400 | 1.05 | -1.5px | Homepage h1 ("Meet your thinking partner") — Copernicus serif |
+| `{typography.display-lg}` | 48px | 400 | 1.1 | -1px | Section heads — Copernicus |
 | `{typography.display-md}` | 36px | 400 | 1.15 | -0.5px | Sub-section heads, model names — Copernicus |
 | `{typography.display-sm}` | 28px | 400 | 1.2 | -0.3px | Pricing tier names, callout headlines — Copernicus |
 | `{typography.title-lg}` | 22px | 500 | 1.3 | 0 | Pricing plan size labels — StyreneB |
-| `{typography.title-md}` | 18px | 700 | 1.55 | 0 | Project feature-card h3 |
+| `{typography.title-md}` | 18px | 500 | 1.4 | 0 | Feature card titles, intro paragraphs |
 | `{typography.title-sm}` | 16px | 500 | 1.4 | 0 | Connector tile titles, list labels |
-| `{typography.body-md}` | 16px | 400 | 1.55 | 0 | Default running-text — project local sans |
+| `{typography.body-md}` | 16px | 400 | 1.55 | 0 | Default running-text — StyreneB |
 | `{typography.body-sm}` | 14px | 400 | 1.55 | 0 | Footer body, fine-print |
 | `{typography.caption}` | 13px | 500 | 1.4 | 0 | Badge labels, captions |
 | `{typography.caption-uppercase}` | 12px | 500 | 1.4 | 1.5px | Category tags, "NEW" badges |
-| `{typography.code}` | 14px | 400 | 1.55 | 0 | Project query — system monospace |
-| `{typography.button}` | 14px | 650 | 1.55 | 0 | Standard project button labels |
-| `{typography.nav-link}` | 14px | 600 | 1.55 | 0 | Project nav links |
+| `{typography.code}` | 14px | 400 | 1.6 | 0 | Code blocks — JetBrains Mono |
+| `{typography.button}` | 14px | 500 | 1.0 | 0 | Standard button labels |
+| `{typography.nav-link}` | 14px | 500 | 1.4 | 0 | Top-nav menu items |
 
 ### Principles
-Project h1/h2 remain serif at weight 400 and -1px tracking. Actual CJK fallback metrics must be inspected rather than assumed equivalent to the proprietary source fonts. Body paragraphs use 400, navigation 600, buttons 650 and feature-card headings 700. Lead text is 18px (17px at ≤430px), line-height 1.55. The product answer heading is 26px/400/1.55 with Georgia, Noto Serif CJK SC, serif. These are recorded project choices, not upstream observations.
+Display sizes use weight 400 (regular), never bold. Negative letter-spacing (-0.3 to -1.5px) is essential — Copernicus without it reads as off-brand. The serif character is what gives Anthropic its literary, considered voice; switching to a sans-serif display would make Claude feel like every other AI tool.
+
+Body type stays at weight 400 for paragraphs, weight 500 for labels and emphasized phrases. The sans body is humanist (StyreneB) — never geometric. Inter is an acceptable substitute because of its similar humanist proportions; Helvetica or Arial would be too neutral and break the warm-editorial feel.
 
 ### Note on Font Substitutes
-The source suggested Cormorant Garamond / EB Garamond and Inter / licensed Söhne. This offline sample instead selects the local stacks above; do not download or claim those source alternatives are loaded. Unused hierarchy rows retain source size metrics as reference defaults, but their font roles use the project-local stacks.
+If Copernicus / Tiempos Headline is unavailable, **Cormorant Garamond** at weight 500 with -0.02em letter-spacing is the closest open-source approximation. **EB Garamond** is a fallback. For StyreneB, **Inter** is the closest match — both are humanist sans designed for screen reading. **Söhne** is another close alternative if licensed.
 
 ## Layout
-
-### Project Layout Profile (current sample)
-
-The source layout subsections following this profile document the original system only. The project uses these selected rules instead:
-
-| Area | Current project rule |
-|---|---|
-| Shell | min(1180px, 100% - 48px), centered |
-| Nav | Normal flow, 72px high; hairline bottom border; local sans links 14px/600/1.55; own “知” text mark, not Anthropic logo |
-| Hero | 1.03fr/0.97fr columns, gap 72px, padding 100px 0 88px; h1 max-width 8em (CJK phrase-aware width, bounded by its grid column), clamp(46px, 5.5vw, 72px)/400/1.03/-1px |
-| Feature section | Padding 88px 0; heading clamp(34px, 4vw, 50px)/400/1.12/-1px; intro split with gap 32px |
-| Feature cards | Three equal columns, gap 18px; padding 30px, radius 12px, min-height 220px; 42px Georgia/serif primary-active (#bf6b50) numbers; h3 18px/700/1.55 with margins 20px 0 8px |
-| Product mockup | Static example, not actual Claude chrome; dark surface, radius 16px, padding 24px; shadow 0 28px 70px rgba(20,20,19,.18), an explicit source-style exception |
-| Query | Dark-elevated, 20px padding, 10px radius, system monospace 14px/1.55; margin 30px 0 18px |
-| Source chips | Three columns, gap 8px; dark-soft surface, 12px padding, 8px radius, sans 12px/1.55, #d8d4cc text |
-| Callout | Centered shell (auto horizontal margins), coral surface, deep-ink text, 14px radius, 56px padding, 90px bottom margin, split layout with 32px gap; h2 local serif 40px/400/1.12/-1px; cream button min-width 150px |
-| Footer | Project exception: cream shell, not source dark footer; muted sans 13px/1.55, padding 30px 0 45px, hairline top border; demo name and data notice only |
-| Focus | Buttons/nav links: 3px solid ink outline, 3px offset. The focused dark answer target uses on-dark outline. Both primary and brand/nav links have minimum height 44px. |
-| Actions | “开始演示” and “查看示例回答” navigate to the static #demo-answer panel; nav “查看演示” navigates to #try. No real trial, email, form or data transfer is performed. Native anchor navigation supports Enter and focus; reduced-motion preference disables smooth scrolling. |
-
-These component literals are project adaptations, not a global scaling of source spacing/radius tokens. The source footer, shadow and display-scale deviations were reviewed against the actual sample by the executing Agent; aesthetic acceptance and replacement authorization still require the user.
-
-### Source layout reference (not current sample rules)
 
 ### Spacing System
 - **Base unit:** 4px.
@@ -440,10 +419,10 @@ The cream canvas + serif display + generous internal padding create an editorial
 | Flat | No shadow, no border | Body sections, top nav, hero bands |
 | Soft hairline | 1px `{colors.hairline}` border | Inputs, sub-nav, occasionally on cards |
 | Cream card | `{colors.surface-card}` background — no shadow | Feature cards, content cards |
-| Dark project panel | `{colors.surface-dark}` plus `0 28px 70px rgba(20,20,19,.18)` shadow | Current static answer panel; explicit exception to source flat cards |
+| Dark surface card | `{colors.surface-dark}` background — no shadow | Code editor mockups, model showcase cards |
 | Subtle drop shadow | Faint shadow at low alpha | Hover-elevated states (the system uses `0 1px 3px rgba(20,20,19,0.08)` rarely) |
 
-The source philosophy is color-block first, shadow rare. This project keeps flat feature cards but explicitly adds the shadow above to the static answer panel. This sample contains no code-editor controls or animated product chrome.
+The elevation philosophy is **color-block first, shadow rare**. Most depth comes from the cream-vs-dark surface contrast. Shadows are minimal. The dark surface mockups have their own internal product chrome (code editor scrollbars, line numbers, syntax highlighting) which adds detail without needing external shadows.
 
 ### Decorative Depth
 - The Anthropic spike-mark glyph (4-spoke radial asterisk) appears as a small black mark in the brand wordmark and inline as a content marker.
@@ -475,17 +454,15 @@ When photography is used (rare — mostly testimonials), avatars crop to perfect
 
 ## Components
 
-The current sample instantiates top-nav, button-primary/secondary, hero-band, feature-card, product-mockup-card-dark, cta-band-coral and footer. Their tokens and descriptions are synchronized to Project Layout Profile and Responsive Behavior. Unused source components below retain their original analysis and must be reviewed before future use. Other components are unused reference defaults. No complex controls have been implemented or verified.
-
 ### Top Navigation
 
-**`top-nav`** — Project nav in normal flow, 72px high (64px at ≤430px), cream background and hairline border. Own text mark, two section links and primary CTA; local sans 14px/600/1.55. Non-button links hide at ≤820px. No hamburger is implemented.
+**`top-nav`** — Cream nav bar pinned to the top of every page. 64px tall, `{colors.canvas}` background. Carries the Anthropic spike-mark + "Claude" wordmark at left, primary horizontal menu (Product, Solutions, Use Cases, Pricing, Research, Company) center-left, right-side cluster with "Sign in" text-link, "Try Claude" `{component.button-primary}` (coral). Menu items in `{typography.nav-link}` (StyreneB 14px / 500).
 
 ### Buttons
 
-**`button-primary`** — The signature coral CTA. Background `{colors.primary}` (#cc785c), text `{colors.on-primary}` (deep ink; project accessibility adaptation), type `{typography.button}` (local sans 14px / 650 / 1.55), padding 11px × 20px, minimum height 44px with natural content height, rounded `{rounded.md}` (8px). Active state `button-primary-active` darkens to the project-adjusted `{colors.primary-active}` (#bf6b50), retaining deep-ink text contrast.
+**`button-primary`** — The signature coral CTA. Background `{colors.primary}` (#cc785c), text `{colors.on-primary}` (deep ink; project accessibility adaptation), type `{typography.button}` (StyreneB 14px / 500), padding 12px × 20px, height 40px, rounded `{rounded.md}` (8px). Active state `button-primary-active` darkens to the project-adjusted `{colors.primary-active}` (#bf6b50), retaining deep-ink text contrast.
 
-**`button-secondary`** — Project transparent button over the cream canvas, ink text and 1px ink border; same 11px × 20px padding, minimum height 44px and 8px radius as primary. The nav CTA uses the nav-link weight 600 via its scoped link rule; other buttons use 650.
+**`button-secondary`** — Cream button with hairline outline. Background `{colors.canvas}`, text `{colors.ink}`, 1px hairline border, same padding + height + radius as primary.
 
 **`button-secondary-on-dark`** — Used over `{colors.surface-dark}` cards. Background `{colors.surface-dark-elevated}` (#252320), text `{colors.on-dark}`. Stays dark — the system never inverts to a light secondary on dark surfaces.
 
@@ -497,13 +474,13 @@ The current sample instantiates top-nav, button-primary/secondary, hero-band, fe
 
 ### Cards & Containers
 
-**`hero-band`** — Project hero: 1.03fr/0.97fr columns, 72px gap, 100px 0 88px padding. Local serif title uses the fluid display-xl rule and 44px at ≤430px. Responsive Behavior defines the single-column variant.
+**`hero-band`** — Cream-canvas hero with a 6-6 grid: h1 + sub-headline + button row on the left, hero illustration card or product mockup card on the right. Vertical padding `{spacing.section}` (96px).
 
 **`hero-illustration-card`** — A larger card holding the hero's right-side artifact — sometimes a coral-stroke line illustration on cream background, sometimes a dark code editor mockup. Background `{colors.canvas}` or `{colors.surface-dark}` depending on context, rounded `{rounded.xl}` (16px).
 
-**`feature-card`** — Three-up project grid (one-up at ≤820px), cream-card background, 12px radius, 30px padding and min-height 220px (auto in compact mode). Primary-active (#bf6b50) 42px serif number for ≥3:1 large-text contrast, local sans 18px/700/1.55 h3, body-md description.
+**`feature-card`** — Used in 3-up feature grids. Background `{colors.surface-card}` (#efe9de — slightly darker cream), rounded `{rounded.lg}` (12px), internal padding `{spacing.xl}` (32px). Carries a small icon at top, an `{typography.title-md}` headline, and a body description in `{typography.body-md}`.
 
-**`product-mockup-card-dark`** — Static project answer mockup, not actual Claude product chrome. Dark background, on-dark text, 16px radius, padding 24px (18px compact), with the recorded project shadow. Query/source chips and answer heading follow Project Layout Profile and Typography.
+**`product-mockup-card-dark`** — Dark navy card showing actual Claude product chrome (chat interface, code editor, agent controls). Background `{colors.surface-dark}`, rounded `{rounded.lg}`, internal padding `{spacing.xl}` (32px). Carries text labels in `{colors.on-dark}` and product UI fragments below.
 
 **`code-window-card`** — A specialized dark card showing a code editor with line numbers, syntax-highlighted code in `{typography.code}` (JetBrains Mono), and sometimes a "Run" button or terminal output panel below. Background `{colors.surface-dark}` with `{colors.surface-dark-soft}` for the inner code block, rounded `{rounded.lg}`, padding `{spacing.lg}` (24px). The signature visual element of Claude Code product pages.
 
@@ -537,22 +514,22 @@ The current sample instantiates top-nav, button-primary/secondary, hero-band, fe
 
 ### CTA / Footer
 
-**`cta-band-coral`** — Project coral callout with deep-ink text, 14px radius, 56px padding and 90px bottom margin. Local serif h2 at 40px/400/1.12/-1px, cream button min-width 150px. Compact padding is 36px; narrow padding 28px, h2 34px and bottom margin 56px.
+**`cta-band-coral`** — A pre-footer "Try Claude" CTA card. Full-width coral fill, deep-ink type for verified contrast, rounded `{rounded.lg}`, padding 64px. Carries an h2 in `{typography.display-sm}` (still serif!), a sub-line, and a cream-button CTA.
 
 **`cta-band-dark`** — Alternative pre-footer band on developer-focused pages. Background `{colors.surface-dark}`, text `{colors.on-dark}`, rounded `{rounded.lg}`, padding 64px. Often pairs with a code-window card.
 
-**`footer`** — Recorded project exception: cream shell, muted local sans 13px/1.55, hairline top border and padding 30px 0 45px. Demo name and example-data notice only; horizontal desktop layout becomes stacked in compact mode. No source logo or four-column footer is used.
+**`footer`** — Dark navy footer that closes every page. Background `{colors.surface-dark}` (#181715), text `{colors.on-dark-soft}`. 4-column link list at desktop covering Product / Company / Resources / Legal. Vertical padding 64px. The Anthropic spike-mark + "Anthropic" wordmark sits at the top in `{colors.on-dark}`. The footer never inverts.
 
 ## Do's and Don'ts
 
 ### Do
 - Anchor every page on the cream canvas. Pure white reads as "any other AI tool"; the warm tint is the brand differentiator.
-- Use the project-local serif stack for h1/h2 and local sans stack for body; inspect CJK line wrapping at each target viewport.
-- Reserve primary coral for CTAs and callouts. Project step numbers use the deeper primary-active color as an explicit, contrast-checked text exception.
-- Use the dark product panel to show clearly marked project example content, not to imply an actual Claude integration or live response.
+- Use Copernicus serif for every display headline. Pair with StyreneB sans body. Negative letter-spacing on display sizes is non-negotiable.
+- Reserve `{colors.primary}` (coral) for primary CTAs and full-bleed `{component.callout-card-coral}` moments. Don't paint accent moments coral elsewhere.
+- Use `{component.product-mockup-card-dark}` and `{component.code-window-card}` to show actual Claude product chrome. Don't paint marketing illustrations of code when you can show real code.
 - Pair `{component.feature-card}` (cream) with `{component.product-mockup-card-dark}` (navy) in alternating bands. The cream-to-dark rhythm is the brand's pacing mechanism.
-- Use the project's own “知” text mark. Do not reproduce the Anthropic spike-mark or imply brand endorsement.
-- Use the explicit project spacing in Project Layout Profile; 96px is a source reference default, not the current sample section spacing.
+- Use the Anthropic spike-mark glyph as the brand wordmark prefix. Never invert the mark to white-on-dark within the wordmark itself.
+- Apply `{spacing.section}` (96px) between major bands.
 
 ### Don't
 - Don't use cool grays or pure white for canvas. Cream is the brand.
@@ -560,8 +537,8 @@ The current sample instantiates top-nav, button-primary/secondary, hero-band, fe
 - Don't use cool blue or saturated cyan as a brand accent. The coral is the brand voltage.
 - Don't put coral everywhere. The coral is scarce on individual elements and generous only on full-bleed coral callout cards.
 - Don't use Inter for display headlines. The serif character is the brand voice.
-- Project pacing is cream hero with dark answer panel → cream-card features → coral callout → cream footer; the cream footer is an explicit deviation from the source dark footer.
-- Primary hover and active both use primary-active; other action backgrounds remain unchanged. Keyboard focus is always documented and visible.
+- Don't repeat the same surface mode in two consecutive bands. The pacing alternates: cream → cream-card → dark-mockup → cream → coral-callout → dark-footer.
+- Don't add hover state styling beyond what the system already encodes — primary darkens on press; nothing else changes.
 
 ## Responsive Behavior
 
@@ -569,18 +546,23 @@ The current sample instantiates top-nav, button-primary/secondary, hero-band, fe
 
 | Name | Width | Key Changes |
 |---|---|---|
-| Narrow | ≤430px | Shell 100% - 24px; nav 64px; h1 44px; lead 17px; section h2 36px; actions full-width stacked; source chips one column; callout padding 28px, h2 34px, bottom margin 56px; hero top padding 48px |
-| Compact | ≤820px | Shell min(100% - 32px, 680px); hide non-button nav links; single-column hero with 44px gap and 64px vertical padding; product padding 18px; feature section padding 64px; single-column cards with auto min-height; callout padding 36px with stacked content and button margin-top 24px; footer stacked |
-| Desktop | >820px | Shell max 1180px; two-column hero; three-column features and source chips; fluid h1/h2 sizes as defined in Typography |
-
-Narrow rules override the corresponding compact rules. Target viewports are 375, 768 and 1440 CSS px. At 768px the sample uses the compact layout, not a two-column tablet grid.
+| Mobile | < 768px | Hamburger nav; hero h1 64→32px; hero-illustration-card stacks below content; feature grids 1-up; connector tiles 2-up; pricing 1-up; footer 4 cols → 1 |
+| Tablet | 768–1024px | Top nav stays horizontal but tightens; feature cards 2-up; connector tiles 3-up; pricing 2-up |
+| Desktop | 1024–1440px | Full top-nav with all menu items; 3-up feature cards; 4-up or 6-up connector tiles; 3-up pricing tiers |
+| Wide | > 1440px | Same as desktop with more outer breathing room; max content width caps at 1200px |
 
 ### Touch Targets
-- Project primary and secondary controls have minimum height 44px, padding 11px × 20px and line-height 1.55; rendered height may exceed 44px. This is a project target, not a blanket WCAG claim.
-- Unused source icon buttons (36px) and inputs (40px) are reference defaults, not verified project touch targets or WCAG conclusions. Review them independently before use.
+- `{component.button-primary}` at minimum 40 × 40px.
+- `{component.button-icon-circular}` at exactly 36 × 36 — slightly under WCAG 44 but visually centered.
+- `{component.text-input}` height is 40px.
+- Connector tile entire card area is tappable; effective tap area >> 44px.
 
 ### Collapsing Strategy
-Secondary navigation links are hidden at ≤820px; no hamburger or sheet interaction is implemented. Hero content precedes the product mockup in single-column mode. Feature cards go directly from three to one column at 820px; source chips stack at 430px. Pricing and code-window components are unused source references.
+- Top nav collapses to hamburger at < 768px; menu opens as a full-screen cream sheet.
+- Hero band's 6-6 grid collapses to single-column on mobile — h1 + sub-head + buttons first, then the illustration / mockup card below.
+- Feature grids reduce columns rather than scaling cards down.
+- Pricing tier cards collapse 4 → 2 → 1; featured-tier dark surface stays visually distinct at every breakpoint.
+- Code-window cards retain code legibility at every breakpoint by allowing horizontal scroll within the card rather than wrapping code lines.
 
 ### Image Behavior
 - Code blocks inside dark mockups stay at fixed font-size; horizontal scroll on mobile rather than wrapping.
@@ -591,11 +573,11 @@ Secondary navigation links are hidden at ≤820px; no hamburger or sheet interac
 
 1. Focus on ONE component at a time. Reference its YAML key (`{component.feature-card}`, `{component.code-window-card}`).
 2. Variants of an existing component (`-active`, `-disabled`, `-focused`) live as separate entries in `components:`.
-3. Use explicit named token references where available; record role-specific literals and project adaptations in the relevant section.
-4. Document all actual default, hover, active and focus states; do not omit keyboard interaction rules.
-5. Project display headlines stay local serif 400 with the documented tracking. Body uses the local sans stack; UI weights follow the project typography table.
+3. Use `{token.refs}` everywhere — never inline hex.
+4. Never document hover. Default and Active/Pressed states only.
+5. Display headlines stay Copernicus serif 400 with negative tracking. Body stays StyreneB / Inter 400. The split is unbreakable.
 6. Cream + coral + dark navy is the trinity. Don't introduce a fourth surface tone (no purple cards, no green sections).
-7. Prefer larger project-local serif display before bolder display weight; check CJK wrapping and mobile readability.
+7. When in doubt about emphasis: bigger Copernicus serif before bolder weight.
 
 ## Known Gaps
 
@@ -619,13 +601,10 @@ Derived from VoltAgent/awesome-design-md at commit `8147538b4226ae41e2487a9179e3
 - Chinese display text uses Georgia followed by Noto Serif CJK SC / Songti SC / STSong / serif; body text uses Inter followed by system Chinese sans fallbacks. The proprietary source fonts are not claimed as loaded.
 - `colors.on-primary` is `#141413` instead of source white because white on coral has insufficient normal-text contrast. All current coral text roles use the adapted deep ink.
 - `colors.primary-active` is `#bf6b50` instead of the darker source `#a9583e`, because deep ink on the source active color does not reach the normal-text target. The current hover and active surface both use the adjusted value.
-- Primary/secondary controls and brand/nav links use minimum height 44px. Ink focus replaces the low-contrast teal outline; step numbers use primary-active rather than low-contrast primary text.
-- The centered callout, CJK-aware heading width, local-only example actions, display scale, UI weights and layout rules are explicit project adaptations. No real trial registration or email is implied.
+- Mobile implementation gives primary controls at least 44px height, exceeding the source 40px component height for this project.
 
 ### Verification & Limits
-Audit02: executing-Agent source/diff/HTML review and fresh Chromium checks completed at real 375×900, 768×1024 and 1440×1000 CSS-pixel viewports. No page horizontal overflow or unreadable/truncated sample text was observed. Native Tab/Shift+Tab/Enter navigation, primary/secondary/callout destinations, visible focus, primary hover and pointer-down active colors were inspected. All rendered action targets measured at least 44px high. Main text pairs meet 4.5:1 (large text 3:1); step numbers measure 3.198:1, primary hover/active with ink 4.770:1, and ink focus against cream 17.498:1. No remote fonts/images/scripts or real submission endpoints are used.
-
-Local CJK fallback declarations and rendered Chinese glyphs were inspected visually; exact per-glyph installed font attribution is not proven. Validation covers this static sample and tested viewports/states only, not full WCAG, other browsers, native-device touch behavior, 200% browser zoom or future unused source components. New evidence is in the audit02 candidate evidence directory; prior screenshots do not certify this version. Final verification prose was added after rendering without changing HTML or design rules, so the same HTML-bound browser evidence is reused. The candidate remains uncommitted awaiting user aesthetic confirmation and explicit replacement approval.
+Structure and token references were checked by the bundled validator. The sample was inspected at 375, 768 and 1440 CSS px for overflow, responsive navigation, focus, typography fallback and content readability. Coral/deep-ink and major surface text contrast were checked. This is scoped sample verification, not complete WCAG certification or proof for future pages.
 
 ### Attribution
 The upstream analysis is distributed under the following MIT notice. Brand names and marks, proprietary fonts and imagery require separate rights review.

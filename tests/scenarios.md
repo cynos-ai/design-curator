@@ -2,7 +2,7 @@
 
 自动单元测试与这些 Agent 场景不是同一层。状态只能写真实执行结果；代码审阅或 mock 不算浏览器证据。
 
-审计修订说明：下表 E07/E08 的浏览器执行仅指旧运行的历史演练。原规范一致性结论已撤回，但原根规范、committed session、确认及正式回执保持不变。修订位于新运行 20260910T062049Z-audit02，baseline 来自原根规范，review=pending、尚无新确认，未重新浏览器验收。历史截图不进入新候选 evidence/。
+审计修订说明：下表 E07/E08 的浏览器执行仅指旧运行的历史演练。原规范一致性结论已撤回，但原 committed run、确认及正式回执保持不变，原根规范在audit02备份及baseline中保留。修订位于新运行 20260910T062049Z-audit02，baseline 来自原根规范。本轮已完成执行Agent对照及375/768/1440浏览器检查，review=ready-machine-verified，随后取得用户确认并通过提交脚本完成落定。历史截图不进入新候选 evidence/。
 
 | ID | 场景 | 预期 | 当前状态 |
 |---|---|---|---|
@@ -17,7 +17,11 @@
 | E09 | 无浏览器/离线 | 生成样张，保持未检查，等待具体人工反馈 | 已补自动正反例：缺人工反馈拒绝、保留机器not-checked且具体人工反馈完整时允许；非真实用户验收 |
 | E10 | 已有根规范、取消/重试 | 无未授权覆盖，有备份和外部修改保护 | 自动提交测试通过 |
 
-## 已执行演练 E07/E08
+## Audit02 新复核（E07/E08 的当前样张范围）
+
+新 evidence/ 包含 Agent 规范对照、新截图和浏览器记录。修复焦点/编号对比不足、无效邮箱操作、callout偏左；复测真实视口溢出、字体显示、控制高度、Tab/Enter/Shift+Tab、hover及pointerdown active。检查完成后向用户展示样张，记录实际“可以，继续”的确认再执行新落定；不扩展为10场景全量通过。详情见 audit02 的 evidence/agent-review.md。
+
+## 原历史演练 E07/E08
 
 测试项目：`examples/saas-demo/`。
 
@@ -26,6 +30,6 @@
 - 项目适配：使用系统 serif/CJK fallback；原 coral + 白字对比不足，候选将 `on-primary` 改为深墨色并同步正文说明。
 - 视口：375、768、1440 CSS px。
 - 证据：`evidence/viewport-*.png`、浏览器检查记录和 review.json。
-- 历史落定：原版本曾通过 `commit-design.py` 写入 demo 根 DESIGN，其字节与原回执完整保留。新 audit 候选尚未落定，需验证与确认后才能替换根文件。
+- 历史落定：原版本曾通过 `commit-design.py` 写入 demo 根 DESIGN，其字节在旧候选、新baseline和backup中完整保留，原回执不变。新 audit 候选经验证与用户确认后已落定根文件，并产生独立的新回执。
 
 这次演练不代表其余 73 套规范或所有未来页面已验证，也不代表完整 WCAG 认证。

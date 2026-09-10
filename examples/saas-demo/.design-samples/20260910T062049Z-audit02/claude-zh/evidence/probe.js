@@ -1,0 +1,13 @@
+// Audit02 scoped browser probe; not a general accessibility validator.
+export function inspect() {
+  const rgb = s => s.match(/[\d.]+/g).map(Number);
+  const lum = c => c.slice(0,3).map(x => { x/=255; return x<=.04045?x/12.92:((x+.055)/1.055)**2.4; }).reduce((a,x,i)=>a+x*[.2126,.7152,.0722][i],0);
+  const ratio=(a,b)=>{const l=[lum(a),lum(b)].sort((a,b)=>b-a);return (l[0]+.05)/(l[1]+.05);};
+  const background=e=>{while(e){const color=getComputedStyle(e).backgroundColor;if(rgb(color)[3]!==0)return color;e=e.parentElement;}return 'rgb(255,255,255)';};
+  const visible=e=>{const r=e.getBoundingClientRect();return r.width>0&&r.height>0&&r.right>0&&getComputedStyle(e).visibility!=='hidden';};
+  const texts=[...document.querySelectorAll('body *')].filter(e=>visible(e)&&[...e.childNodes].some(n=>n.nodeType===3&&n.textContent.trim())).map(e=>{const s=getComputedStyle(e),bg=background(e),large=parseFloat(s.fontSize)>=24||(parseFloat(s.fontSize)>=18.6667&&parseFloat(s.fontWeight)>=700);return {text:e.textContent.trim().slice(0,24),color:s.color,background:bg,ratio:ratio(rgb(s.color),rgb(bg)),target:large?3:4.5};});
+  const controls=[...document.querySelectorAll('a,button')].filter(visible).map(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {text:e.textContent.trim(),width:r.width,height:r.height,href:e.getAttribute('href'),targetExists:e.hash?!!document.getElementById(e.hash.slice(1)):false,outlineColor:s.outlineColor};});
+  const s=selector=>{const e=document.querySelector(selector),c=getComputedStyle(e);return {font:c.fontFamily,fontSize:c.fontSize,lineHeight:c.lineHeight,weight:c.fontWeight,columns:c.gridTemplateColumns,padding:c.padding,radius:c.borderRadius};};
+  return {viewport:[innerWidth,innerHeight],scrollWidth:document.documentElement.scrollWidth,overflow:[...document.body.querySelectorAll('*')].filter(visible).filter(e=>{const r=e.getBoundingClientRect();return r.left<-.5||r.right>innerWidth+.5;}).map(e=>e.id||e.className||e.tagName),fontsStatus:document.fonts.status,body:s('body'),h1:s('h1'),hero:s('.hero'),cards:s('.cards'),product:s('.product'),controls,textPairs:[...new Map(texts.map(t=>[t.color+'|'+t.background+'|'+t.target,{color:t.color,background:t.background,ratio:t.ratio,target:t.target}])).values()],textFailures:texts.filter(t=>t.ratio<t.target),images:document.images.length,remoteResources:performance.getEntriesByType('resource').map(r=>r.name).filter(u=>!u.startsWith(location.origin)),userAgent:navigator.userAgent};
+}
+export function remember(key,value){const data=JSON.parse(sessionStorage.getItem('audit02')||'{}');data[key]=value;sessionStorage.setItem('audit02',JSON.stringify(data));return value;}

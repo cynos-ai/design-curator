@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
   "candidate_id": "claude-zh",
-  "design_sha256": "a446dceec62f7c4a7814dd6567b367c83a4ece944d72a5ca07a0c91ebea6279d",
-  "sample_sha256": "11938a471f7c1ebdce314ce94a66e8367f394b971eb9c587aefbe079c5605351",
+  "design_sha256": "d962edd85b3781e9dbc7cca32ff3e71af906e456d53fc8f6f61bfd0ed006cb48",
+  "sample_sha256": "63611f5105164dfba178e15bf9212d5c1cd57cb506eebc07bef3dae82e420279",
   "asset_hashes": {},
-  "sample_bundle_sha256": "d373e0733b45bc5453eca12a6119530a4d55c21216b2702db919568e36d8ccb1",
+  "sample_bundle_sha256": "da1b553f5506ea1029770fe76063c6bf1e202bd23674dcb11c0c641f916a345c",
   "external_assets": [],
-  "status": "pending",
+  "status": "ready-machine-verified",
   "checks": [
     {
       "id": "structure",
       "status": "pass",
-      "method": "Revised bundled validator; audit revision",
+      "method": "Bundled validate-design.py on current candidate and original-root baseline",
       "evidence": [
         "claude-zh/evidence/validate-design.json"
       ],
@@ -20,64 +20,83 @@
     {
       "id": "references",
       "status": "pass",
-      "method": "Revised bundled validator; no blocking reference errors; warning retained for review",
+      "method": "Bundled frontmatter/prose reference checks; token.refs placeholder removed",
       "evidence": [
         "claude-zh/evidence/validate-design.json"
       ],
-      "findings": [
-        {
-          "code": "ambiguous-prose-reference",
-          "line": 298,
-          "reference": "token.refs",
-          "severity": "warning"
-        }
-      ]
+      "findings": []
     },
     {
       "id": "prose-consistency",
-      "status": "not-checked",
-      "method": "Awaiting fresh review of revised specification; previous evidence is historical only",
-      "evidence": [],
+      "status": "pass",
+      "method": "Executing Agent full-document, baseline diff, CSS/DOM and scope review",
+      "evidence": [
+        "claude-zh/evidence/agent-review.md",
+        "claude-zh/evidence/validate-design.json"
+      ],
       "findings": []
     },
     {
       "id": "fonts",
-      "status": "not-checked",
-      "method": "Awaiting fresh review of revised specification; previous evidence is historical only",
-      "evidence": [],
+      "status": "pass",
+      "method": "Computed local font roles, document.fonts status and visual inspection of Chinese glyphs in fresh screenshots; not per-glyph identity proof",
+      "evidence": [
+        "claude-zh/evidence/agent-review.md",
+        "claude-zh/evidence/browser-checks.json",
+        "claude-zh/evidence/viewport-375.png",
+        "claude-zh/evidence/viewport-768.png",
+        "claude-zh/evidence/viewport-1440.png"
+      ],
       "findings": []
     },
     {
       "id": "responsive",
-      "status": "not-checked",
-      "method": "Awaiting fresh review of revised specification; previous evidence is historical only",
-      "evidence": [],
+      "status": "pass",
+      "method": "Real Chromium 375x900/768x1024/1440x1000 viewports; measured overflow and screenshot inspection",
+      "evidence": [
+        "claude-zh/evidence/browser-checks.json",
+        "claude-zh/evidence/viewport-375.png",
+        "claude-zh/evidence/viewport-768.png",
+        "claude-zh/evidence/viewport-1440.png"
+      ],
       "findings": []
     },
     {
       "id": "interaction",
-      "status": "not-checked",
-      "method": "Awaiting fresh review of revised specification; previous evidence is historical only",
-      "evidence": [],
+      "status": "pass",
+      "method": "Real Tab/Shift+Tab/Enter, native local destinations, hover and pointerdown active; control size measurements",
+      "evidence": [
+        "claude-zh/evidence/browser-checks.json",
+        "claude-zh/evidence/focus-375.png",
+        "claude-zh/evidence/agent-review.md"
+      ],
       "findings": []
     },
     {
       "id": "contrast",
-      "status": "not-checked",
-      "method": "Awaiting fresh review of revised specification; previous evidence is historical only",
-      "evidence": [],
+      "status": "pass",
+      "method": "Actual opaque computed text/background pairs and size/weight classification; primary hover/active and ink focus checks",
+      "evidence": [
+        "claude-zh/evidence/browser-checks.json",
+        "claude-zh/evidence/agent-review.md"
+      ],
       "findings": []
     },
     {
       "id": "content-authenticity",
-      "status": "not-checked",
-      "method": "Awaiting fresh review of revised specification; previous evidence is historical only",
-      "evidence": [],
+      "status": "pass",
+      "method": "Executing Agent review: explicitly labeled static example data, local-only actions, no customer/financial/compliance assertions",
+      "evidence": [
+        "claude-zh/evidence/agent-review.md"
+      ],
       "findings": []
     }
   ],
-  "blocking_findings": [
-    "Revised draft: fresh consistency/visual review and current-version confirmation pending."
-  ],
-  "accepted_limitations": []
+  "blocking_findings": [],
+  "accepted_limitations": [
+    "Scoped static sample only; user confirmation and replacement approval are recorded separately in session.json.",
+    "Local CJK fallback visibly rendered; exact per-glyph installed font identity not proven.",
+    "No full WCAG, cross-browser, native-touch, 200% browser-zoom or unused-component certification.",
+    "Footer/shadow/display geometry are explicit project adaptations, not source-default guarantees."
+  ]
 }
